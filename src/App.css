@@ -9,25 +9,31 @@
 body {
   background-color: #fff;
 }
-.login-img {
+.login-img,
+.signup-img {
   width: 55%;
 }
-.login-img {
+.login-img,
+.signup-img {
   position: relative;
 }
-.login-img img {
+.login-img img,
+.signup-img img {
   width: 100%;
   height: 100vh;
 }
-.login-logo {
+.login-logo,
+.signup-logo {
   position: absolute;
   z-index: 1;
   margin: 60px;
 }
-.login {
+.login,
+.signup {
   display: flex;
 }
-.login-text {
+.login-text,
+.signup-text {
   width: 45%;
   display: flex;
   justify-content: center;
@@ -35,7 +41,8 @@ body {
   flex-direction: column;
   gap: 30px;
 }
-.login-txt h1 {
+.login-txt h1,
+.signup-txt h1 {
   width: 445px;
   color: var(--dark-500, #131118);
   font-family: Jost;
@@ -44,7 +51,8 @@ body {
   font-weight: 700;
   line-height: normal;
 }
-.login-txt h2 {
+.login-txt h2,
+.signup-txt h2 {
   width: 445px;
   color: var(--gray-500, #a4a1aa);
   font-family: Jost;
@@ -53,13 +61,15 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.login-form{
+.login-form,
+.signup-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
 }
-.login-address{
+.login-address,
+.signup-address {
   display: flex;
   width: 445px;
   padding-top: 2px;
@@ -68,7 +78,8 @@ body {
   align-items: flex-start;
   gap: 5px;
 }
-.login-address input {
+.login-address input,
+.signup-address input {
   border-radius: 10px;
   border: 1px solid var(--dark-500, #131118);
   display: flex;
@@ -79,7 +90,8 @@ body {
   align-items: center;
   flex-shrink: 0;
 }
-.login-rem{
+.login-rem,
+.signup-rem {
   display: flex;
   padding-right: 0px;
   justify-content: center;
@@ -91,7 +103,8 @@ body {
   width: 445px;
   justify-content: space-between;
 }
-.login-text a {
+.login-text a,
+.signup-text a {
   display: flex;
   width: 445px;
   height: 56px;
