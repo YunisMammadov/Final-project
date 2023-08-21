@@ -10,7 +10,8 @@ body {
   background-color: #fff;
 }
 .login-img,
-.signup-img {
+.signup-img,
+.forgot_password-img {
   width: 55%;
 }
 .login-img,
@@ -18,7 +19,8 @@ body {
   position: relative;
 }
 .login-img img,
-.signup-img img {
+.signup-img img,
+.forgot_password-img img {
   width: 100%;
   height: 100vh;
 }
@@ -29,11 +31,13 @@ body {
   margin: 60px;
 }
 .login,
-.signup {
+.signup,
+.forgot_password {
   display: flex;
 }
 .login-text,
-.signup-text {
+.signup-text,
+.forgot_password-text {
   width: 45%;
   display: flex;
   justify-content: center;
@@ -42,7 +46,8 @@ body {
   gap: 30px;
 }
 .login-txt h1,
-.signup-txt h1 {
+.signup-txt h1,
+.forgot_password-txt h1 {
   width: 445px;
   color: var(--dark-500, #131118);
   font-family: Jost;
@@ -52,7 +57,8 @@ body {
   line-height: normal;
 }
 .login-txt h2,
-.signup-txt h2 {
+.signup-txt h2,
+.forgot_password-txt h2 {
   width: 445px;
   color: var(--gray-500, #a4a1aa);
   font-family: Jost;
@@ -62,14 +68,16 @@ body {
   line-height: normal;
 }
 .login-form,
-.signup-form {
+.signup-form,
+.forgot_password-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
 }
 .login-address,
-.signup-address {
+.signup-address,
+.forgot_password-address {
   display: flex;
   width: 445px;
   padding-top: 2px;
@@ -79,7 +87,8 @@ body {
   gap: 5px;
 }
 .login-address input,
-.signup-address input {
+.signup-address input,
+.forgot_password input {
   border-radius: 10px;
   border: 1px solid var(--dark-500, #131118);
   display: flex;
@@ -104,7 +113,8 @@ body {
   justify-content: space-between;
 }
 .login-text a,
-.signup-text a {
+.signup-text a,
+.forgot_password a {
   display: flex;
   width: 445px;
   height: 56px;
@@ -115,6 +125,31 @@ body {
   border-radius: 10px;
   background: var(--dark-500, #131118);
   color: var(--white-500, #fff);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.forgot_password-back {
+  display: flex;
+  width: 445px;
+  align-items: center;
+}
+.forgot_password-back a {
+  background-color: #fff;
+  justify-content: flex-start;
+  color: black;
+}
+.forgot_password-back svg {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.forgot_password-back p {
+  color: var(--dark-500, #131118);
   font-family: Jost;
   font-size: 16px;
   font-style: normal;

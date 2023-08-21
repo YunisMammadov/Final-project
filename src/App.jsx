@@ -3,6 +3,8 @@ import "./App.css";
 import { lazy, Suspense } from "react";
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
+const Forgot_password = lazy(() => import("./pages/Forgot_password"));
+
 
 function App() {
   const routes = [
@@ -13,7 +15,11 @@ function App() {
     {
       path: "/signup",
       element: <Signup />,
-    }
+    },
+    {
+      path: "/forgot_password",
+      element: <Forgot_password />,
+    },
   ];
   return (
     <>
@@ -31,4 +37,4 @@ function App() {
     </>
   );
 }
-export default App
+export default App;
