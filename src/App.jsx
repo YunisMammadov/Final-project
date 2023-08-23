@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { lazy, Suspense } from "react";
 const Login = lazy(() => import("./pages/Login"));
+const Enter_otp = lazy(() => import("./pages/Enter_otp"));
 const Signup = lazy(() => import("./pages/Signup"));
 const Forgot_password = lazy(() => import("./pages/Forgot_password"));
 
@@ -20,6 +21,10 @@ function App() {
       path: "/forgot_password",
       element: <Forgot_password />,
     },
+    {
+      path: "/enter_otp",
+      element: <Enter_otp />,
+    }
   ];
   return (
     <>

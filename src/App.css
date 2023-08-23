@@ -11,7 +11,8 @@ body {
 }
 .login-img,
 .signup-img,
-.forgot_password-img {
+.forgot_password-img,
+.enter_otp-img {
   width: 55%;
 }
 .login-img,
@@ -20,7 +21,8 @@ body {
 }
 .login-img img,
 .signup-img img,
-.forgot_password-img img {
+.forgot_password-img img,
+.enter_otp-img img {
   width: 100%;
   height: 100vh;
 }
@@ -32,12 +34,14 @@ body {
 }
 .login,
 .signup,
-.forgot_password {
+.forgot_password,
+.enter_otp {
   display: flex;
 }
 .login-text,
 .signup-text,
-.forgot_password-text {
+.forgot_password-text,
+.enter_otp-text {
   width: 45%;
   display: flex;
   justify-content: center;
@@ -47,7 +51,8 @@ body {
 }
 .login-txt h1,
 .signup-txt h1,
-.forgot_password-txt h1 {
+.forgot_password-txt h1,
+.enter_otp-txt h1 {
   width: 445px;
   color: var(--dark-500, #131118);
   font-family: Jost;
@@ -58,7 +63,8 @@ body {
 }
 .login-txt h2,
 .signup-txt h2,
-.forgot_password-txt h2 {
+.forgot_password-txt h2,
+.enter_otp-txt h2 {
   width: 445px;
   color: var(--gray-500, #a4a1aa);
   font-family: Jost;
@@ -114,7 +120,8 @@ body {
 }
 .login-text a,
 .signup-text a,
-.forgot_password a {
+.forgot_password a,
+.enter_otp a {
   display: flex;
   width: 445px;
   height: 56px;
@@ -131,12 +138,14 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.forgot_password-back {
+.forgot_password-back,
+.enter_otp-back {
   display: flex;
   width: 445px;
   align-items: center;
 }
-.forgot_password-back a {
+.forgot_password-back a,
+.enter_otp-back a {
   background-color: #fff;
   justify-content: flex-start;
   color: black;
@@ -154,5 +163,27 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  line-height: normal;
+}
+.enter_otp-form {
+  width: 445px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.enter_otp-form input {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+}
+.enter_otp-form input {
+  color: var(--dark-500, #131118);
+  text-align: center;
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
   line-height: normal;
 }
