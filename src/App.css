@@ -187,3 +187,106 @@ body {
   font-weight: 700;
   line-height: normal;
 }
+.enter-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enter-modal-password {
+  width: 432px;
+  height: 332px;
+  flex-shrink: 0;
+  border: 1px solid var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+  background: var(--white-500, #fff);
+  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.02),
+    0px 10px 40px -4px rgba(16, 24, 40, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: space-between;
+  justify-content: center;
+  align-items: center;
+}
+.enter-modal-text {
+  display: flex;
+  width: 392px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.enter-modal-txt {
+  text-align: center;
+  width: 400px;
+}
+.enter-modal-txt h1 {
+  color: var(--dark-500, #131118);
+  text-align: center;
+  font-family: Jost;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.enter-modal-txt h2 {
+  color: var(--dark-500, #131118);
+  text-align: center;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.enter-modal-text a {
+  width: 100%;
+  display: flex;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px;
+  background: var(--dark-500, #131118);
+}
+.enter-modal-rectangle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.modal-ellipse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.modal-ellipse svg:nth-child(1) {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.modal-ellipse svg:nth-child(2) {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+.modal-ellipse svg:nth-child(3) {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+.modal-ellipse svg:nth-child(4) {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
