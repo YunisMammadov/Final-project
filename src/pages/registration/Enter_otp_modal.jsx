@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "./Registration.css"
 
 function Enter_otp_modal() {
   return (

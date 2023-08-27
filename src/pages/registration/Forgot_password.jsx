@@ -1,25 +1,20 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import { forgotpasswordSchema } from "../../schemas";
+import "./Registration.css"
+
+
 function Forgot_password() {
-  const [email, setEmail] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [isTouched, setIsTouched] = useState(false);
-
-  const handleEmailChange = (event) => {
-    setIsTouched(true);
-    setEmail(event.target.value);
-    setErrorMessage("");
-  };
-
-  const handleSendOTP = (event) => {
-    e.preventDefault();
-    if (!email.includes("@") || email.length < 8) {
-      setErrorMessage("Email is not correct!");
-    } else {
-      setErrorMessage("");
-    }
-  };
-  const isEmailValid = email.includes("@");
+  const navigate = useNavigate()
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+    },
+    validationSchema: forgotpasswordSchema,
+    onSubmit: (values) => {
+      navigate("/enter_otp");
+    },
+  });
 
   return (
     <section className="forgot_password">
@@ -58,31 +53,26 @@ function Forgot_password() {
             your password
           </h2>
         </div>
-        <form className="forgot_password-form">
+        <form className="forgot_password-form" onSubmit={formik.handleSubmit}>
           <div className="forgot_password-address">
             <p>Email Address</p>
             <input
+              id="email"
+              name="email"
               type="email"
               placeholder="please write your email"
-              value={email}
-              onChange={handleEmailChange}
-              onBlur={() => setIsTouched(true)}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
             />
+            {formik.errors.email && formik.touched.email && (
+              <p style={{ color: "red" }}>{formik.errors.email}</p>
+            )}
           </div>
-          {isTouched && !isEmailValid && (
-            <p style={{ color: "red", marginTop: "5px" }}>
-              Invalid email address!
-            </p>
-          )}
-          <button type="submit" style={{ border: "none" }} disabled={!isEmailValid || email.length === 0} onClick={handleSendOTP}>
-            <NavLink to="/enter_otp">
-              Send OTP
-            </NavLink>
+          <button type="submit" style={{ border: "none" }}>
+            Send OTP
           </button>
         </form>
-        {isTouched && errorMessage && (
-          <p style={{ color: "red" }}>{errorMessage}</p>
-        )}
       </div>
     </section>
   );

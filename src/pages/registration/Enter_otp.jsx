@@ -1,7 +1,8 @@
-
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Enter_otp_modal from "./Enter_otp_modal";
+import "./Registration.css"
+
 function Enter_otp() {
   const [open, setOpen] = useState(false);
   const inputCount = 5;
@@ -77,12 +78,11 @@ function Enter_otp() {
               maxLength="1"
             />
           ))}
-
+          <button onClick={handleVerifyClick} type="button">
+            Verify
+          </button>
+          {open && <Enter_otp_modal />}
         </form>
-        <NavLink onClick={handleVerifyClick} type="button">
-          Verify
-        </NavLink>
-        {open && <Enter_otp_modal />}
       </div>
     </section>
   );
