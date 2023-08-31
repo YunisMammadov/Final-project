@@ -1,107 +1,210 @@
 .home {
-    position: relative;
-    width: 1430px;
-    height: 884px;
-    flex-shrink: 0;
-    margin: 0 auto;
-    background: var(--dark-dark-5, rgba(19, 17, 24, 0.05));
-    overflow: hidden;
-  }
-  .bestseller {
-    position: absolute;
-    bottom: -50px;
-    left: 150px;
-    color: var(--white-500, #fff);
-    font-family: Jost;
-    font-size: 241.379px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    opacity: 0.7;
-    z-index: 0;
-  }
-  .home-banner {
-    display: flex;
-    justify-content: space-between;
-  }
-  .home-banner-info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 45px;
-  }
-  
-  .home-rectangle {
-    width: 50%;
-    height: 885px;
-    position: relative;
-    z-index: 2;
-  }
-  .home-rec {
-    border: 24px solid var(--white-500, #fff);
-    width: 510px;
-    height: 724px;
-    margin: 100px 26px;
-  }
-  .home-rectangle1 {
-    border: 24px solid var(--white-500, #fff);
-    width: 510px;
-    height: 362px;
-    margin: 100px 26px;
-    position: absolute;
-    bottom: -25px;
-    border-top: none;
-  }
-  
-  .home-img {
-    width: 990;
-    position: absolute;
-    top: 0;
-  }
-  .home-img img {
-    width: 100%;
-  }
-  .home-banner-info-text p {
-    color: var(--dark-500, #131118);
-    font-family: Jost;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  .home-banner-info-text h1 {
-    color: var(--dark-500, #131118);
-    font-family: Jost;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  .home-banner-info-text h2 {
-    color: var(--dark-500, #131118);
-    font-family: Jost;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
-  }
-  .home-banner-info button {
-    display: flex;
-    width: 156px;
-    height: 56px;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: var(--dark-500, #131118);
-    color: var(--white-500, #fff);
-    font-family: Jost;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+  position: relative;
+  width: 1430px;
+  height: 884px;
+  flex-shrink: 0;
+  margin: 0 auto;
+  background: var(--dark-dark-5, rgba(19, 17, 24, 0.05));
+  overflow: hidden;
+}
+.bestseller {
+  position: absolute;
+  bottom: -50px;
+  left: 150px;
+  color: var(--white-500, #fff);
+  font-family: Jost;
+  font-size: 241.379px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  opacity: 0.7;
+  z-index: 0;
+}
+.home-banner {
+  display: flex;
+  justify-content: space-between;
+}
+.home-banner-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 45px;
+}
+
+.home-rectangle {
+  width: 50%;
+  height: 885px;
+  position: relative;
+  z-index: 2;
+}
+.home-rec {
+  border: 24px solid var(--white-500, #fff);
+  width: 510px;
+  height: 724px;
+  margin: 100px 26px;
+}
+.home-rectangle1 {
+  border: 24px solid var(--white-500, #fff);
+  width: 510px;
+  height: 362px;
+  margin: 100px 26px;
+  position: absolute;
+  bottom: -25px;
+  border-top: none;
+}
+
+.home-img {
+  width: 990;
+  position: absolute;
+  top: 0;
+}
+.home-img img {
+  width: 100%;
+}
+.home-banner-info-text p {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.home-banner-info-text h1 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.home-banner-info-text h2 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+.home-banner-info button {
+  display: flex;
+  width: 156px;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--dark-500, #131118);
+  color: var(--white-500, #fff);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deals {
+  margin: 150px 0;
+}
+.deals-month {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.deals-month-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+}
+.deals-month-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.deals-month-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.deals-month-info p {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deals-month-info span {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deals-month-text button {
+  border: none;
+}
+.deals-month-text button a {
+  display: flex;
+  width: 196px;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  border-radius: 10px;
+  background: var(--dark-500, #131118);
+  color: var(--white-500, #fff);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deals-month-img {
+  width: 553px;
+  height: 499px;
+}
+.deals-month-img img {
+  width: 100%;
+}
+.counters {
+  width: 404px;
+  height: 86px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.counter {
+  width: 86px;
+  height: 86px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.counter__inner span {
+  color: var(--dark-500, #131118);
+  text-align: center;
+  font-family: Jost;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.counter__inner p {
+  color: var(--dark-500, #131118);
+  text-align: center;
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

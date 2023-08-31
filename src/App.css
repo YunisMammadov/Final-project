@@ -269,3 +269,41 @@ footer {
   align-items: center;
   gap: 20px;
 }
+.features-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.features-card {
+  width: 250px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.our-features {
+  margin-bottom: 100px;
+}
+.features-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.features-text h1 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.features-text h2 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
