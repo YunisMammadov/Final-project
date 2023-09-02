@@ -1,0 +1,536 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "https://s3-alpha-sig.figma.com/img/3d30/4ae5/ab098881655b8003736dc40c7b639ebf?Expires=1693180800&Signature=jCtncFKvvKHOlkkNAhUEk3LHNYFPehnQHV4Ee8GTlEMfHuKsS2jXXAYWh28vxmI2siEfYRplrxvRj9in5DuAAnsF7YZZcovBDexMba1mcvktvsuBPWhYmWl0nCLdTKpWL1wN9YUy1pzOlGJIo8EjzbiKlNmYV9EQafFejpZkxK8VubDVTSPpdeekxDp413uZYa9p~bCO05wu1qJXMdv8v-fnJw4J06VDPNkKe4UCThp-Zh6M6NEPnpbkEBTH5kDXKkxrhCJXW57BrB4idDLr68OGkPv0LkJssaK4mSEuIe~cuY34D1OEmLDv5QM6jFkTiqeMfMgW~s4zho-BNrevcw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Allen Solly",
+      "text": "Women Textured Handheld Bag",
+      "old_price": "80",
+      "new_price": "100",
+      "bestseller": true,
+      "category": "Women"
+    },
+    {
+      "id": 2,
+      "image": "https://s3-alpha-sig.figma.com/img/5d25/dde6/8ec77190e6faf67ae13935c85f14034a?Expires=1693180800&Signature=aCsaSZljtuXnSu2jthtU28ULGH0dydpLaI9JfLqoN334u4r1VHYtn~I-Y6bGMwy3JI1hYZh-1-VxzKBCrmVWthVvIVsgQdDWr7cSwlcB5a5c6wEA7IDHiYg58AanULYFhz4r2K35G0uaKBVNXVQt3WqC4QUkQklBM5-DUd0r0canEMq1nOfwaQe5gFkVZLsuIi2zM3lNWLVNTETB~9lHnCQom9y2X0AYYhaWE4NhivIQiCCkILDUvFyrqUZLmb0iQJy6844IT8CGuFt0FWnoH4ZyAYnzWBMGCiv~CXOi-a9ehguyZJtGUAhFZ~oH805BjZcegMy7taxRvY9SfPRbTA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Louis Philippe Sport",
+      "text": "Polo Collar T-Shirt",
+      "old_price": "55",
+      "new_price": "50",
+      "bestseller": true,
+      "category": "Men"
+    },
+    {
+      "id": "3",
+      "image": "https://s3-alpha-sig.figma.com/img/fff4/ed7f/01220167c04b1d88291901c2f95869c3?Expires=1693180800&Signature=jjPFMWQUOl2senIVYnDa469-M~Ma0thYU3Gw8YZH8zoKe18y6cPxRv81jEoLYbYLI~GREn~5mkt-3nWLEc8WGpyQjVW5~tzXTWph72~MgK7Tamo1dmEs7dYMPCzgG3XR9QT~0u1T0NC45IVpsiiUnK4~Ud1EsIGrWiwH7LY8nh8hes55JwiaCCrQehWv1OR3IN8kmuZWscHiJHC7ngGPCpm9Xo-RE2cdnyUQFx99ikJlaGWsGgK0vSNnG3-GOurpliSZ5BSZfysCVvwCXfU0yPy-ADUnZukgDJ6GYBvtSDY~hgDZz9rqD4~iU8aYulGFokq9rrdeMqUN11TsG6S7sQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Adidas",
+      "text": "Men adi-dash Running Shoes",
+      "old_price": "75",
+      "new_price": "60",
+      "bestseller": true,
+      "category": "Footwear"
+    },
+    {
+      "id": "4",
+      "image": "https://s3-alpha-sig.figma.com/img/373a/817f/9cbafc8169e90c04a4cbb70ec0d04900?Expires=1693180800&Signature=l1XybJIcA9Ze27xTLL-f83sptvgcLL5kW3PDr3PiW1eIhD8GeP9i8o23PyCLFZ4KLnOtb6bUGFF9xP-7CRgfgU0T~KWWOm~BDNp63j8SrcZt1dbfbylNEIbz6jYbvd0vqUG5cN-ovhIrRuQIbIEiGy-33SxzQfswSbEmhbJZtrC~PeBHM~geB5ZQ-3w92xL3ZCx2TFKE0S0gRiuM2d4jl4tn7Olzrtx8HCHdcfLk21SXxD6SItGOTnhRvySLQBRMeP9KOQQFB1HPS-kguAEQaOhYScLgXftTdDGy3cGwGJUOgfEzB8cvexjyAyWfpzRgujrsrDqo0uDKLKurLlCSvw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Roadstar",
+      "text": "Printed Cotton T-Shirt",
+      "old_price": "40",
+      "new_price": "38",
+      "bestseller": true,
+      "category": "Men"
+    },
+    {
+      "id": "5",
+      "image": "https://s3-alpha-sig.figma.com/img/c15b/6611/5aa7889eb8f932cee010b2b597d38ce9?Expires=1693180800&Signature=TkrMb0K8vORTUeyQMZqFY4xHU5j~teiXpgRUhbad9PzXVyp6poQvHoASyOD28z8hZObhounj2SNV9WDAtM2iZN7WkUByZuWXgHvH37sPkxMCTEcQ4Ipk7L3HZtgmFgtGHyIyn48coPbdJmOqXKhHXW9sgaruBOaUKNnRJq5syEn09Kq2Mphz2f~7FCK~oIRhucM-Ywcom2rs3Ooflab5aKyboi13Mae1ZB8n7INsxc9W5Ekh4Rv9tqEMmm2mCFsLpk-9wj3BQyfauUpKFR-VUhbqT0arJo45Qlr-GNJkvHd1-cK-5z0sD-m-7KQ4D6cwIwie3hiP2k9GbM3PfJb-EQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "US Polo",
+      "text": "Tailored Cotton Casual Shirt",
+      "old_price": "50",
+      "new_price": "40",
+      "bestseller": true,
+      "category": "Kids"
+    },
+    {
+      "id": "6",
+      "image": "https://s3-alpha-sig.figma.com/img/db1e/7c90/645492a82cd4ccd31a45a80a0fff9a97?Expires=1693180800&Signature=JP~TGCDQL3hwf97PPoXMyVMyHEUY3uIcSkGgbAJYrYh5jMeNFr5dVwojENPCCnsp7zvAs8-5XLeRVeOfGxYl-HFKMTXSXhnWjixXA8Zrld~BYOVdkd-kKBAOR5-7a72Wvc9Ga0mlve6Ra3WLL5VGi5~kDpNn7gQRzaizKmN6-vXIdEYcht0rbAU9VoNvTUQJ7bwDVLcnRyznMlaImmZb9aankX7STZUteOqnnzfgY3qbm6gJ0m08JZXAgQkO18PL8XsJ6~JQf02Ok--ipckOxHxJhxzxLYQf~CBlT9ErZ6GvHxSdZLgLwKZDavWJBCyKrACekG3yZD3QC2035Ofb-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Zyla",
+      "text": "Women Sandals",
+      "old_price": "40",
+      "new_price": "35",
+      "category": "Footwear"
+    },
+    {
+      "id": "7",
+      "image": "https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1693180800&Signature=GsBDGbm3k5gwj-2YuobMyG7AoZ-vLUIHGllEhhDvfNIl83DGstprjqDJ9nDqk0CLw6SHes84POeOVAQCDuZ3675MH2XXTv4lK0RWuGNB3J5Gv9tVp57DxCaoXYcifXGLu~4THAs5wEpOJzcgYXM6bWZDmaRcXlABcgMJn3K0XyYqCPfvA2xGA0UibWK6q41OGpF~tlDpepHL420pk9~3kab-9IR2m2jAb4rd-6s8ek6fE5UnIPajzRpw5SO8i4EzGr7UVR-y6qIngQZyBptj4xHgYYaFOMUgVWMjSJYfv6mbj73T~m8KKCGXqM17dF4A1gQbKeOj5v~o0xvkj8I9BA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "YK Disney",
+      "text": "Girls Pink Moana Printed Dress",
+      "old_price": "100",
+      "new_price": "80",
+      "category": "Kids"
+    },
+    {
+      "id": "8",
+      "image": "https://s3-alpha-sig.figma.com/img/49d4/6f9d/2d81d0e9c910a80bbff19ff8c4ecdab4?Expires=1693180800&Signature=Ui35AJelMw2yDYQ3QnDPkS8gpv5chneGZqiQXQJMH-fQC8D1wPUu0pfQ6Vn6jL5zcvlvKGsXydaJ55pT0ppOVodIj~x-1Eg7SIuFFEHxrNdL898bsGFXnRjt8l2R-2PFpdO8hSDXb6xNa2Mv8Iyh2MPk~fQtEz2rCXpG53tIwJ26aJV-a1IWv34WzNYFCOfRvVFs6lpOD79PqDzSmiSTqW3uSi97WWg8bcJbf2SPEFUe8quoSBI-RJBeSixxSubCXdDjfWtJwUqSsrBIdZojLk0G5Aiu5JRy4KH4vCsr-6-uUNZRxeYdTZ~RjvwzYnz4zOtuTm2e57CsDblSAY9lVQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Arrow",
+      "text": "Casual Blue Jeans",
+      "old_price": "60",
+      "new_price": "50",
+      "bestseller": true,
+      "category": "Men"
+    },
+    {
+      "id": "9",
+      "image": "https://s3-alpha-sig.figma.com/img/cc6e/e907/dd51b4589c1ea30518b48a0368de16fe?Expires=1693180800&Signature=NVQOixnvW93lnBB7BYkpSlkjwyndLyEo8cZa~q0Bzrb7BWcIAhC4Iv~URWanSTKPBJ3p5taoQrIZgIKle1lcJYKnMs8gzT2pNbcJRE2tbn5NWiCk8o4t5blKnb~YdJFbsSM10Qv8ervjdhrkzwSY~GEQyoN937QtfZJShm9croIuvaMGgvDrDkLsEw0q7WbU0~--uAwwS166xnKSsiLZxY--URJQxR59Fm92zGoE-JqEt9rJd0IdsQ5caO1VTPD5C1aBnySyv4ZmfTYh8h4K7WewQJQJq5v4egC~hZp9BegJ3MnPN~E6mT-pJD1w06dpaUI61RC7Bj-dZn49yeZE2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Trendyol",
+      "text": "Floral Embroidered Maxi Dress",
+      "old_price": "45",
+      "new_price": "35",
+      "category": "Women"
+    },
+    {
+      "id": "10",
+      "image": "https://s3-alpha-sig.figma.com/img/8cb1/8520/f667435f525e9929a2824cad05e2495f?Expires=1693180800&Signature=DKLheyjy8C1LcVeZdhfEe~-TMnzUOW3YYGkhhntgXcqoilwaUDy9gF6QL1VQ9guC9QQDua1phSpzwoYP2w4Hud4cIwgQwUChCO7z8Rhy5klnK6h9Pl0ZuzilbLGzjtM19F50haaR-45-~1a1y08uBZR~CdmjE7ylKmbTdMKtMaZJgjCATSmr9sZxsPIFS4yyljbnnMZnzhkVpU5m4U-dEz5fZdz6uOp2w-irNsO~JM2awuZbeqh0gqD2eYGRShGODcJdnxue-XeRzbG~Cg2ssoiu0dGzpV~5J7tNl9UAm2pJ1Gf-oPcSGTURQ6EyI~9DzrcqP~oeEvcE~DmXb-amwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Allen Solly",
+      "text": "Brown Leather Jacket",
+      "old_price": "70",
+      "new_price": "60",
+      "category": "Men"
+    },
+    {
+      "id": "11",
+      "image": "https://s3-alpha-sig.figma.com/img/5e83/925b/1a30786a109eec94cc8d81984e4bd9b1?Expires=1693180800&Signature=n80et6u7VnJcEGDyQUDrx0VYpC4DKxhJMK4xZSG7cJ2jeOxpsUrUwhv3quxQBbfOQZ6KveqRxCs7a4YPSg~54C~OIbTtVdT8ZPuc1gJZRVUN-vveKhc5by72Pf0rWa~NMJxNiFFCzHoboR3FTJ04GVMKuefM7pog7APS8JN2U-6MCxDEHVrEOOxbEra-ABHJ6AEIbdwADUFIRj7~ZBxGdpP5yRVTPlZ3ACABj583Gvp8JmjPwHIzTkaGIT4TuxRR~ONpO9B3Dzmdpz9SNCDZG-brtcJSQc0DH-okiswrsLdfENyJvZT5gmOdBQX851Rdr6yW7C8eYvi8ehaJty3Clw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "US Polo",
+      "text": "Casual Shoe for Men",
+      "old_price": "50",
+      "new_price": "40",
+      "bestseller": true,
+      "category": "Footwear"
+    },
+    {
+      "id": "12",
+      "image": "https://s3-alpha-sig.figma.com/img/943c/c0ca/cbc28be755daabf6cd2ee5d85018029a?Expires=1693180800&Signature=kiT5qGJ9pn3zTRFqH8vJKSEb7WTc8-Vfc9fCTMRpYGZlL7mM8gsGsZfQX8akqpeSFMKxdJkxzNmbaCJWGKLq7EaY7ltriUow4yk2AE-3bEY79sT7l5kZRqqyuh5lPsb5Z69bfRMrj27hQ48ijPxpFnN71u-I-tKDajhitG965YHQmLbFOncxyQEKcYWAQUnUdwhHRl14vCrGPNiffoYc9u5StJ31owF~ZpVBw9WAorS4zZrpOrv6uX5LlccKM4mcNd94u9VLRVpQPfQwWyaSft0EaQ135NGdjQZyNUwtL02zswm6hZIumOTbDnAMl64v4kH9HdeNlOtMUom7N8tDTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Gucci",
+      "text": "Leather Hand Purse",
+      "old_price": "60",
+      "new_price": "40",
+      "category": "Women"
+    },
+    {
+      "id": "13",
+      "image": "https://s3-alpha-sig.figma.com/img/4f9a/2e3b/8430fbebba65039e7c6624c9cd9eaf2e?Expires=1693180800&Signature=ARV1H~mVnVlaeWOL1oL5Qz7UhkRIryWN8uqZH~shqmM3ozNp4qynrOBn7E7tReTRwhzbWjNnSkFf7X-mkFqNNh5gILRNFuCJy8djfr9MTjIJMq9-EIwuHx4KhIUW7N0LBrSsQIhT18wtf1XF1lnWmsZFBY-A94ZsLGrA4ARpEGr40XBaj7JYmJp01-3~GTe864zA9nuEePtYlNPg5fRMvjbdRekC2k-ebZANaa7wiYLRVQaVvRuHBQplRBjlDtzUntT9evjKKh-2LNGrP9feR-zpD4MccN1ZLjglWZpXXHXlXISEg927SBS7I5WN5HyJ9Ur7l9JdiGVOijWZrZm0nA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "YK Disney",
+      "text": "Red Printed T-Shirt",
+      "old_price": "35",
+      "new_price": "30",
+      "category": "Kids"
+    },
+    {
+      "id": "14",
+      "image": "https://s3-alpha-sig.figma.com/img/8cca/fe73/0b55e70fbe9571a1da4230c9ee3df8a6?Expires=1693180800&Signature=iZzbvYtU7dfNy7yG~3zT2Cejfh1s7bJAr2yOmEfSplXNEokdqjmVVUKWrIdbxIRMddqKMP4y~00ZxQeVdMSLmCI9~CZJDi5q43iReJKiLRAGc~U9o4gzNnFeJuczB-7yv3wxZ-C8JR09sNEkCeUql-IMhzwuncS4LIp2oJNkIxMii1pPyOCN8OqpylqCBl5EVwV4S02176PWngNlCLklN~nh~B6uZ6eATCWoMZp4q3oOvUm3BsPCS85jASn~H8ipZs~zipkLJBqbJoxRzsTjTUSEgCbKiLUp56HgjRn5Ktz416ZUx9~ZP7TXbs81G4YGBWpuDKTraxFgOJuuBn72vw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Roadstar",
+      "text": "Printed Blazer for Men",
+      "old_price": "70",
+      "new_price": "60",
+      "bestseller": true,
+      "category": "Women"
+    },
+    {
+      "id": "15",
+      "image": "https://img.mensxp.com/media/content/2022/Dec/iStock-1280562095_63a051a70dbff.jpeg",
+      "title": "US Polo",
+      "text": "Tailored Cotton Casual Shirt",
+      "old_price": "45",
+      "new_price": "95",
+      "category": "Men"
+    },
+    {
+      "id": "16",
+      "image": "https://s3-alpha-sig.figma.com/img/5977/3776/b1382aaebb76ffab74213f0f325dfd6e?Expires=1693785600&Signature=RFC3t7RQFQapX9SC7XaNSx6fNDTBDhIliELjuvO~9cpu3bbbx~iPSkVr1Bk0dEJf2n8lLQXIGCcgoljXNcrVg83bD9UfXDZEcmlGzXR1s04k3YpiwQHqIlYDmKiLTpty1rh7zili5FeJLJFT7QmYDdqptFaWxxRkqJdPRHB8UrmPy4~GE3KI9CIDgJusk579U04s2BGoLkyGlKQmgeMsRncBfTYRDdugdq52d3TrT5vIS45hC4W~uy~RJFUUu6hR3ZD70wpSF9q5n~uOUCI~TV0k1DbIn96O92C1s-Iv6r7G~Je1nhu8arsuTwQU0kiZcAgs23zP~cR1nwJil4h2Uw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Flora",
+      "text": "Leather Hand Purse",
+      "old_price": "105",
+      "new_price": "75",
+      "category": "Women"
+    },
+    {
+      "id": "17",
+      "image": "https://media.wrangler.com/i/wrangler/Western-TinyTiles-WORodeo-S23",
+      "title": "Western",
+      "text": "Western Wear | Iconic Western-Inspired Apparel",
+      "old_price": "105",
+      "new_price": "85",
+      "category": "Western Wear"
+    },
+    {
+      "id": "18",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZA3-YWB-Cc6e9ub-8rNWoy9UEcV-hyEk83g&usqp=CAU",
+      "title": "Trendyol",
+      "text": "Floral Embroidered Maxi Dress",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Western Wear"
+    },
+    {
+      "id": "19",
+      "image": "https://cdn.shoplightspeed.com/shops/606185/files/52401446/580x400x2/rock-and-roll-cowgirl-rock-roll-ladies-graphic-tan.jpg",
+      "title": "Flora",
+      "text": "Brown Leather t-shirts",
+      "old_price": "45",
+      "new_price": "75",
+      "category": "Western Wear"
+    },
+    {
+      "id": "20",
+      "image": "https://img.faballey.com/images/Product/ISS00023Z/1.jpg",
+      "title": "Roadstar",
+      "text": "Leather dresses",
+      "old_price": "45",
+      "new_price": "35",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "21",
+      "image": "https://img.faballey.com/images/Product/ITN03660Z/1.jpg",
+      "title": "Roadstar",
+      "text": "Tailored Cotton Casual Dress",
+      "old_price": "155",
+      "new_price": "135",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "22",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/PrateikBabbar.jpg/220px-PrateikBabbar.jpg",
+      "title": "Roadstar",
+      "text": "Tailored Cotton Casual Dress",
+      "old_price": "125",
+      "new_price": "150",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "23",
+      "image": "data:image/jpeg;base64,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",
+      "title": "Roadstar",
+      "text": "Tailored Cotton Casual Dress",
+      "old_price": "125",
+      "new_price": "110",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "24",
+      "image": "https://5.imimg.com/data5/ANDROID/Default/2022/8/KK/WD/QH/32127998/prod-20220808-1410475823490100275466527-jpg.jpg",
+      "title": "Roadstar",
+      "text": "Tailored Cotton Casual Dress",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Kids"
+    },
+    {
+      "id": "25",
+      "image": "https://assets.manufactum.de/p/204/204351/204351_01.jpg/mens-shirt-tencel.jpg",
+      "title": "Trendyol",
+      "text": "Tailored Cotton Casual Shirt",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Men",
+      "related": true
+    },
+    {
+      "id": "26",
+      "image": "https://5.imimg.com/data5/PC/JR/MY-20619691/designer-men-shirt-500x500.jpg",
+      "title": "Roadstar",
+      "text": "Tailored Cotton Casual Shirt",
+      "old_price": "130",
+      "new_price": "110",
+      "category": "Men",
+      "related": true
+    },
+    {
+      "id": "27",
+      "image": "https://5.imimg.com/data5/BR/GE/MY-43691381/formal-shirts-for-men-dark-green-shirt-mens-supplier.jpg",
+      "title": "Roadstar",
+      "text": "Cottton Men Plain Formal Shirts",
+      "old_price": "75",
+      "new_price": "85",
+      "category": "Men",
+      "related": true
+    },
+    {
+      "id": "28",
+      "image": "https://5.imimg.com/data5/GG/PJ/MY-552852/men-fancy-formal-shirt.jpg",
+      "title": "Roadstar",
+      "text": "Cottton Men Plain Formal Shirts",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Men",
+      "related": true
+    },
+    {
+      "id": "29",
+      "image": "https://thursdayboots.com/cdn/shop/products/1024x1024-Men-Jacket-Roadster-BlackCoffee-102221-1.jpg?v=1635196923",
+      "title": "Roadstar",
+      "text": "Men's Leather Jackets",
+      "old_price": "85",
+      "new_price": "90",
+      "category": "Men"
+    },
+    {
+      "id": "30",
+      "image": "https://img.guess.com/image/upload/f_auto,q_auto:eco,fl_strip_profile,dpr_1.5,fl_advanced_resize,fl_progressive,w_392,c_scale/v1/NA/Style/ECOMM/W3GL15WF8P0-G1M5-ALT1",
+      "title": "Roadstar",
+      "text": "Women's coat and jackets",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Women"
+    },
+    {
+      "id": "31",
+      "image": "https://www.rei.com/media/0406d5ae-9d1d-482c-af72-6dedf2abdc48.jpg",
+      "title": "AVVA",
+      "text": "Women's Winter Jackets",
+      "old_price": "175",
+      "new_price": "140",
+      "category": "Women"
+    },
+    {
+      "id": "32",
+      "image": "https://contents.mediadecathlon.com/p1852748/k$1af38010d872dff62ab1bac0e2eebfcd/women-s-mountain-trekking-padded-jacket-trek-50-navy.jpg?format=auto&quality=40&f=800x800",
+      "title": "Roadstar",
+      "text": "Women's synthetic mountain trekking padded jacket ",
+      "old_price": "185",
+      "new_price": "200",
+      "category": "Women"
+    },
+    {
+      "id": "33",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7inVRMOPUX2hJckcX0A2XSH0-MHB2z57j9A&usqp=CAU",
+      "title": "Western",
+      "text": "Soft Denim Biker Jacket",
+      "old_price": "155",
+      "new_price": "140",
+      "category": "Women"
+    },
+    {
+      "id": "34",
+      "image": "https://5.imimg.com/data5/RT/CK/UK/SELLER-11787632/61sfxqz2xgl-ul1004--500x500.jpg",
+      "title": "AVVA",
+      "text": "Women's Net Semi-Stitched Lehenga Choli",
+      "old_price": "210",
+      "new_price": "240",
+      "category": "Women"
+    },
+    {
+      "id": "35",
+      "image": "https://5.imimg.com/data5/CI/DI/GY/SELLER-32493408/00.jpg",
+      "title": "Adidas",
+      "text": "Sport Fashion Men Sport Shoes",
+      "old_price": "115",
+      "new_price": "90",
+      "category": "Footwear"
+    },
+    {
+      "id": "36",
+      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/jvcf7clhvzyavyopsi9n/revolution-5-womens-road-running-shoes-hC41Vf.png",
+      "title": "Nike",
+      "text": "Women's Road Running Shoes",
+      "old_price": "120",
+      "new_price": "150",
+      "category": "Footwear"
+    },
+    {
+      "id": "37",
+      "image": "https://5.imimg.com/data5/ANDROID/Default/2020/9/BL/ER/TO/28448232/product-jpeg-500x500.jpg",
+      "title": "Nike",
+      "text": "Men Adidas Running Shoes",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Footwear"
+    },
+    {
+      "id": "38",
+      "image": "https://img.favpng.com/5/3/18/adidas-sports-shoes-football-boot-footwear-png-favpng-9Enkebs7t0cu0z4uk7rTWwXzF.jpg",
+      "title": "Adidas",
+      "text": "Adidas - Adidas Sports Shoes Football Boot",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Footwear"
+    },
+    {
+      "id": "39",
+      "image": "https://www.efootwear.eu/media/catalog/product/cache/image/650x650/0/0/0000207777187_01_mk.jpg",
+      "title": "Roadstar",
+      "text": "Adidas Runfalcon 2.0 Cloud White Core Black ",
+      "old_price": "140",
+      "new_price": "120",
+      "category": "Footwear"
+    },
+    {
+      "id": "40",
+      "image": "https://www.mumkins.in/cdn/shop/products/jeans-for-kids-bl061305-darkblue-1.jpg?v=1649146838",
+      "title": "Roadstar",
+      "text": "Denim Jeans For Boys",
+      "old_price": "85",
+      "new_price": "110",
+      "category": "Kids"
+    },
+    {
+      "id": "41",
+      "image": "https://liandli.in/cdn/shop/products/LICD103_2_800x.jpg?v=1678871167",
+      "title": "Trendyol",
+      "text": "lavender-and-purple-ombre-shaded-couture-gown-with-handcrafted-flowers",
+      "old_price": "145",
+      "new_price": "170",
+      "category": "Kids"
+    },
+    {
+      "id": "42",
+      "image": "https://5.imimg.com/data5/ANDROID/Default/2022/8/KK/WD/QH/32127998/prod-20220808-1410475823490100275466527-jpg.jpg",
+      "title": "Roadstar",
+      "text": "Tailored Cotton Casual Dress",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Kids"
+    },
+    {
+      "id": "43",
+      "image": "https://saradresses.com/cdn/shop/products/DSC03409_RBE10_15__46978.jpg?v=1681416773&width=1500",
+      "title": "Flora",
+      "text": "Girls Pink Moana Printed Dress",
+      "old_price": "75",
+      "new_price": "60",
+      "category": "Kids"
+    },
+    {
+      "id": "44",
+      "image": "https://tiimg.tistatic.com/fp/1/008/389/modern-polyester-kids-party-wear-three-piece-suit-set-for-boys-106.jpg",
+      "title": "Allen Solly",
+      "text": "Black And Grey Modern Polyester Kids Party Wear Three Piece Suit Set For Boys",
+      "old_price": "105",
+      "new_price": "90",
+      "category": "Kids"
+    },
+    {
+      "id": "45",
+      "image": "https://indiancouture.co.za/files/000324/gallery/00/01/19/00011919_00033927.jpg",
+      "title": "Arrow",
+      "text": "PINK NET WITH COTTON EMBROIDERY & THREAD-WORK FESTIVE-WEAR SEQUINS-WORK LEHENGA CHOLI",
+      "old_price": "150",
+      "new_price": "130",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "46",
+      "image": "https://i.pinimg.com/736x/7d/a1/50/7da150a6067aa206da292f4bdc54faf6.jpg",
+      "title": "Roadstar",
+      "text": "12 Unique And Trendy Festive Wear Outfits Under INR 25K",
+      "old_price": "100",
+      "new_price": "90",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "47",
+      "image": "https://imgmedia.lbb.in/media/2020/08/5f2d9b36141ce329cf8d253c_1596824374628.jpg",
+      "title": "Roadstar",
+      "text": "Festive and Ethnice WEAR",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "48",
+      "image": "data:image/jpeg;base64,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",
+      "title": "Roadstar",
+      "text": "Western Wear | Iconic Western Clothes Cowboy",
+      "old_price": "75",
+      "new_price": "90",
+      "category": "Western Wear"
+    },
+    {
+      "id": "49",
+      "image": "https://i.pinimg.com/736x/cf/02/87/cf02872e76623a7bce667a5c33207455.jpg",
+      "title": "Western",
+      "text": "Cowgirls Outfits for Women",
+      "old_price": "65",
+      "new_price": "90",
+      "category": "Western Wear"
+    },
+    {
+      "id": "50",
+      "image": "https://www.spurwesternwear.com/images/category/medium/140.jpg",
+      "title": "Western",
+      "text": "Old West Clothing | Spur Western Wear",
+      "old_price": "120",
+      "new_price": "95",
+      "category": "Western Wear"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "category": "Men",
+      "categoryimg": "https://s3-alpha-sig.figma.com/img/7b49/5588/d2d9e5946f18cdd68fb56df9d415b9fa?Expires=1693785600&Signature=hMmENpjg3F3QNkQ3UIb75OlVeVorf9lEjsX~SJ5VStIa-V~8mLq5PWxO4mBGp-Ml3Bu1DzQfgku-GL80PmDXOmKVQtgHhxnYJwS5ReFgzb-TxchwcnXbOnNL6dMQP6WNdnq6tQdjngIRLhHXmZL7P9B4TCAb619qcYIcUTJQbwgZTF1o9~CyYgwbYw05ykBGEJBe33JpgDOYztqwyoxUSNoZayYaBtjF3~c9cvYH-ZPyjsX~xWFXTcpA9~JT~koiFvLXDRgR~uGTfW9JiaTqM-EUSrYYNaEs6hUIzLPl6SwG2hgVFkHECH5~Qu4h8PSusaavN8vBKvvET8KeV5YBEA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "subcategories": [
+        "Casual Shirts",
+        "T-Shirts",
+        "Formal Shirts",
+        "Jackets",
+        "Blazers & Coats"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Indian & Festive Wear",
+      "categoryimg": "https://www.theknot.com/tk-media/images/7fb096f9-2b79-4927-a9ef-8b89589ccece~rs_768.h",
+      "subcategories": ["Kurtas & Kurta Sets", "Sherwanis"]
+    },
+    {
+      "id": 3,
+      "category": "Women",
+      "categoryimg": "https://s3-alpha-sig.figma.com/img/c575/87ba/8e2bdffd168b1471d44fcdd922be204a?Expires=1693785600&Signature=NSir7QlpJzsaIhc2rs0SD62zE8lc3iS3XbSBCQeF2fyi-oKfu-16hTbaQyjUhUFisZa1BBNuohhyFLFfx1hMNoYrpOZYhJatlRTHCtr33qmEIAuBwlQf1k2QT0U6Hgjmavw37RUxWBxLhsdnlIdghX4fEUuk7WhTy~GJJuFtsbdeLP4B2m2lnMgUV~snU642UN-luIMAN7k9Naa2epYq~MBsjvTFBG3K23Y3Iioi7obY563KO6GEsiH0q7QySIqX5qVFnW1JFIweRHX2UjpX4Wy2M6O954LEsMNC6FmsUIxRm9ikO5W7-8ThqhYEiNOHkO12OPDlFxoPAnJa0VO31g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "subcategories": [
+        "Ethnic Wear",
+        "Kurtas & Suits",
+        "Sarees",
+        "Lehenga Cholis",
+        "Jackets"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Western Wear",
+      "categoryimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkshXvH0fsHpwjbe6yJ4P4oT7F4YluczViXTkyglJfaYzMZJwgDSVVqgO5_kIvsoU5Eo8&usqp=CAU",
+      "subcategories": ["Dresses", "Jumpsuits"]
+    },
+    {
+      "id": 5,
+      "category": "Footwear",
+      "categoryimg": "https://static.businessworld.in/article/article_extra_large_image/1560859917_Yqz5H0_sneaker2_470.jpg",
+      "subcategories": [
+        "Flats",
+        "Casual Shoes",
+        "Heels",
+        "Boots",
+        "Sports Shoes & Floaters"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Product Features",
+      "categoryimg": "https://oldnavy.gap.com/Asset_Archive/ONWeb/content/0029/745/737/assets/230501_12-M5091_G_DP_Dresses.jpg",
+      "subcategories": ["360 Product Viewer", "Product with Video"]
+    },
+    {
+      "id": 7,
+      "category": "Kids",
+      "categoryimg": "https://s3-alpha-sig.figma.com/img/4376/227a/2d750daddf2d0cda07c210fe0bc7bbb1?Expires=1693785600&Signature=TSE3Hr3YYKY8y596YoicUeaO21f933gavzkGR6l~OYBDUTOtK78Xj-kK9Ad0iWw~zc65dDGGbAT8OUcCzCoEeP4meCnXGDZxnZpOotC6mhge7WljJN33k0Cvq~xAL7GlNwIeMRetAvY06A~CI9SymtqmPEj37K8KddFBNB1awZqTE~yXZStWQZCUctReJvtCceHhDC39ETEYGnWNF6dcAmkU~pY5X~kDb~5zwAYdgw7IlualrT3iQj0xW4Hf1r5NBPBDW7qwQwbiBgjQmODyLY2cINyTFz7kKbzH~PM2dFLrH6bUwYvNgBPtfQMjAskqWIUcygy2Nffi~UUCdyGAOA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "subcategories": [
+        "T-Shirts",
+        "Shirts",
+        "Jeans",
+        "Trousers",
+        "Innerwear & Thermal",
+        "Track Pants",
+        "Value Pack"
+      ]
+    }
+  ]
+}

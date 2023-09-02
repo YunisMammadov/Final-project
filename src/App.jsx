@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import Layout from "./components/Layout";
+import { connect } from "react-redux";
 
 const Login = lazy(() => import("./pages/registration/Login"));
 const Signup = lazy(() => import("./pages/registration/Signup"));
@@ -11,7 +12,27 @@ const Forgot_password = lazy(() =>
 );
 const Home = lazy(() => import("./pages/home/Home"));
 
-function App() {
+function App({ dispatch }) {
+  useEffect(() => {
+    fetch("http://localhost:1313/categories")
+      .then((a) => a.json())
+      .then((a) =>
+        dispatch({
+          type: "SET_CATEGORY",
+          payload: a,
+        })
+      )
+      .then(() => {
+        fetch("http://localhost:1313/products")
+          .then((a) => a.json())
+          .then((a) =>
+            dispatch({
+              type: "SET_PRODUCTS",
+              payload: [...a],
+            })
+          );
+      });
+  }, []);
   const routes = [
     {
       path: "/login",
@@ -34,33 +55,18 @@ function App() {
     <>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-
-          {/* <Route
-            path="/"
-            element={<Suspense fallback="Loading...">{<Home />}</Suspense>}
-          /> */}
-          {/* <Route
-            path="/"
-            element={
-              <Suspense fallback="Loading...">
-                <Home />
-              </Suspense>
-            }
-          /> */}
+          <Route path="/" element={<Suspense>{<Home />}</Suspense>} />
         </Route>
 
         {routes.map((a) => (
           <Route
             key={a.path}
             path={a.path}
-            element={
-              <Suspense fallback={<div>Loading...</div>}>{a.element}</Suspense>
-            }
+            element={<Suspense>{a.element}</Suspense>}
           />
         ))}
       </Routes>
     </>
   );
 }
-export default App;
+export default connect()(App);
