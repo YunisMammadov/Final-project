@@ -424,16 +424,25 @@
   width: 100%;
   height: 110px;
 }
+.feedback,
 .shop-category {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
+.feedback-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
 .shop-category-up {
   display: flex;
   justify-content: space-between;
 }
+.feedback-up p,
 .shop-category-up p {
   color: var(--dark-500, #131118);
   font-family: Jost;
@@ -445,11 +454,13 @@
 .shop-by-category {
   margin-top: 100px;
 }
+.feedback-arrow,
 .shop-category-arrow {
   display: flex;
   align-items: flex-start;
   gap: 20px;
 }
+.feedback-arrow-left,
 .shop-category-arrow-left {
   display: flex;
   width: 56px;
@@ -461,6 +472,7 @@
   border-radius: 10px;
   background: var(--gray-gray-10, rgba(164, 161, 170, 0.1));
 }
+.feedback-arrow-right,
 .shop-category-arrow-right {
   display: flex;
   width: 56px;
@@ -471,4 +483,118 @@
   gap: 10px;
   border-radius: 10px;
   background: var(--dark-500, #131118);
+}
+.feedback-down-card {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.feedback-down {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.feedback-down-cards {
+  border-radius: 10px;
+  padding: 30px;
+  background: var(--white-500, #fff);
+  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.02),
+    0px 10px 40px -4px rgba(16, 24, 40, 0.02);
+  width: 360px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+}
+.feedback-person {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 300px;
+  height: 48px;
+}
+.feedback-person img {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+.feedback-person-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.feedback-person-name h1 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.feedback-person-name h2 {
+  color: var(--gray-500, #a4a1aa);
+  font-family: Jost;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.instagram {
+  margin: 100px 0;
+}
+.insta {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.insta-text p {
+  color: var(--dark-500, #131118);
+  text-align: center;
+  font-family: Jost;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.insta-stories {
+  display: flex;
+  justify-content: space-between;
+}
+.insta-story {
+  width: 262px;
+  height: 262px;
+  position: relative;
+}
+.insta-story img {
+  width: 262px;
+  height: 262px;
+  object-fit: top;
+}
+.insta-story:hover .insta-icon {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+.insta-icon {
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: var(--white-500, #fff);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+.insta-icon svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
