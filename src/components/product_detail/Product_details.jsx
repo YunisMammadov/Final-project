@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Descriptions from "./Descriptions";
 import Additional from "./Additional";
+import Reviews from "./Reviews";
 function Product_details() {
   const [activeTab, setActiveTab] = useState("Descriptions");
   const handleTabClick = (tabName) => {
@@ -251,7 +252,7 @@ function Product_details() {
                   className={`product-down-button${
                     activeTab === "Descriptions" ? " active" : ""
                   }`}
-                  onClick={() => handleTabClick("Descriptions")}
+                  onClick={() => handleTabClick("Descriptions")} 
                 >
                   Descriptions
                 </button>
@@ -268,7 +269,7 @@ function Product_details() {
                   className={`product-down-button${
                     activeTab === "Additional" ? " active" : ""
                   }`}
-                  onClick={() => handleTabClick("Additional")}
+                  onClick={() => handleTabClick("Additional")} 
                 >
                   Additional
                 </button>
@@ -279,11 +280,29 @@ function Product_details() {
                   data-tab="Additional"
                 ></div>
               </div>
+
+              <div className="product-down-btn">
+                <button
+                  className={`product-down-button${
+                    activeTab === "Reviews" ? " active" : ""
+                  }`}
+                  onClick={() => handleTabClick("Reviews")} 
+                >
+                  Reviews
+                </button>
+                <div
+                  className={`product-down-rec${
+                    activeTab === "Reviews" ? " active" : ""
+                  }`}
+                  data-tab="Reviews"
+                ></div>
+              </div>
             </div>
 
             <div className="product-down-content">
               {activeTab === "Descriptions" && <Descriptions />}
               {activeTab === "Additional" && <Additional />}
+              {activeTab === "Reviews" && <Reviews />}
             </div>
             <div className="product-down-text-rectangle"></div>
           </div>

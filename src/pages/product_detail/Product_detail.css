@@ -385,3 +385,327 @@ body {
   font-weight: 700;
   line-height: normal;
 }
+
+.product-text-up {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.product-text-up-title p {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+
+.product-text-up-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.product-text-up-review {
+  width: 1140px;
+  height: 196px;
+  width: 100%;
+}
+.product-text-up-review-per {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 160px;
+  height: 50px;
+}
+.product-up-rev-per-img img {
+  width: 100%;
+  border-radius: 50px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  width: 50px;
+  height: 50px;
+}
+.product-text-up-review-txt h1 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.product-text-up-review-txt h2 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product-text-up-review-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-text-up-review-txt h3 {
+  color: var(--gray-500, #a4a1aa);
+  font-family: Jost;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product-text-up-review-txt span {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product-text-down {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  height: 545px;
+}
+.product-text-down-title p {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.product-review {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.prod-review-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.prod-review-stars {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.prod-review-star-rect {
+  width: 1px;
+  height: 20px;
+  background: var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+}
+.prod-review-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.prod-review-input-name {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  padding-top: 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+}
+.prod-review-input-name span {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.prod-review-input-name input {
+  display: flex;
+  width: 1200px;
+  height: 56px;
+  padding: 16px 16px 17px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid var(--dark-500, #131118);
+}
+.product-review button {
+  display: flex;
+  width: 139px;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--dark-500, #131118);
+  color: var(--white-500, #fff);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.related-products {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+.related-product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.related-product:hover .related-img {
+  background: var(--gray-gray-10, rgba(164, 161, 170, 0.1));
+}
+.related-products img {
+  padding: 30px;
+  width: 100%;
+  height: 330px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.related-img {
+  background: var(--gray-gray-5, rgba(164, 161, 170, 0.05));
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+.related-img:hover .related-common {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+.related-common {
+  visibility: hidden;
+  opacity: 0;
+}
+.related-icons {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.related-cart {
+  display: flex;
+  width: 222px;
+  height: 50px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--white-500, #fff);
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.related-icons button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: var(--white-500, #fff);
+}
+
+.related-price {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.related-price h3 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.related-price h4 {
+  position: relative;
+  color: var(--gray-500, #a4a1aa);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.related-price h4::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--gray-500, #a4a1aa);
+  transform: translateY(-50%);
+}
+
+.related {
+  margin: 100px;
+}
+.our_related {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.related-text {
+  width: 100%;
+  height: 60px;
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.related-txt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.related-txt h1 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.related-txt h2 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
