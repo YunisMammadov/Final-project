@@ -1,8 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { lazy, Suspense, useEffect } from "react";
-import Layout from "./components/Layout";
+import Layout from "./components/layout/Layout";
+import Layout1 from "./components/layout/Layout1";
 import { connect } from "react-redux";
+import My_profile from "./pages/my_profile/My_profile";
 import Product_listing from "./pages/product/Product_listing";
 import Product_detail from "./pages/product_detail/Product_detail";
 const Login = lazy(() => import("./pages/registration/Login"));
@@ -59,6 +61,11 @@ function App({ dispatch }) {
           <Route path="/" element={<Suspense>{<Home />}</Suspense>} />
           <Route path="/product" element={<Product_listing />} />
           <Route path="/product_detail" element={<Product_detail />} />
+        </Route>
+
+
+        <Route element={<Layout1 />}>
+          <Route path="/my_profile" element={<My_profile />} />
         </Route>
 
         {routes.map((a) => (

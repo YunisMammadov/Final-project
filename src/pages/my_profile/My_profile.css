@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+}
+.container {
+  width: 1200px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.my_prof {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  gap: 50px;
+}
+.profile-up {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+.profile-down {
+  display: flex;
+  gap: 50px;
+}
+.profile-up-left {
+  color: var(--Dark-500, #131118);
+  font-family: Jost;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 640px;
+}
+
+.profile-down-left {
+  height: 524px;
+  width: 300px;
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border: 1px solid var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+  background: var(--White-500, #fff);
+  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.02),
+    0px 10px 40px -4px rgba(16, 24, 40, 0.02);
+}
+
+.profile-left-up {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-left: 20px;
+}
+.profile-left-up-img img {
+  width: 51px;
+  height: 51px;
+  border-radius: 51px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  object-fit: cover;
+}
+.profile-left-up-info p {
+  color: var(--Dark-500, #131118);
+  font-family: Jost;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.profile-left-up-info h1 {
+  color: var(--Dark-500, #131118);
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.profile-left-rect {
+  width: 100%;
+  height: 1px;
+  background: var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+}
+.profile-left-bot {
+  width: 100%;
+}
+.product-bot-rect {
+  width: 100%;
+  height: 56px;
+}
+.active-tab {
+  background-color: #131118;
+}
+.active-tab .product-bot-rect-text span {
+  color: white;
+}
+.product-bot-rect-text {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+}
+.product-bot-rect-text span {
+  color: var(--Dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

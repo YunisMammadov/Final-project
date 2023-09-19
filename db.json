@@ -18,6 +18,7 @@
       "old_price": "55",
       "new_price": "50",
       "bestseller": true,
+      "wishlists": true , 
       "category": "Men"
     },
     {
@@ -38,6 +39,7 @@
       "old_price": "40",
       "new_price": "38",
       "bestseller": true,
+      "wishlists": true , 
       "category": "Men"
     },
     {
@@ -76,6 +78,7 @@
       "old_price": "60",
       "new_price": "50",
       "bestseller": true,
+      "wishlists": true , 
       "category": "Men"
     },
     {
@@ -94,6 +97,7 @@
       "text": "Brown Leather Jacket",
       "old_price": "70",
       "new_price": "60",
+      "wishlists": true , 
       "category": "Men"
     },
     {
@@ -141,6 +145,7 @@
       "text": "Tailored Cotton Casual Shirt",
       "old_price": "45",
       "new_price": "95",
+      "wishlists": true , 
       "category": "Men"
     },
     {
@@ -241,6 +246,7 @@
       "text": "Tailored Cotton Casual Shirt",
       "old_price": "130",
       "new_price": "110",
+      "wishlists": true , 
       "category": "Men",
       "related": true
     },
@@ -251,6 +257,7 @@
       "text": "Cottton Men Plain Formal Shirts",
       "old_price": "75",
       "new_price": "85",
+      "wishlists": true , 
       "category": "Men",
       "related": true
     },
@@ -261,6 +268,7 @@
       "text": "Cottton Men Plain Formal Shirts",
       "old_price": "75",
       "new_price": "90",
+      "wishlists": true , 
       "category": "Men",
       "related": true
     },
@@ -271,6 +279,7 @@
       "text": "Men's Leather Jackets",
       "old_price": "85",
       "new_price": "90",
+      "wishlists": true , 
       "category": "Men"
     },
     {
