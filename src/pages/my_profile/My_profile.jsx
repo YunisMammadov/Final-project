@@ -1,6 +1,8 @@
 import { useState } from "react";
 import My_orders from "../../components/my_profile/my_orders/My_orders";
 import Personal_info from "../../components/my_profile/personal_info/Personal_info";
+import My_wishlists from "../../components/my_profile/my_wishlists/My_wishlists";
+import Manage_address from "../../components/my_profile/manage_address/Manage_address";
 
 import "./My_profile.css";
 function My_profile() {
@@ -304,6 +306,8 @@ function My_profile() {
               </div>
               {activeTab === "Personal_Info" && <Personal_info />}
               {activeTab === "My_orders" && <My_orders />}
+              {activeTab === "My_wishlists" && <My_wishlists />}
+              {activeTab === "Manage_address" && <Manage_address />}
             </div>
           </div>
         </div>
