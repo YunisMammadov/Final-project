@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;1,900&display=swap");
+.profile-down-right {
+  width: 850px;
+}
+.profile-saved-cards {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.saved-btn {
+  display: flex;
+  width: 320px;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--Dark-500, #131118);
+  color: var(--White-500, #fff);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.saved-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.saved-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.saved-card-rect {
+  width: 828px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+}
+.saved-card-info {
+  display: flex;
+  gap: 16px;
+}
+.saved-card-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.saved-card-text h1 {
+  color: var(--Dark-500, #131118);
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.saved-card-text span {
+  color: var(--Dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.saved-del-btn {
+  display: flex;
+  width: 87px;
+  height: 40px;
+  border: none;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: rgba(255, 114, 98, 0.1);
+}
+.saved-del-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.saved-del-btn span {
+  color: #ff7262;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Jost;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}

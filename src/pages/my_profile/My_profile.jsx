@@ -3,6 +3,9 @@ import My_orders from "../../components/my_profile/my_orders/My_orders";
 import Personal_info from "../../components/my_profile/personal_info/Personal_info";
 import My_wishlists from "../../components/my_profile/my_wishlists/My_wishlists";
 import Manage_address from "../../components/my_profile/manage_address/Manage_address";
+import Saved_cards from "../../components/my_profile/saved_cards/Saved_cards";
+import Notifications from "../../components/my_profile/notifications/Notifications";
+import Settings from "../../components/my_profile/settings/Settings";
 
 import "./My_profile.css";
 function My_profile() {
@@ -308,6 +311,9 @@ function My_profile() {
               {activeTab === "My_orders" && <My_orders />}
               {activeTab === "My_wishlists" && <My_wishlists />}
               {activeTab === "Manage_address" && <Manage_address />}
+              {activeTab === "Saved_cards" && <Saved_cards />}
+              {activeTab === "Notifications" && <Notifications />}
+              {activeTab === "Settings" && <Settings />}
             </div>
           </div>
         </div>
