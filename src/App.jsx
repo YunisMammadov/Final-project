@@ -4,9 +4,11 @@ import { lazy, Suspense, useEffect } from "react";
 import Layout from "./components/layout/Layout";
 import Layout1 from "./components/layout/Layout1";
 import { connect } from "react-redux";
-import My_profile from "./pages/my_profile/My_profile";
 import Product_listing from "./pages/product/Product_listing";
 import Product_detail from "./pages/product_detail/Product_detail";
+import My_profile from "./pages/my_profile/My_profile";
+import Checkout from "./pages/payment_process/checkout/Checkout";
+import Payment_review from "./pages/payment_process/payment_review/Payment_review";
 const Login = lazy(() => import("./pages/registration/Login"));
 const Signup = lazy(() => import("./pages/registration/Signup"));
 const Enter_otp = lazy(() => import("./pages/registration/Enter_otp"));
@@ -63,9 +65,10 @@ function App({ dispatch }) {
           <Route path="/product_detail" element={<Product_detail />} />
         </Route>
 
-
         <Route element={<Layout1 />}>
           <Route path="/my_profile" element={<My_profile />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/payment_review" element={<Payment_review />} />
         </Route>
 
         {routes.map((a) => (

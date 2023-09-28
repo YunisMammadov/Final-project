@@ -16,6 +16,9 @@ function Shop_category({ category }) {
     sliderRef.current.slickNext();
   };
   var settings = {
+    autoplay: true, 
+    autoplaySpeed: 3000,
+    loop: true , 
     dots: false,
     infinite: true,
     speed: 500,

@@ -1,4 +1,3 @@
-
 import Slider from "react-slick";
 import { useRef } from "react";
 
@@ -13,6 +12,8 @@ function Feedbacks() {
     sliderRef.current.slickNext();
   };
   var settings = {
+    autoplay: true,
+    autoplaySpeed: 3000,
     dots: false,
     infinite: true,
     speed: 500,
