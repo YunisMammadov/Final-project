@@ -5,7 +5,32 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import { Link } from "react-router-dom";
 
-function Product_listing({ products, dispatch }) {
+function Product_listing({ products, dispatch, filteredCategories }) {
+  const [priceFilter, setPriceFilter] = useState([0, 1000]);
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const sliderStyles = {
+    trackStyle: {
+      backgroundColor: "#575859",
+      height: "2px",
+    },
+    handleStyle: {
+      backgroundColor: "#000000",
+      width: "13px",
+      height: "13px",
+      boxShadow: "none",
+      borderColor: "#000000",
+    },
+  };
+  const handleSliderChange = (values) => {
+    setPriceFilter(values);
+    const filtered = products.filter((product) => {
+      const price = parseFloat(product.new_price);
+      return price >= values[0] && price <= values[1];
+    });
+
+    setFilteredProducts(filtered);
+  };
+
   const activeSvg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -44,14 +69,16 @@ function Product_listing({ products, dispatch }) {
 
   const handleAccordionClick = (index) => {
     if (activeAccordions.includes(index)) {
-      setActiveAccordions(activeAccordions.filter(item => item !== index));
+      setActiveAccordions(activeAccordions.filter((item) => item !== index));
     } else {
       setActiveAccordions([...activeAccordions, index]);
     }
   };
 
   const itemsPerPage = 9;
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(
+    parseInt(localStorage.getItem("currentPage")) || 1
+  );
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -60,6 +87,15 @@ function Product_listing({ products, dispatch }) {
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
+  useEffect(() => {
+    localStorage.setItem('currentPage', currentPage.toString());
+  }, [currentPage]);
+  const mergedProducts = [
+    ...filteredCategories,
+    ...filteredProducts,
+    ...currentProducts,
+  ];
+
   return (
     <section className="products">
       <div className="container">
@@ -98,23 +134,22 @@ function Product_listing({ products, dispatch }) {
                   onClick={() => handleAccordionClick(1)}
                 >
                   <p>Filter by Price</p>
-                  {activeAccordions === 1 ? activeSvg : inactiveSVG}
+                  {activeAccordions.includes(1) ? activeSvg : inactiveSVG}
                 </div>
 
                 <div className="product-category-body accordion-content">
                   <div className="product-text1 ">
                     <div className="product-checkbox">
-                      <input type="checkbox" />
-                      <p
+                      <input
+                        type="checkbox"
                         onClick={(e) => {
                           dispatch({
-                            type: "PRODUCT_FILTER",
+                            type: "CATEGORY_FILTER",
                             payload: e.target.textContent,
                           });
                         }}
-                      >
-                        Men
-                      </p>
+                      />
+                      <p>Men</p>
                     </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -134,16 +169,7 @@ function Product_listing({ products, dispatch }) {
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <input type="checkbox" />
-                      <p
-                        onClick={(e) => {
-                          dispatch({
-                            type: "PRODUCT_FILTER",
-                            payload: e.target.textContent,
-                          });
-                        }}
-                      >
-                        Women
-                      </p>
+                      <p>Women</p>
                     </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -163,16 +189,7 @@ function Product_listing({ products, dispatch }) {
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <input type="checkbox" />
-                      <p
-                        onClick={(e) => {
-                          dispatch({
-                            type: "PRODUCT_FILTER",
-                            payload: e.target.textContent,
-                          });
-                        }}
-                      >
-                        Kids
-                      </p>
+                      <p>Kids</p>
                     </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -228,33 +245,27 @@ function Product_listing({ products, dispatch }) {
                   onClick={() => handleAccordionClick(2)}
                 >
                   <p>Filter by Price</p>
-                  {activeAccordions === 2 ? activeSvg : inactiveSVG}
+                  {activeAccordions.includes(2) ? activeSvg : inactiveSVG}
                 </div>
                 <div className="product-category-body accordion-content">
                   <div className="product-txt">
-                    <p>Price: $0 - $2000</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="244"
-                      height="14"
-                      viewBox="0 0 244 14"
-                      fill="none"
-                    >
-                      <circle cx="7" cy="7" r="7" fill="#131118" />
-                      <rect
-                        x="10"
-                        y="6"
-                        width="230"
-                        height="2"
-                        fill="#131118"
-                      />
-                      <circle cx="237" cy="7" r="7" fill="#131118" />
-                    </svg>
+                    <p>
+                      Price: ${priceFilter[0]} - ${priceFilter[1]}
+                    </p>
+                    <Slider
+                      range
+                      min={0}
+                      max={1000}
+                      step={50}
+                      value={priceFilter}
+                      onChange={handleSliderChange}
+                      trackStyle={sliderStyles.trackStyle}
+                      handleStyle={sliderStyles.handleStyle}
+                    />
                   </div>
                 </div>
                 <div className="product-rectangle"></div>
               </div>
-
               <div
                 className={`product-category accordion-item ${
                   activeAccordions.includes(3) ? "active" : ""
@@ -267,7 +278,7 @@ function Product_listing({ products, dispatch }) {
                   onClick={() => handleAccordionClick(3)}
                 >
                   <p>Filter by Color</p>
-                  {activeAccordions  === 3 ? activeSvg : inactiveSVG}
+                  {activeAccordions.includes(3) ? activeSvg : inactiveSVG}
                 </div>
                 <div className="product-category-body accordion-content">
                   <div className="product-text1 ">
@@ -315,7 +326,6 @@ function Product_listing({ products, dispatch }) {
                 </div>
                 <div className="product-rectangle"></div>
               </div>
-
               <div
                 className={`product-category accordion-item ${
                   activeAccordions.includes(4) ? "active" : ""
@@ -325,10 +335,10 @@ function Product_listing({ products, dispatch }) {
                   className={`product-category-head ${
                     activeAccordions.includes(4) ? "active" : ""
                   }`}
-                  onClick={() => handleAccordionClick()}
+                  onClick={() => handleAccordionClick(4)}
                 >
                   <p>Filter by Size</p>
-                  {activeAccordions === 4 ? activeSvg : inactiveSVG}
+                  {activeAccordions.includes(4) ? activeSvg : inactiveSVG}
                 </div>
                 <div className="product-category-body accordion-content">
                   <div className="product-text1 ">
@@ -447,7 +457,7 @@ function Product_listing({ products, dispatch }) {
                 </div>
               </div>
               <div className="products-listing">
-                {currentProducts.slice(0, 9).map((a) => {
+                {mergedProducts.slice(0, 9).map((a) => {
                   return (
                     <div key={a.id} className="product-listing">
                       <Link
@@ -458,10 +468,7 @@ function Product_listing({ products, dispatch }) {
                         <img src={a.image} alt="" />
                         <div className="product-listing-common">
                           <div className="product-listing-carts">
-                            <button
-                              // onClick={() => addToCart(a)}
-                              className="product-listing-cart"
-                            >
+                            <button className="product-listing-cart">
                               Add to Cart
                             </button>
                           </div>

@@ -4,11 +4,21 @@ import { lazy, Suspense, useEffect } from "react";
 import Layout from "./components/layout/Layout";
 import Layout1 from "./components/layout/Layout1";
 import { connect } from "react-redux";
-import Product_listing from "./pages/product/Product_listing";
-import Product_detail from "./pages/product_detail/Product_detail";
-import My_profile from "./pages/my_profile/My_profile";
-import Checkout from "./pages/payment_process/checkout/Checkout";
-import Payment_review from "./pages/payment_process/payment_review/Payment_review";
+const Product_listing = lazy(() => import("./pages/product/Product_listing"));
+const Product_detail = lazy(() =>
+  import("./pages/product_detail/Product_detail")
+);
+const My_profile = lazy(() => import("./pages/my_profile/My_profile"));
+const Checkout = lazy(() =>
+  import("./pages/payment_process/checkout/Checkout")
+);
+const ShippingAddress = lazy(() =>
+  import("./pages/payment_process/shippingAddress/ShippingAddress")
+);
+
+const Payment_review = lazy(() =>
+  import("./pages/payment_process/payment_review/Payment_review")
+);
 const Login = lazy(() => import("./pages/registration/Login"));
 const Signup = lazy(() => import("./pages/registration/Signup"));
 const Enter_otp = lazy(() => import("./pages/registration/Enter_otp"));
@@ -59,16 +69,67 @@ function App({ dispatch }) {
   return (
     <>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Suspense>{<Home />}</Suspense>} />
-          <Route path="/product" element={<Product_listing />} />
-          <Route path="/product_detail" element={<Product_detail />} />
+      <Route element={<Layout />}>
+          <Route
+            path="/"
+            element={
+              <Suspense>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/product"
+            element={
+              <Suspense>
+                <Product_listing />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/:id/product_detail"
+            element={
+              <Suspense>
+                <Product_detail />
+              </Suspense>
+            }
+          />
         </Route>
 
         <Route element={<Layout1 />}>
-          <Route path="/my_profile" element={<My_profile />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/payment_review" element={<Payment_review />} />
+          <Route
+            path="/my_profile"
+            element={
+              <Suspense>
+                <My_profile />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <Suspense>
+                <Checkout />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/shippingaddress"
+            element={
+              <Suspense>
+                <ShippingAddress />
+              </Suspense>
+            }
+          />
+          
+          <Route
+            path="/payment_review"
+            element={
+              <Suspense>
+                <Payment_review />
+              </Suspense>
+            }
+          />
         </Route>
 
         {routes.map((a) => (

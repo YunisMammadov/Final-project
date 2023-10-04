@@ -12,8 +12,8 @@ function Feedbacks() {
     sliderRef.current.slickNext();
   };
   var settings = {
-    autoplay: true,
-    autoplaySpeed: 3000,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     dots: false,
     infinite: true,
     speed: 500,
@@ -26,12 +26,10 @@ function Feedbacks() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
-          dots: false,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 850,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -39,7 +37,7 @@ function Feedbacks() {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 620,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -156,7 +154,6 @@ function Feedbacks() {
                 <p>
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum.
                 </p>
                 <div className="feedback-person">
                   <img
@@ -164,7 +161,7 @@ function Feedbacks() {
                     alt=""
                   />
                   <div className="feedback-person-name">
-                    <h1>Mauro Emanuel Icardi</h1>
+                    <h1>Mauro Icardi</h1>
                     <h2>Football player</h2>
                   </div>
                 </div>
@@ -237,7 +234,6 @@ function Feedbacks() {
                 <p>
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum.
                 </p>
                 <div className="feedback-person">
                   <img
@@ -318,7 +314,6 @@ function Feedbacks() {
                 <p>
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum.
                 </p>
                 <div className="feedback-person">
                   <img
@@ -399,7 +394,6 @@ function Feedbacks() {
                 <p>
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum.
                 </p>
                 <div className="feedback-person">
                   <img
@@ -480,7 +474,6 @@ function Feedbacks() {
                 <p>
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum.
                 </p>
                 <div className="feedback-person">
                   <img
@@ -561,7 +554,6 @@ function Feedbacks() {
                 <p>
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum.
                 </p>
                 <div className="feedback-person">
                   <img

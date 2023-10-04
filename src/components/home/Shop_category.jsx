@@ -16,9 +16,9 @@ function Shop_category({ category }) {
     sliderRef.current.slickNext();
   };
   var settings = {
-    autoplay: true, 
-    autoplaySpeed: 3000,
-    loop: true , 
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    loop: true,
     dots: false,
     infinite: true,
     speed: 500,
@@ -27,7 +27,7 @@ function Shop_category({ category }) {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1274,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -36,7 +36,7 @@ function Shop_category({ category }) {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 820,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -44,7 +44,7 @@ function Shop_category({ category }) {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 620,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

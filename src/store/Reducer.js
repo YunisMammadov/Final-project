@@ -1,7 +1,7 @@
 const init = {
     products: [],
     category: [],
-    filteredProducts: [],
+    filteredCategories: [],
   };
   export default function Reducer(state = init, action) {
     switch (action.type) {
@@ -9,10 +9,10 @@ const init = {
         return { ...state, products: action.payload, filteredProducts: action.payload };
       case "SET_CATEGORY":
         return { ...state, category: action.payload };
-      case "PRODUCT_FILTER":
-        let newArr = [];
-        newArr = state.products.filter((x) => x.category === action.payload)
-        return { ...state, filteredProducts: newArr };
+        case "CATEGORY_FILTER":
+          let newArr = [];
+          newArr = state.products.filter((x) => x.category_id === action.payload);
+          return { ...state, filteredCategories: newArr };
       default:
         return state;
     }
