@@ -15,7 +15,9 @@ const Checkout = lazy(() =>
 const ShippingAddress = lazy(() =>
   import("./pages/payment_process/shippingAddress/ShippingAddress")
 );
-
+const Payment_method = lazy(() =>
+  import("./pages/payment_process/payment_method/Payment_method")
+);
 const Payment_review = lazy(() =>
   import("./pages/payment_process/payment_review/Payment_review")
 );
@@ -69,7 +71,7 @@ function App({ dispatch }) {
   return (
     <>
       <Routes>
-      <Route element={<Layout />}>
+        <Route element={<Layout />}>
           <Route
             path="/"
             element={
@@ -121,7 +123,14 @@ function App({ dispatch }) {
               </Suspense>
             }
           />
-          
+          <Route
+            path="/payment_method"
+            element={
+              <Suspense>
+                <Payment_method />
+              </Suspense>
+            }
+          />
           <Route
             path="/payment_review"
             element={

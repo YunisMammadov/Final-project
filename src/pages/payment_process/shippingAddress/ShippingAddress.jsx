@@ -213,7 +213,7 @@ function ShippingAddress() {
                   </div>
                 </div>
                 <button className="delivery-btn">
-                  <NavLink >Delivery Here</NavLink>
+                  <NavLink to="/payment_method">Delivery Here</NavLink>
                 </button>
                 <div className="delivery-big-rect"></div>
               </div>
