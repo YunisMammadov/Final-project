@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { connect } from "react-redux";
 import Descriptions from "./Descriptions";
 import Additional from "./Additional";
 import Reviews from "./Reviews";
+import AddToCard from "./Index";
 function Product_details() {
+  const { id } = useParams();
+  const [productDetail, setProductDetail] = useState({});
+  useEffect(() => {
+    fetch(`http://localhost:1313/products/${id}`)
+      .then((a) => a.json())
+      .then((a) => setProductDetail(a));
+  }, [id]);
+
   const [activeTab, setActiveTab] = useState("Descriptions");
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
@@ -46,48 +57,32 @@ function Product_details() {
                 />
               </svg>
             </span>
-            <p>Women Textured Handheld Bag</p>
+            <p>{productDetail.text}</p>
           </div>
           <div className="product-detail-center">
             <div className="product-center-left">
               <div className="product-cen-big-rec">
-                <img
-                  src="https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1693785600&Signature=XAEFyESGOAsGtJbtizX~BUCS2Hqmcz5UKXeiwaUUOiq7BhjFrimycfDG3AbTCiEYyNCXqyMeSegvPB~bb-MHxwiZSVuCYpK18HTBYyb19axwyqMJ1JFn0JX3NQIKjXnurWmf5CIFinL5YemuiD~YKYOp3jlW1buoTXRwQHCMl4G~YqURn3uPvmkIRrQ7R23-aeXL2obyKOSwl0hUIYKtoKwdv30ebIr3BEQoTFyBn3OlMQAM~j9lcoCEdPxbgEdcMvxZBdsytdIHd9F13C-ebJ6suD-L6SL1p4vWJY3qmXuXulh283gndUilHYCM4WJcfBCZPrFnJuwCkgrls6e~BA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                  alt=""
-                />
+                <img src={productDetail.image} alt="" />
               </div>
-
               <div className="product-cen-lit-recs">
                 <div className="product-cen-lit-rec">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1693785600&Signature=XAEFyESGOAsGtJbtizX~BUCS2Hqmcz5UKXeiwaUUOiq7BhjFrimycfDG3AbTCiEYyNCXqyMeSegvPB~bb-MHxwiZSVuCYpK18HTBYyb19axwyqMJ1JFn0JX3NQIKjXnurWmf5CIFinL5YemuiD~YKYOp3jlW1buoTXRwQHCMl4G~YqURn3uPvmkIRrQ7R23-aeXL2obyKOSwl0hUIYKtoKwdv30ebIr3BEQoTFyBn3OlMQAM~j9lcoCEdPxbgEdcMvxZBdsytdIHd9F13C-ebJ6suD-L6SL1p4vWJY3qmXuXulh283gndUilHYCM4WJcfBCZPrFnJuwCkgrls6e~BA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    alt=""
-                  />
+                  <img src={productDetail.image} alt="" />
                 </div>
                 <div className="product-cen-lit-rec">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1693785600&Signature=XAEFyESGOAsGtJbtizX~BUCS2Hqmcz5UKXeiwaUUOiq7BhjFrimycfDG3AbTCiEYyNCXqyMeSegvPB~bb-MHxwiZSVuCYpK18HTBYyb19axwyqMJ1JFn0JX3NQIKjXnurWmf5CIFinL5YemuiD~YKYOp3jlW1buoTXRwQHCMl4G~YqURn3uPvmkIRrQ7R23-aeXL2obyKOSwl0hUIYKtoKwdv30ebIr3BEQoTFyBn3OlMQAM~j9lcoCEdPxbgEdcMvxZBdsytdIHd9F13C-ebJ6suD-L6SL1p4vWJY3qmXuXulh283gndUilHYCM4WJcfBCZPrFnJuwCkgrls6e~BA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    alt=""
-                  />
+                  <img src={productDetail.image} alt="" />
                 </div>
                 <div className="product-cen-lit-rec">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1693785600&Signature=XAEFyESGOAsGtJbtizX~BUCS2Hqmcz5UKXeiwaUUOiq7BhjFrimycfDG3AbTCiEYyNCXqyMeSegvPB~bb-MHxwiZSVuCYpK18HTBYyb19axwyqMJ1JFn0JX3NQIKjXnurWmf5CIFinL5YemuiD~YKYOp3jlW1buoTXRwQHCMl4G~YqURn3uPvmkIRrQ7R23-aeXL2obyKOSwl0hUIYKtoKwdv30ebIr3BEQoTFyBn3OlMQAM~j9lcoCEdPxbgEdcMvxZBdsytdIHd9F13C-ebJ6suD-L6SL1p4vWJY3qmXuXulh283gndUilHYCM4WJcfBCZPrFnJuwCkgrls6e~BA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    alt=""
-                  />
+                  <img src={productDetail.image} alt="" />
                 </div>
                 <div className="product-cen-lit-rec">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1693785600&Signature=XAEFyESGOAsGtJbtizX~BUCS2Hqmcz5UKXeiwaUUOiq7BhjFrimycfDG3AbTCiEYyNCXqyMeSegvPB~bb-MHxwiZSVuCYpK18HTBYyb19axwyqMJ1JFn0JX3NQIKjXnurWmf5CIFinL5YemuiD~YKYOp3jlW1buoTXRwQHCMl4G~YqURn3uPvmkIRrQ7R23-aeXL2obyKOSwl0hUIYKtoKwdv30ebIr3BEQoTFyBn3OlMQAM~j9lcoCEdPxbgEdcMvxZBdsytdIHd9F13C-ebJ6suD-L6SL1p4vWJY3qmXuXulh283gndUilHYCM4WJcfBCZPrFnJuwCkgrls6e~BA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    alt=""
-                  />
+                  <img src={productDetail.image} alt="" />
                 </div>
               </div>
             </div>
             <div className="product-center-right">
               <div className="product-right-text">
-                <p>YK Disney</p>
-                <span>Girls Pink Moana Printed Dress</span>
+                <p>{productDetail.title}</p>
+                <span>{productDetail.text}</span>
               </div>
               <div className="product-right-stars">
                 <div className="product-right-star">
@@ -155,8 +150,12 @@ function Product_details() {
                 <div className="product-right-rewievs">5.0 (121 Reviews)</div>
               </div>
               <div className="product-right-price">
-                <div className="product-right-newprice">$80.00</div>
-                <div className="product-right-oldprice">$100.00</div>
+                <div className="product-right-newprice">
+                  {productDetail.new_price}
+                </div>
+                <div className="product-right-oldprice">
+                  {productDetail.old_price}
+                </div>
               </div>
               <div className="product-right-txt">
                 <p>
@@ -188,60 +187,7 @@ function Product_details() {
                 </div>
               </div>
               <div className="product-add-cart">
-                <div className="product-dec-inc">
-                  <div className="product-dec">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="2"
-                      viewBox="0 0 14 2"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M13.75 1C13.75 1.41421 13.4142 1.75 13 1.75L1 1.75C0.585786 1.75 0.25 1.41421 0.25 1C0.25 0.585786 0.585786 0.25 1 0.25L13 0.25C13.4142 0.25 13.75 0.585786 13.75 1Z"
-                        fill="#131118"
-                      />
-                    </svg>
-                  </div>
-                  <div className="product-cart-count">
-                    <p>1</p>
-                  </div>
-                  <div className="product-inc">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M7.75 1C7.75 0.585786 7.41421 0.25 7 0.25C6.58579 0.25 6.25 0.585786 6.25 1V6.25H1C0.585786 6.25 0.25 6.58579 0.25 7C0.25 7.41421 0.585786 7.75 1 7.75H6.25V13C6.25 13.4142 6.58579 13.75 7 13.75C7.41421 13.75 7.75 13.4142 7.75 13V7.75H13C13.4142 7.75 13.75 7.41421 13.75 7C13.75 6.58579 13.4142 6.25 13 6.25H7.75V1Z"
-                        fill="#131118"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <button>Add to Cart</button>
-                <div className="product-add-heart">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12.765 4.70229L12 5.52422L11.235 4.70229C9.12233 2.43257 5.69709 2.43257 3.58447 4.70229C1.47184 6.972 1.47184 10.6519 3.58447 12.9217L10.4699 20.3191C11.315 21.227 12.685 21.227 13.5301 20.3191L20.4155 12.9217C22.5282 10.6519 22.5282 6.972 20.4155 4.70229C18.3029 2.43257 14.8777 2.43257 12.765 4.70229Z"
-                      stroke="#131118"
-                      stroke-width="1.5"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
+                <AddToCard product={productDetail} />
               </div>
             </div>
           </div>
@@ -252,7 +198,7 @@ function Product_details() {
                   className={`product-down-button${
                     activeTab === "Descriptions" ? " active" : ""
                   }`}
-                  onClick={() => handleTabClick("Descriptions")} 
+                  onClick={() => handleTabClick("Descriptions")}
                 >
                   Descriptions
                 </button>
@@ -269,7 +215,7 @@ function Product_details() {
                   className={`product-down-button${
                     activeTab === "Additional" ? " active" : ""
                   }`}
-                  onClick={() => handleTabClick("Additional")} 
+                  onClick={() => handleTabClick("Additional")}
                 >
                   Additional
                 </button>
@@ -286,7 +232,7 @@ function Product_details() {
                   className={`product-down-button${
                     activeTab === "Reviews" ? " active" : ""
                   }`}
-                  onClick={() => handleTabClick("Reviews")} 
+                  onClick={() => handleTabClick("Reviews")}
                 >
                   Reviews
                 </button>
@@ -311,4 +257,6 @@ function Product_details() {
     </section>
   );
 }
-export default Product_details;
+
+const t = (a) => a;
+export default connect(t)(Product_details);

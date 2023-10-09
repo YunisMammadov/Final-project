@@ -27,19 +27,13 @@ body {
   height: 1px;
   background: var(--gray-gray-10, rgba(5, 4, 8, 0.1));
 }
-.product-up {
-  display: flex;
-  gap: 10px;
-  color: var(--Dark-500, #131118);
-  font-family: Jost;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 .product-down {
   display: flex;
   justify-content: space-between;
+}
+.product-up{
+  display: flex;
+  gap: 10px;
 }
 .product-left {
   width: 244px;
