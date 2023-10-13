@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Manage_address.css";
 import Address_modal from "./Address_modal";
 function Manage_address() {
-
   const [open, setOpen] = useState(false);
   const handleAddNewAddressClick = () => {
     setOpen(true);

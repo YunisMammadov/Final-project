@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;1,900&display=swap");
-
 .home {
   position: relative;
   height: 884px;
@@ -106,117 +104,9 @@
   font-weight: 400;
   line-height: normal;
 }
-.deals {
-  margin: 150px 0;
-}
-.deals-month {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.deals-month-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 50px;
-}
-.deals-month-txt {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-}
-.deals-month-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-.deals-month-info p {
-  color: var(--dark-500, #131118);
-  font-family: Jost;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.deals-month-info span {
-  text-align: justify;
-  color: var(--dark-500, #131118);
-  font-family: Jost;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.deals-month-text button {
-  border: none;
-}
-.deals-month-text button a {
-  display: flex;
-  width: 196px;
-  height: 56px;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 13px;
-  border-radius: 10px;
-  background: var(--dark-500, #131118);
-  color: var(--white-500, #fff);
-  font-family: Jost;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.deals-month-img {
-  width: 553px;
-  height: 499px;
-}
-.deals-month-img img {
-  width: 100%;
-}
-.counters {
-  width: 404px;
-  height: 86px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-.counter {
-  width: 86px;
-  height: 86px;
-  border-radius: 10px;
-  border: 1px solid var(--gray-gray-20, rgba(164, 161, 170, 0.2));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.counter__inner span {
-  color: var(--dark-500, #131118);
-  text-align: center;
-  font-family: Jost;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.counter__inner p {
-  color: var(--dark-500, #131118);
-  text-align: center;
-  font-family: Jost;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
 .our_bestseller-products {
-  width: 1200px;
+  width: 100%;
   display: grid;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   text-align: center;
@@ -233,7 +123,7 @@
 .our_bestseller-products img {
   padding: 30px;
   width: 100%;
-  height: 100%;
+  height: 330px;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -241,7 +131,7 @@
   background: var(--gray-gray-5, rgba(164, 161, 170, 0.05));
   position: relative;
   height: 400px;
-  width: 262px;
+  width: 100%;
 }
 .our_bestseller-img:hover .our_bestseller-common {
   visibility: visible;
@@ -272,8 +162,8 @@
   border-radius: 10px;
   background: var(--white-500, #fff);
   position: absolute;
-  bottom: 20px;
-  left: 30px;
+  bottom: 30px;
+  left: 20px;
   color: var(--dark-500, #131118);
   font-family: Jost;
   font-size: 16px;
@@ -368,69 +258,117 @@
   font-weight: 400;
   line-height: normal;
 }
-
-.shop-category-down {
+.deals {
+  margin: 150px 0;
+}
+.deals-month {
   display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.deals-month-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+}
+.deals-month-txt {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   gap: 30px;
 }
-.shop-category-card {
-  width: 255px;
-  height: 360px;
-  background: var(--dark-dark-5, rgba(154, 136, 172, 0.05));
-  position: relative;
-  overflow: hidden;
-}
-.shop-category-card button {
+.deals-month-info {
   display: flex;
-  width: 222px;
-  height: 50px;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background: var(--white-500, #fff);
+}
+.deals-month-info p {
   color: var(--dark-500, #131118);
-  border: none;
+  font-family: Jost;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deals-month-info span {
+  color: var(--dark-500, #131118);
   font-family: Jost;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  position: absolute;
-  bottom: 20px;
-  left: 25px;
 }
-.shop-category-img {
-  position: absolute;
-  width: 221px;
-  height: 347px;
-  bottom: 0;
-  right: 0;
+.deals-month-text button {
+  border: none;
 }
-.shop-category-img img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.shop-category-text {
-  color: var(--dark-dark-5, rgba(19, 17, 24, 0.1));
+.deals-month-text button a {
+  display: flex;
+  width: 196px;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  border-radius: 10px;
+  background: var(--dark-500, #131118);
+  color: var(--white-500, #fff);
   font-family: Jost;
-  font-size: 74.359px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deals-month-img {
+  width: 553px;
+  height: 499px;
+}
+.deals-month-img img {
+  width: 100%;
+}
+.counters {
+  width: 404px;
+  height: 86px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.counter {
+  width: 86px;
+  height: 86px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.counter__inner span {
+  color: var(--dark-500, #131118);
+  text-align: center;
+  font-family: Jost;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  position: absolute;
-  left: 50px;
-  top: -20px;
-  width: 100%;
-  height: 110px;
 }
+.counter__inner p {
+  color: var(--dark-500, #131118);
+  text-align: center;
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.feedbacks {
+  background: var(--gray-gray-5, rgba(164, 161, 170, 0.05));
+}
+
 .feedback,
 .shop-category {
- margin: 50px 0;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -443,7 +381,6 @@
   width: 100%;
 }
 .shop-category-up {
-  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -459,8 +396,12 @@
 .shop-by-category {
   margin-top: 100px;
 }
-.feedback-arrow,
 .shop-category-arrow {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.feedback-arrow {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -493,20 +434,6 @@
   display: flex;
   gap: 20px;
   flex-direction: column;
-  border-radius: 10px;
-  background: var(--White-500, #fff);
-  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.02),
-    0px 10px 40px -4px rgba(16, 24, 40, 0.02);
-    height: 264px;
-}
-.feedback-down-card p {
-  text-align: justify;
-  color: var(--Dark-500, #131118);
-  font-family: Jost;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .feedback-down {
   display: flex;
@@ -585,12 +512,26 @@
   height: 262px;
   position: relative;
 }
+.insta-story1{
+  width: 262px;
+  height: 262px;
+  position: relative;
+}
 .insta-story img {
   width: 262px;
   height: 262px;
-  object-fit: top;
+  object-fit: cover;
+}
+.insta-story1 img {
+  width: 262px;
+  height: 262px;
 }
 .insta-story:hover .insta-icon {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+.insta-story1:hover .insta-icon {
   opacity: 1;
   visibility: visible;
   transition: 0.5s;
@@ -616,4 +557,124 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.features-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.features-card {
+  width: 250px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.our-features {
+  margin-bottom: 100px;
+}
+.features-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.features-text h1 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.features-text h2 {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.shop-category-down {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+.shop-category-card {
+  width: 275px;
+  height: 360px;
+  background: var(--dark-dark-5, rgba(154, 136, 172, 0.05));
+  position: relative;
+  overflow: hidden;
+}
+.shop-category-card button {
+  display: flex;
+  width: 222px;
+  height: 50px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--white-500, #fff);
+  color: var(--dark-500, #131118);
+  border: none;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+}
+.shop-category-img {
+  position: absolute;
+  width: 221px;
+  height: 347px;
+  bottom: 0;
+  right: 0;
+}
+.shop-category-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.shop-category-text {
+  color: var(--dark-dark-5, rgba(19, 17, 24, 0.1));
+  font-family: Jost;
+  font-size: 74.359px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  left: 50px;
+  top: -20px;
+  width: 100%;
+  height: 110px;
+}
+
+.product-up {
+  display: inline-flex;
+  align-items: center;
+}
+.product-up p {
+  color: var(--dark-500, #131118);
+  font-family: Jost;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product-up svg {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  padding: 5.208px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
