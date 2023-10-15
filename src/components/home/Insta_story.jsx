@@ -130,7 +130,7 @@ function Insta_Story() {
                   </a>
                 </div>
               </div>
-              <div className="insta-story">
+              <div className="insta-story1">
                 <img
                   src="https://s3-alpha-sig.figma.com/img/94a0/2ec1/3eb64253a37783737da749b6c8615b03?Expires=1693180800&Signature=C1LHhwfeZ25hpJpwegWqgblaKTblHkLPFruMycNTXrO4Lqtj9L79qHrQ8sZubJF7bICdylYlu~NjOtdofS6uTGAXGvxyyZ6urvYIb1ecDcSHX~rKc8Iw1~zjVw66Le6PRalfaZNlSgRDBS4rhmiQASpTZpFE3-h-Mzb3QxewxsaabYTvGc0tXyfwTxGvIwktTe189EILzWGY0yzgiT5-8U97T9qOjgpCM5b~y6khZ0GvVKnUnNMQQJT4CvJ~yelQ~sR7JI76fu6oQ5uVTTqotkrqZ2RLkErrUjWKt3TXWu80Q5GZzydg3n921T9tZNzbmTQE3dne9hyzENhQNhz5jA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                   alt=""

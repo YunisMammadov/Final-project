@@ -10,7 +10,7 @@ import Insta_Story from "../../components/home/Insta_story";
 function Home() {
   return (
     <>
-      {/* <Home_banner /> */}
+      <Home_banner />
       <Shop_category />
       <Our_bestseller />
       <Deals_month />

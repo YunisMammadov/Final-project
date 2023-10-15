@@ -1,6 +1,5 @@
 .home {
   position: relative;
-  height: 884px;
   flex-shrink: 0;
   margin: 0 30px;
   background: var(--dark-dark-5, rgba(19, 17, 24, 0.05));
@@ -9,10 +8,9 @@
 .bestseller {
   position: absolute;
   bottom: -50px;
-  left: 150px;
   color: var(--white-500, #fff);
   font-family: Jost;
-  font-size: 241.379px;
+  font-size: 217px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -20,6 +18,7 @@
   z-index: 0;
 }
 .home-banner {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -40,13 +39,13 @@
 }
 .home-rec {
   border: 24px solid var(--white-500, #fff);
-  width: 510px;
+  width: 90%;
   height: 724px;
   margin: 100px 26px;
 }
 .home-rectangle1 {
   border: 24px solid var(--white-500, #fff);
-  width: 510px;
+  width: 90%;
   height: 362px;
   margin: 100px 26px;
   position: absolute;
@@ -55,12 +54,14 @@
 }
 
 .home-img {
-  width: 990;
   position: absolute;
   top: 0;
+  height: 100%;
 }
 .home-img img {
+  object-fit: contain;
   width: 100%;
+  height: 100%;
 }
 .home-banner-info-text p {
   color: var(--dark-500, #131118);
@@ -258,9 +259,6 @@
   font-weight: 400;
   line-height: normal;
 }
-.deals {
-  margin: 150px 0;
-}
 .deals-month {
   display: flex;
   align-items: center;
@@ -293,6 +291,7 @@
   line-height: normal;
 }
 .deals-month-info span {
+  text-align: justify;
   color: var(--dark-500, #131118);
   font-family: Jost;
   font-size: 16px;
@@ -366,9 +365,13 @@
   background: var(--gray-gray-5, rgba(164, 161, 170, 0.05));
 }
 
-.feedback,
+.feedback {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 .shop-category {
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -512,7 +515,7 @@
   height: 262px;
   position: relative;
 }
-.insta-story1{
+.insta-story1 {
   width: 262px;
   height: 262px;
   position: relative;
@@ -558,44 +561,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.features-cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.features-card {
-  width: 250px;
-  height: 110px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-}
-.our-features {
-  margin-bottom: 100px;
-}
-.features-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-}
-.features-text h1 {
-  color: var(--dark-500, #131118);
-  font-family: Jost;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.features-text h2 {
-  color: var(--dark-500, #131118);
-  font-family: Jost;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+
 .shop-category-down {
   display: flex;
   align-items: flex-start;

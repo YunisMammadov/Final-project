@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import "./Footer.css"
+import "./Footer.css";
+import "./Footer_resp.css";
 function Footer() {
   return (
     <footer>
@@ -100,9 +101,9 @@ function Footer() {
               <div className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
+                  width="36"
                   height="24"
-                  viewBox="0 0 24 24"
+                  viewBox="36 24"
                   fill="none"
                 >
                   <circle
@@ -123,6 +124,7 @@ function Footer() {
             </div>
             <ul>
               Information
+              <li></li>
               <li>
                 <NavLink>My Account</NavLink>
               </li>
@@ -141,6 +143,8 @@ function Footer() {
             </ul>
             <ul>
               Service
+              <li></li>
+
               <li>
                 <a href="#">About us</a>
               </li>
@@ -213,7 +217,7 @@ function Footer() {
               </button>
             </div>
           </div>
-          <hr />
+          <div className="footer-rect"></div>
 
           <div className="footer-down">
             <div className="footer-down-icon">

@@ -1,607 +1,487 @@
-@media only screen and (max-width: 1240px) {
-    .insta-stories {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-    .insta-story {
-      width: 330px;
-      height: 330px;
-    }
-    .insta-story img {
-      width: 330px;
-      height: 330px;
-    }
-    .insta-story1 {
-      width: 330px;
-      height: 330px;
-    }
-    .insta-story1 img {
-      width: 330px;
-      height: 330px;
-    }
-    .insta-icon {
-      width: 70px;
-      height: 70px;
-    }
-    .insta-icon a svg {
-      width: 30px;
-      height: 30px;
-    }
+@media only screen and (max-width: 620px) {
+  .shop-category-up {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
   }
-  @media only screen and (max-width: 768px) {
-    .insta-stories {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 50px;
-    }
+  .shop-category-up p {
+    font-size: 25px;
   }
-  @media only screen and (max-width: 922px) {
-    .insta-stories {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 50px;
-    }
-    .insta-story {
-      width: 700px;
-    }
-    .insta-story img {
-      width: 700px;
-    }
-    .insta-story1 {
-      width: 700px;
-    }
-    .insta-story1 img {
-      width: 700px;
-    }
+  .shop-category-arrow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-  @media only screen and (max-width: 480px) {
-    .insta-story {
-      width: 250px;
-      height: 250px;
-      margin: 0 auto;
-    }
-    .insta-story img {
-      width: 250px;
-      height: 250px;
-    }
-    .insta-story1 {
-      width: 250px;
-      height: 250px;
-      margin: 0 auto;
-    }
-    .insta-story1 img {
-      width: 250px;
-      height: 250px;
-    }
-    .insta-icon {
-      width: 50px;
-      height: 50px;
-    }
-    .insta-icon a svg {
-      width: 25px;
-      height: 25px;
-    }
+  .shop-category-arrow-left {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
   }
-  
-  @media only screen and (max-width: 620px) {
-    .feedback-up p {
-      width: 300px;
-      font-size: 40px;
-    }
-    .feddback-stars {
-      text-align: center;
-    }
-    .feedback-down-card p {
-      font-size: 18px;
-    }
-    .feedback-person {
-      height: 60px;
-      width: 250px;
-      margin: 0 auto;
-    }
-    .feedback-person img {
-      width: 60px;
-      height: 60px;
-    }
-    .feedback-person-name h1 {
-      font-size: 20px;
-      width: 100%;
-    }
-    .feedback-person-name h2 {
-      font-size: 16px;
-    }
+  .shop-category-arrow-right {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
   }
-  @media only screen and (max-width: 620px) {
-    .feedback-up {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      gap: 10px;
-    }
-    .feedback-person {
-      height: 60px;
-      width: 250px;
-      margin: 0 auto;
-    }
-    .feedback-up p {
-      font-size: 22px;
-    }
-    .feedback-down-cards {
-      text-align: justify;
-      padding: 20px;
-    }
-    .feedback-arrow-left {
-      width: 40px;
-      height: 40px;
-      padding: 15px;
-    }
-    .feedback-arrow-right {
-      width: 40px;
-      height: 40px;
-      padding: 15px;
-    }
+  .feddback-stars {
+    text-align: center;
   }
-  @media only screen and (max-width: 1070px) {
-    .feedback-down-card {
-      display: flex;
-      gap: 10px;
-    }
-    .feedback {
-      display: flex;
-      gap: 20px;
-    }
+  .feedback-down-card p {
+    font-size: 18px;
   }
-  @media only screen and (max-width: 1036px) {
-    .deals-month {
-      display: flex;
-      flex-direction: column;
-    }
-    .deals-month-text {
-      width: 55%;
-    }
-    .deals-month-info p {
-      font-size: 38px;
-    }
+  .feedback-person {
+    height: 60px;
+    width: 250px;
+    margin: 0 auto;
   }
-  
-  @media only screen and (max-width: 768px) {
-    .deals-month-image {
-      width: 400px;
-      height: 400px;
-    }
-    .deals-month-image img {
-      width: 100%;
-      height: 100%;
-    }
-    .deals-month-text {
-      width: 410px;
-    }
-    .deals-month-info p {
-      font-size: 50px;
-    }
-    .deals-month-text button a {
-      width: 400px;
-    }
+  .feedback-person img {
+    width: 60px;
+    height: 60px;
   }
-  @media only screen and (max-width: 480px) {
-    .deals-month-image {
-      width: 250px;
-      height: 250px;
-    }
-    .deals-month-image img {
-      width: 100%;
-      height: 100%;
-    }
-    .deals-month-text,
-    .deals-month-txt,
-    .deals-month-text button a {
-      width: 250px;
-    }
-    .counters {
-      width: 250px;
-      display: grid;
-      gap: 20px;
-      grid-template-columns: 1fr 1fr;
-    }
-    .counter {
-      width: 110px;
-      height: 110px;
-    }
-    .deals-month-info p {
-      font-size: 30px;
-      font-weight: 500;
-    }
+  .feedback-person-name h1 {
+    font-size: 20px;
+    width: 100%;
   }
-  @media only screen and (max-width: 768px) {
-    .our_bestseller-text {
-      margin-bottom: 30px;
-    }
-    .our-bestseller-txt h1 {
-      font-size: 28px;
-    }
-    .our-bestseller-txt h2 {
-      font-size: 20px;
-    }
-    .price {
-      display: flex;
-      gap: 20px;
-    }
-    .price h3,
-    .price h4 {
-      font-size: 30px;
-    }
+  .feedback-person-name h2 {
+    font-size: 16px;
   }
-  @media only screen and (max-width: 600px) {
-    .our_bestseller-text p {
-      font-size: 70px;
-    }
-    .our_bestseller-products {
-      display: grid;
-      gap: 50px;
-      grid-template-columns: 1fr 1fr;
-    }
-    .our_bestseller-product {
-      margin: 0 auto;
-      width: 400px;
-    }
-    .our_bestseller-img {
-      width: 400px;
-    }
-  
-    .our-bestseller-txt h1 {
-      font-size: 40px;
-    }
-    .our-bestseller-txt h2 {
-      font-size: 28px;
-    }
-    .price {
-      display: flex;
-      gap: 30px;
-    }
-    .price h3,
-    .price h4 {
-      font-size: 50px;
-    }
+  .feedback-up {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
-  @media only screen and (max-width: 376px) {
-    .our_bestseller-products {
-      display: grid;
-      gap: 50px;
-      grid-template-columns: 1fr;
-    }
-    .our_bestseller-product {
-      width: 320px;
-      height: 300px;
-    }
-  
-    .our_bestseller-img {
-      width: 300px;
-    }
-    .our_bestseller-img img {
-      width: 100%;
-    }
-    .our_bestseller-text p {
-      font-size: 80px;
-    }
-    .our_bestseller-text {
-      margin-bottom: 50px;
-    }
-    .our_bestseller-img {
-      width: 500px;
-    }
-    .our_bestseller-img {
-      width: 100%;
-    }
-    .our-bestseller-txt h1 {
-      font-size: 53px;
-    }
-    .our-bestseller-txt h2 {
-      font-size: 36px;
-    }
-    .price {
-      display: flex;
-      gap: 50px;
-    }
-    .price h3,
-    .price h4 {
-      font-size: 50px;
-    }
+  .feedback-up p {
+    font-size: 22px;
   }
-  
-  @media only screen and (max-width: 620px) {
-    .shop-category-up {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      text-align: center;
-    }
-    .shop-category-up p {
-      font-size: 25px;
-    }
-    .shop-category-arrow {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .shop-category-arrow-left {
-      width: 40px;
-      height: 40px;
-      padding: 15px;
-    }
-    .shop-category-arrow-right {
-      width: 40px;
-      height: 40px;
-      padding: 15px;
-    }
+  .feedback-down-cards {
+    text-align: justify;
+    padding: 20px;
   }
-  
-  /* ----------------------- */
-  @media only screen and (max-width: 1100px) {
-    .features-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      width: 1055px;
-    }
-    .features-card {
-      width: 330px;
-      height: 150px;
-    }
-    .features-text {
-      width: 330px;
-    }
-    .features-text h1 {
-      color: var(--dark-500, #131118);
-      font-family: Jost;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-    .features-text h2 {
-      width: 100%;
-      color: var(--dark-500, #131118);
-      font-family: Jost;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
+  .feedback-arrow-left {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
   }
-  @media only screen and (max-width: 768px) {
-    .features-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 100px;
-    }
-    .features-card {
-      width: 450px;
-    }
-    .features-text h1 {
-      color: var(--dark-500, #131118);
-      font-family: Jost;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-    .features-text h2 {
-      width: 100%;
-      color: var(--dark-500, #131118);
-      font-family: Jost;
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
+  .feedback-arrow-right {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
   }
-  @media only screen and (max-width: 550px) {
-    .features-cards {
-      display: grid;
-      grid-template-columns: 1fr;
-      width: 300px;
-      margin: 0 auto;
-    }
-    .features-card {
-      width: 300px;
-    }
-    .features-text h1 {
-      color: var(--dark-500, #131118);
-      font-family: Jost;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-    .features-text h2 {
-      width: 100%;
-      color: var(--dark-500, #131118);
-      font-family: Jost;
-      font-size: 22px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
+}
+
+@media only screen and (max-width: 1070px) {
+  .feedback-down-card {
+    display: flex;
+    gap: 10px;
   }
-  @media only screen and (max-width: 1024px) {
-    .our_bestseller-product:nth-child(7),
-    .our_bestseller-product:nth-child(8) {
-      display: none;
-    }
-    .our_bestseller-products {
-      display: grid;
-      width: 100%;
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .our_bestseller-img {
-      height: 300px;
-    }
-    .our_bestseller-img img {
-      padding: 15px;
-      height: 100%;
-    }
-    .deals-month {
-      margin: 0 auto;
-    }
-    .deals-month-text span {
-      text-align: justify;
-    }
-    .counters {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
-    .insta-story {
-      width: 410px;
-      height: 410px;
-      margin: 0 auto;
-    }
-    .insta-story img {
-      width: 410px;
-      height: 410px;
-    }
-    .insta-story1 {
-      width: 410px;
-      height: 410px;
-      margin: 0 auto;
-    }
-    .insta-story1 img {
-      width: 410px;
-      height: 410px;
-    }
-    .insta-icon {
-      width: 70px;
-      height: 70px;
-    }
-    .insta-icon a svg {
-      width: 30px;
-      height: 30px;
-    }
+  .feedback {
+    display: flex;
+    gap: 20px;
   }
-  @media only screen and (max-width: 768px) {
-    .our-bestseller-cart {
-      width: 87%;
-    }
-    .insta-story:nth-child(4) {
-      display: none;
-    }
-    .our_bestseller-products {
-      display: grid;
-      width: 100%;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .our-bestseller-txt h1 {
-      font-size: 20px;
-    }
-    .our-bestseller-txt h2 {
-      font-size: 15px;
-    }
-    .price h3,
-    .price h4 {
-      font-size: 18px;
-    }
+}
+@media only screen and (max-width: 1036px) {
+  .deals-month {
+    display: flex;
+    flex-direction: column;
   }
-  @media only screen and (max-width: 600px) {
-    .our_bestseller-icons {
-      display: none;
-    }
-    .our-bestseller-cart {
-      width: 87%;
-    }
-    .our_bestseller-products {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 50px;
-    }
-    .our_bestseller-product {
-      width: 200px;
-      /* height: 50px; */
-    }
-    .our_bestseller-img {
-      height: 200px;
-      width: 200px;
-      margin: 0 auto;
-    }
-    .our_bestseller-img img {
-      height: 100%;
-      width: 100%;
-      padding: 15px;
-    }
-    .shop-category-up p,
-    .deals-month-info p,
-    .our_bestseller-text p {
-      font-size: 40px;
-    }
-    .feedback-up p {
-      font-size: 40px;
-      width: 100%;
-    }
+  .deals-month-text {
+    width: 55%;
   }
-  @media only screen and (max-width: 475px) {
-    .our_bestseller-product:nth-child(6),
-    .our_bestseller-product:nth-child(5) {
-      display: none;
-    }
-    .our_best {
-      width: 100%;
-      margin: 0 auto;
-    }
-    .our_bestseller-products {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    .our_bestseller-product {
-      width: 80%;
-      height: 350px;
-    }
-    .our_bestseller-img {
-      width: 100%;
-      height: 250px;
-    }
-    .our_bestseller-img img {
-      width: 100%;
-      height: 250px;
-    }
+  .deals-month-info p {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .price {
+    display: flex;
+    gap: 20px;
+  }
+  .deals-month-image {
+    width: 400px;
+    height: 400px;
+  }
+  .deals-month-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .deals-month-text {
+    width: 410px;
+  }
+  .deals-month-info p {
+    font-size: 40px;
+  }
+  .deals-month-text button a {
+    width: 400px;
+  }
+  .our-bestseller-cart {
+    width: 80%;
+  }
+  .our-bestseller-txt h1 {
+    font-size: 20px;
+  }
+  .our-bestseller-txt h2 {
+    font-size: 15px;
+  }
+  .price h3,
+  .price h4 {
+    font-size: 18px;
+  }
+  .insta-stories {
+    display: flex;
+    justify-content: space-between;
+  }
+  .insta-story {
+    width: 200px;
+    height: 200px;
+  }
+
+  .insta-story1 {
+    display: none;
+  }
+ 
+}
+@media only screen and (max-width: 480px) {
+  .deals-month-image {
+    width: 250px;
+    height: 250px;
+  }
+  .deals-month-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .deals-month-text,
+  .deals-month-txt,
+  .deals-month-text button a {
+    width: 250px;
+  }
+  .counters {
+    width: 250px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .counter {
+    width: 110px;
+    height: 110px;
+  }
+  .deals-month-info p {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .our_bestseller-product:nth-child(6),
+  .our_bestseller-product:nth-child(5) {
+    display: none;
+  }
+  .our_best {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .our_bestseller-products {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .our_bestseller-product {
+    width: 80%;
+    height: 350px;
+  }
+  .our_bestseller-img {
+    width: 100%;
+    height: 250px;
+  }
+  .our_bestseller-img img {
+    width: 100%;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .our_bestseller-products {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr;
+  }
+  .our_bestseller-product {
+    width: 320px;
+    height: 300px;
+  }
+
+  .our_bestseller-img {
+    width: 300px;
+  }
+  .our_bestseller-img img {
+    width: 100%;
+  }
+  .our_bestseller-text p {
+    font-size: 80px;
+  }
+  .our_bestseller-text {
+    margin-bottom: 50px;
+  }
+  .our_bestseller-img {
+    width: 500px;
+  }
+  .our_bestseller-img {
+    width: 100%;
+  }
+  .price {
+    display: flex;
+    gap: 50px;
+  }
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .our_bestseller-product:nth-child(7),
+  .our_bestseller-product:nth-child(8) {
+    display: none;
+  }
+  .our_bestseller-products {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .our_bestseller-img {
+    height: 300px;
+  }
+  .our_bestseller-img img {
+    padding: 15px;
+    height: 100%;
+  }
+  .deals-month {
+    margin: 0 auto;
+  }
+  .deals-month-text span {
+    text-align: justify;
+  }
+  .counters {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .price {
+    display: flex;
+    gap: 30px;
+  }
+  .our_bestseller-icons {
+    display: none;
+  }
+  .our-bestseller-cart {
+    width: 80%;
+  }
+  .our_bestseller-products {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .our_bestseller-product {
+    margin: 0 auto;
+    width: 200px;
+  }
+  .our_bestseller-img {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .our_bestseller-img img {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+  }
+  .shop-category-up p,
+  .deals-month-info p,
+  .our_bestseller-text p {
+    font-size: 30px;
+  }
+  .feedback-up p {
+    font-size: 40px;
+    width: 100%;
+  }
+  .home-banner-info {
+    margin: 0 auto;
+    width: 250px;
+  }
+  .home-rectangle {
+    margin: 0 auto;
+    width: 250px;
+    height: 500px;
+  }
+  .home-banner-info-text p {
+    font-size: 20px;
+  }
+  .home-banner-info-text h1 {
+    font-size: 25px;
+  }
+  .home-banner-info-text h2 {
+    font-size: 15px;
+  }
+  .home-banner-info button {
+    width: 100%;
+  }
+  .home-img {
+    position: absolute;
+    top: -30px;
+    left: 6px;
+  }
+  .home-rec {
+    height: 250px;
+    border-bottom: none;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    margin: 3px 0;
+  }
+  .home-rectangle1 {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    bottom: 115px;
+    margin: 3px 0;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .counter {
+    height: 110px;
+  }
+  .deals-month-info p {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .home-img {
+    width: 100%;
+    position: absolute;
+    right: -10px;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .bestseller {
+    display: none;
+  }
+  .home-img {
+    position: absolute;
+    right: -20px;
+    top: -30px;
+  }
+  .home-rec {
+    height: 524px;
+  }
+  .home-rectangle1 {
+    height: 362px;
+    position: absolute;
+    bottom: 55px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .home-rectangle {
+    height: 800px;
+  }
+  .home-img {
+    position: absolute;
+    right: -20px;
+  }
+  .home-rec {
+    height: 424px;
+  }
+  .home-rectangle1 {
+    height: 362px;
+    position: absolute;
+    bottom: 75px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .home-banner-info {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+  }
+  .home-rectangle {
+    margin: 0 auto;
+    height: 500px;
+  }
+  .home-img {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+  .home-rec {
+    height: 262px;
+    border-bottom: none;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    margin: 3px 0;
+  }
+  .home-rectangle1 {
+    height: 262px;
+    width: 100%;
+    position: absolute;
+    bottom: 35px;
+    margin: 3px 0;
+  }
+  .home-banner-info-text p {
+    font-size: 30px;
+  }
+  .home-banner-info-text h1 {
+    font-size: 35px;
+  }
+  .home-banner-info-text h2 {
+    font-size: 18px;
+  }
+  .home-banner-info button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .insta-story {
+    width: 180px;
+    height: 180px;
+  }
+  .insta-story img {
+    width: 100%;
+    height: 100%;
+  }
+  .insta-story1 {
+    width: 180px;
+    height: 180px;
+  }
+  .insta-story1 img {
+    width: 100%;
+    height: 100%;
   }
   
-  @media only screen and (max-width: 426px) {
-    .counter {
-      height: 110px;
-    }
-    .insta-story {
-      width: 250px;
-      height: 250px;
-      margin: 0 auto;
-    }
-    .insta-story img {
-      width: 250px;
-      height: 250px;
-    }
-    .insta-story1 {
-      width: 250px;
-      height: 250px;
-      margin: 0 auto;
-    }
-    .insta-story1 img {
-      width: 250px;
-      height: 250px;
-    }
-    .insta-icon {
-      width: 40px;
-      height: 40px;
-    }
-    .insta-icon a svg {
-      width: 20px;
-      height: 20px;
-    }
-    .deals-month-info p {
-      font-size: 25px;
-    }
+}
+@media only screen and (max-width: 630px) {
+  .insta-stories {
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .insta-story {
+    width: 350px;
+    height: 350px;
   }
   
+}
+
+@media only screen and (max-width: 425px) {
+  .insta-story{
+    width: 200px;
+    height: 200px;
+  }
+}

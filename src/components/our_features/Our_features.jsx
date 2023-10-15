@@ -1,4 +1,5 @@
 import "./Our_features.css"
+import "./Our_features_resp.css"
 function Our_features() {
     return (
       <section className="our-features">

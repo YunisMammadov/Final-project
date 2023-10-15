@@ -9,8 +9,8 @@ function Layout() {
     <>
       {/* <Header /> */}
       <Outlet />
-      {/* <Our_features /> */}
-      {/* <Footer /> */}
+      <Our_features />
+      <Footer />
     </>
   );
 }

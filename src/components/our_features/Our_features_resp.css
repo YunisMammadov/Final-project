@@ -1,85 +1,88 @@
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 768px) {
   .features-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    width: 1055px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .features-card:nth-child(4) {
+    display: none;
   }
   .features-card {
-    width: 330px;
+    width: 170px;
     height: 150px;
   }
-  .features-text {
-    width: 330px;
+}
+@media only screen and (max-width: 1100px) {
+  .features-card {
+    width: 170px;
+    height: 150px;
   }
   .features-text h1 {
+    color: var(--dark-500, #131118);
+    font-family: Jost;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .features-text h2 {
+    color: var(--dark-500, #131118);
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .features-cards {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr;
+  }
+
+  .features-card {
+    margin: 0 auto;
+    width: 310px;
+  }
+  .features-text h1 {
+    color: var(--dark-500, #131118);
+    font-family: Jost;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .features-text h2 {
     color: var(--dark-500, #131118);
     font-family: Jost;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  .features-text h2 {
-    width: 100%;
-    color: var(--dark-500, #131118);
-    font-family: Jost;
-    font-size: 20px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
   }
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 425px) {
   .features-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
+    gap: 10px;
   }
-  .features-card {
-    width: 450px;
+  .features-card{
+    width: 190px;
+    height: 190px;
   }
   .features-text h1 {
-    color: var(--dark-500, #131118);
-    font-family: Jost;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  .features-text h2 {
-    width: 100%;
-    color: var(--dark-500, #131118);
-    font-family: Jost;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-}
-@media only screen and (max-width: 550px) {
-  .features-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 300px;
-    margin: 0 auto;
-  }
-  .features-card {
-    width: 300px;
-  }
-  .features-text h1 {
-    color: var(--dark-500, #131118);
-    font-family: Jost;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  .features-text h2 {
-    width: 100%;
     color: var(--dark-500, #131118);
     font-family: Jost;
     font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .features-text h2 {
+    color: var(--dark-500, #131118);
+    font-family: Jost;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
