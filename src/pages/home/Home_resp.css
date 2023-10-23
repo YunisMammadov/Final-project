@@ -142,7 +142,6 @@
   .insta-story1 {
     display: none;
   }
- 
 }
 @media only screen and (max-width: 480px) {
   .deals-month-image {
@@ -231,8 +230,6 @@
     gap: 50px;
   }
 }
-
-
 
 @media only screen and (max-width: 1024px) {
   .our_bestseller-product:nth-child(7),
@@ -463,7 +460,6 @@
     width: 100%;
     height: 100%;
   }
-  
 }
 @media only screen and (max-width: 630px) {
   .insta-stories {
@@ -476,11 +472,10 @@
     width: 350px;
     height: 350px;
   }
-  
 }
 
 @media only screen and (max-width: 425px) {
-  .insta-story{
+  .insta-story {
     width: 200px;
     height: 200px;
   }

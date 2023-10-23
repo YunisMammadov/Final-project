@@ -28,6 +28,7 @@ const Forgot_password = lazy(() =>
   import("./pages/registration/Forgot_password")
 );
 const Home = lazy(() => import("./pages/home/Home"));
+const Blog = lazy(() => import("./pages/blog/Blog"));
 
 function App({ dispatch }) {
   useEffect(() => {
@@ -77,6 +78,14 @@ function App({ dispatch }) {
             element={
               <Suspense>
                 <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/blog"
+            element={
+              <Suspense>
+                <Blog />
               </Suspense>
             }
           />

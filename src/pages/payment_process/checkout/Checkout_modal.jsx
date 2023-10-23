@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 import "./Checkout.css";
 import { connect } from "react-redux";
 
-function Checkout_modal({ cartItems, totalAmount }) {
+function Checkout_modal({ cartItems, totalAmount, open, close }) {
   return (
-    <div className="checkout_modal">
-      <div className="minicart">
+    <div onClick={close} className={`checkout_modal ${open ? "active" : ""}`}>
+      <div onClick={(e) => e.stopPropagation()} className="minicart">
         <div className="minicart-up">
           <p>You have {cartItems.length} items in your cart</p>
         </div>

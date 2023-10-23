@@ -1,0 +1,79 @@
+.blog {
+    margin: 50px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
+  .blog h1 {
+    font-size: 35px;
+  }
+  .blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  .blog-img {
+    width: 100%;
+  }
+  .blog-card img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    gap: 30px;
+    position: relative;
+  }
+  .blog-time {
+    background-color: #fda729;
+    width: 80px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .blog-text {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .blog-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .blog-text i {
+    color: #fff;
+    padding-left: 10px;
+  }
+  .blog-btn button {
+    background: #fda729;
+    border: 1px solid #fda729;
+    color: #000000;
+    padding: 5px 20px;
+    width: 150px;
+    z-index: 1;
+  }
+  .blog-btn button:hover {
+    border: 1px solid #fda729;
+    color: #fda729;
+    background: transparent;
+  }
+  .blog-text p {
+    opacity: 0.7;
+  }
+  .blog-text h4 {
+    font-size: 20px;
+  }
+  

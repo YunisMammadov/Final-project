@@ -4,20 +4,22 @@ header {
   height: 70px;
   background: var(--white-500, #fff);
 }
-
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 0 100px;
 }
 .header-logo {
   display: flex;
-  width: 145px;
   height: 70px;
   justify-content: center;
   align-items: center;
 }
 .header ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header-ul {
   display: flex;
   align-items: center;
   gap: 30px;

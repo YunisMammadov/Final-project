@@ -7,7 +7,7 @@ import Our_features from "../our_features/Our_features";
 function Layout() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Outlet />
       <Our_features />
       <Footer />

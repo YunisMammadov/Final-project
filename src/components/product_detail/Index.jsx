@@ -65,10 +65,10 @@ const AddToCard = ({ product, dispatch }) => {
           </svg>
         </div>
       </div>
-      <button type="submit" onClick={handleCheckout}>
+      <button type="submit"  onClick={handleCheckout}>
         Add to Cart
       </button>
-      {open && <Checkout_modal />}
+      {open && <Checkout_modal open={open} close={() => setOpen(false)}/>}
       <div className="product-add-heart">
         <svg
           xmlns="http://www.w3.org/2000/svg"
