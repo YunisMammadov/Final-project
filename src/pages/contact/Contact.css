@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;1,900&display=swap");
+.contact-text {
+  width: 45%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-text h1 {
+  display: flex;
+  gap: 20px;
+}
+.contact-text p {
+  font-family: Jost;
+  font-size: 55px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.contact-text p.active {
+  opacity: 1;
+  transform: scale(0.8);
+  text-shadow: 2px 2px 4px #888888;
+  color: #eee4e4;
+}
+.contact-text p:hover {
+  transform: scale(0.8);
+  text-shadow: 2px 2px 4px #888888;
+  opacity: 0.5;
+  color: red;
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+  height: 480px;
+}
+.contact-text h2 {
+  font-size: 20px;
+  font-family: Jost;
+}
+.contact form {
+  width: 100%;
+}
+.contact-map-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1;
+  text-align: center;
+  background-color:white;
+  top: 2px;
+  left: 2px;
+  width: 35%;
+  padding: 10px;
+}
+.contact-map {
+  position: relative;
+  width: 45%;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgb(198, 177, 177);
+  border-radius: 5px;
+  color: #113118;
+  outline: none;
+}
+input[type="email"] {
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  margin: 4px 0;
+  background: transparent;
+  border: 1px solid rgb(198, 177, 177);
+  border-radius: 5px;
+  color: #113118;
+  outline: none;
+}
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin: 4px 0;
+  height: 180px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgb(198, 177, 177);
+  border-radius: 5px;
+  color: #113118;
+  outline: none;
+}
+.formSubmitBtn {
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background: rgb(116, 152, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(116, 152, 255, 1) 14%,
+    rgba(87, 94, 248, 1) 61%,
+    rgba(47, 55, 255, 1) 100%
+  );
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.02s;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+}

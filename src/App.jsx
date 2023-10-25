@@ -29,7 +29,8 @@ const Forgot_password = lazy(() =>
 );
 const Home = lazy(() => import("./pages/home/Home"));
 const Blog = lazy(() => import("./pages/blog/Blog"));
-
+const Contact = lazy(() => import("./pages/contact/Contact"));
+const Our_story = lazy(() => import ("./pages/our_story/Our_story"))
 function App({ dispatch }) {
   useEffect(() => {
     fetch("http://localhost:1313/categories")
@@ -86,6 +87,22 @@ function App({ dispatch }) {
             element={
               <Suspense>
                 <Blog />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/contact_us"
+            element={
+              <Suspense>
+                <Contact />
+              </Suspense>
+            }
+          />
+           <Route
+            path="/our_story"
+            element={
+              <Suspense>
+                <Our_story />
               </Suspense>
             }
           />
