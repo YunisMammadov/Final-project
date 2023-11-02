@@ -5,8 +5,16 @@ header {
   background: var(--white-500, #fff);
 }
 .header {
+  z-index: 9999;
+  background: var(--white-500, #fff);
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
 }
 .header-logo {
   display: flex;
@@ -143,4 +151,30 @@ header button a {
   border: 1px solid gray;
   opacity: 0.1;
   height: 357px;
+}
+.menu-btn{
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-menu {
+    display: none !important;
+  }
+  .menu-btn{
+    display: block;
+    cursor: pointer;
+  }
+  .header{
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 625px) {
+  .breadcrumb {
+    display: none !important  ;
+  }
+  .header{
+    padding: 0 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

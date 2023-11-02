@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { connect } from "react-redux";
+import { AiOutlineMenu } from "react-icons/ai";
 import "./Header.css";
-import "./Header_resp.css";
-function Header() {
+
+function Header({ dispatch }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -17,13 +19,6 @@ function Header() {
               <img src="/logo.png" alt="" />
             </NavLink>
           </div>
-          <button className="menu-button" onClick={toggleMenu}>
-            <div className={`menu-icon ${menuOpen ? "open" : ""}`}>
-              <div className="bar"></div>
-              <div className="bar"></div>
-              <div className="bar"></div>
-            </div>
-          </button>
           <ul className={`header-menu ${menuOpen ? "open" : ""}`}>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -270,8 +265,15 @@ function Header() {
               <NavLink to="/contact_us">Contact us</NavLink>
             </li>
           </ul>
-          <ul>
-            <li>
+          <ul className="breadcrumb">
+            <li
+              onClick={() => {
+                dispatch({
+                  type: "SEARCHVISIBLE",
+                  payload: true,
+                });
+              }}
+            >
               <svg
                 width="24"
                 height="24"
@@ -340,9 +342,20 @@ function Header() {
               <NavLink to="/login">Login</NavLink>
             </button>
           </ul>
+          <div
+            className="menu-btn"
+            onClick={() => {
+              dispatch({ type: "SIDEBAROPEN", payload: true });
+            }}
+          >
+            <span>
+              <AiOutlineMenu color="black" size={"30px"} />
+            </span>
+          </div>
         </div>
       </div>
     </header>
   );
 }
-export default Header;
+const t = (a) => a;
+export default connect(t)(Header);

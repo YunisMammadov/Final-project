@@ -21,6 +21,8 @@ const init = {
   filteredCategories: [],
   cartItems: getBasket(),
   totalAmount: getTotalAmount(),
+  searchVisible: false,
+  sidebar: false,
 };
 
 export default function Reducer(state = init, action) {
@@ -79,6 +81,26 @@ export default function Reducer(state = init, action) {
         ...state,
         cartItems: filteredBasket,
         totalAmount: updatedTotalAmount,
+      };
+    case "SIDEBAROPEN":
+      return {
+        ...state,
+        sidebar: action.payload,
+      };
+    case "SIDEBARCLOSE":
+      return {
+        ...state,
+        sidebar: action.payload,
+      };
+    case "SEARCHVISIBLE":
+      return {
+        ...state,
+        searchVisible: action.payload,
+      };
+    case "SEARCHNOVISIBLE":
+      return {
+        ...state,
+        searchVisible: action.payload,
       };
     default:
       return state;

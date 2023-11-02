@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;1,900&display=swap");
+.searchSection {
+  display: flex;
+  font-family: Jost;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #f5f5f5;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+.formItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.searchBar {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+button[type="submit"] {
+  background-color: #fff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button[type="button"] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+.searchList {
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.searchItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: #333;
+  transition: background-color 0.2s;
+}
+.item-img {
+  width: 30px;
+}
+.searchItem img {
+  width: 100%;
+}
+.searchItem:hover {
+  background-color: #f5f5f5;
+}

@@ -369,6 +369,7 @@
 .minicart-product-det {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .minicart-rect {
   width: 100%;
@@ -438,4 +439,13 @@
   line-height: normal;
   border-radius: 10px;
   background: var(--Dark-500, #131118);
+}
+#check-modal-del-btn {
+  width: 100px;
+  height: 0px;
+  background-color: #fff;
+  border: none;
+  position: absolute;
+  bottom: -8px;
+  right: -40px;
 }

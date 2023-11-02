@@ -1,0 +1,64 @@
+.aside {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  z-index: -2;
+  align-items: center;
+  transform: translate(-100%);
+  transition: 0.5s;
+}
+.sidebarActive {
+  transform: translate(0%);
+  z-index: 999999 !important;
+}
+.container {
+  width: 90%;
+}
+.logoClose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ul {
+  padding: 0;
+  margin: 40px 0 0 0;
+}
+.navlinks {
+  width: 100%;
+}
+.menuItem {
+  list-style: none;
+  height: 55px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  transition: 0.3s;
+}
+.menuItem:hover {
+  background-color: #f1f5f8;
+}
+.menuItem:hover > a {
+  transition: 0.5s;
+  transform: translate(3%);
+}
+.cart {
+  height: 100px;
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  padding: 5%;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
