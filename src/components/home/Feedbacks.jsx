@@ -1,7 +1,8 @@
 import Slider from "react-slick";
 import { useRef } from "react";
+import { connect } from "react-redux";
 
-function Feedbacks() {
+function Feedbacks({ words, lang }) {
   const sliderRef = useRef(null);
 
   const goToPrev = () => {
@@ -50,7 +51,7 @@ function Feedbacks() {
       <div className="container">
         <div className="feedback">
           <div className="feedback-up">
-            <p>What our Customer say’s</p>
+            <p>{words[lang].customersays}</p>
             <div className="feedback-arrow">
               <div onClick={goToPrev} className="feedback-arrow-left">
                 <svg
@@ -151,10 +152,7 @@ function Feedbacks() {
                     />
                   </svg>
                 </div>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
+                <p>{words[lang].feedbacks}</p>
                 <div className="feedback-person">
                   <img
                     src="https://img.a.transfermarkt.technology/portrait/big/68863-1671105169.png?lm=1"
@@ -162,7 +160,7 @@ function Feedbacks() {
                   />
                   <div className="feedback-person-name">
                     <h1>Mauro Icardi</h1>
-                    <h2>Football player</h2>
+                    <h2>{words[lang].football}</h2>
                   </div>
                 </div>
               </div>
@@ -231,10 +229,7 @@ function Feedbacks() {
                     />
                   </svg>
                 </div>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
+                <p>{words[lang].feedbacks}</p>
                 <div className="feedback-person">
                   <img
                     src="https://images.unsplash.com/photo-1587397845856-e6cf49176c70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW4lMjBoZWFkfGVufDB8fDB8fHww&w=1000&q=80"
@@ -242,7 +237,7 @@ function Feedbacks() {
                   />
                   <div className="feedback-person-name">
                     <h1>Sergio Oliveira</h1>
-                    <h2>Human Resources</h2>
+                    <h2>{words[lang].football}</h2>
                   </div>
                 </div>
               </div>
@@ -311,10 +306,7 @@ function Feedbacks() {
                     />
                   </svg>
                 </div>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
+                <p>{words[lang].feedbacks}</p>
                 <div className="feedback-person">
                   <img
                     src="https://s3-alpha-sig.figma.com/img/0265/1490/b7390f28d50ffb98bc7be05622c0e522?Expires=1693785600&Signature=Dc1d0jTB5NWouEBRRqt0uZYXcrGk~xKBbaanm9XQ7gnjAJ10Wz0gHy6iJ0apNa8-QlqwdN9AZEsdyIZt4xFPVSeA99meTEBGjajjyd4Ovl3cI75odju5342lcqXoM-NALka7G7udzts0~KTrI00QEUc8gnKXfajS5Bb4gfcPcqDm45MoCVZEZdGiUHyP~idMY3ik~Sta8tjpu5w6XIWG4L5PJBJWRSRA0P4XVAiGQ6qzl-oZgQfeHCr2w~LKDBP44davbRN-k51gBU5Jg4hcHr9bkVf2GNdcaebCaX9umtTWxMdjLvvXBQ0YxLZT5cdl3kjR4KaTtN0YeNnfE-GppA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -391,10 +383,7 @@ function Feedbacks() {
                     />
                   </svg>
                 </div>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
+                <p>{words[lang].feedbacks}</p>
                 <div className="feedback-person">
                   <img
                     src="https://s3-alpha-sig.figma.com/img/fd8b/ceaf/61eb50b1d44a437e2c70909aa4e5d32b?Expires=1693785600&Signature=jKbKWH87HFBeqUuM-4AAAl0SPC~-sqYee0g5ock-DA6nVrTBF0Aq47MdgNUe90zrPEMmjzLE01MDPJhSdbuWJq33MU~zHsCwcZcc2gPGeB04SSAKYNh0Xy4so1tjygZ2O1THsQ3g-yei0MLdh9MzZH4tRBG~P~nz0c1F3YyV2ITQlxksMalis7iMYe24tC4ZW-aYPc8KKUZto-97CjS7ygnLS8qP-o5z5ynFlACKmEuz1CqiPRPUCKGCrxmsu~4dLY4UpkG3teZJ5yNWynRqc6BBVATsdsIhlG2PnC~SFb3RsBN8ecQbtK86LqZWV9MNM5bRisZYD-HAsmGPckAHIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -402,7 +391,7 @@ function Feedbacks() {
                   />
                   <div className="feedback-person-name">
                     <h1>Jenny Wilson</h1>
-                    <h2>Fashion Designer</h2>
+                    <h2>{words[lang].fashiondesigner}</h2>
                   </div>
                 </div>
               </div>
@@ -471,10 +460,7 @@ function Feedbacks() {
                     />
                   </svg>
                 </div>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
+                <p>{words[lang].feedbacks}</p>
                 <div className="feedback-person">
                   <img
                     src="https://assets.vogue.com/photos/5c1be3ddc2aeb52d288c89d0/master/w_2560%2Cc_limit/00-story-sophie-buhai.jpg"
@@ -482,7 +468,7 @@ function Feedbacks() {
                   />
                   <div className="feedback-person-name">
                     <h1>Leslie Alex</h1>
-                    <h2>Co-Founder</h2>
+                    <h2>{words[lang].hr}</h2>
                   </div>
                 </div>
               </div>
@@ -551,10 +537,7 @@ function Feedbacks() {
                     />
                   </svg>
                 </div>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
+                <p>{words[lang].feedbacks}</p>
                 <div className="feedback-person">
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5E43RIrSNuMZevff6doGOeNVZ-k0NsulUtA&usqp=CAU"
@@ -562,7 +545,7 @@ function Feedbacks() {
                   />
                   <div className="feedback-person-name">
                     <h1>Wanda Nara</h1>
-                    <h2>Actor</h2>
+                    <h2>{words[lang].actor}</h2>
                   </div>
                 </div>
               </div>
@@ -573,5 +556,5 @@ function Feedbacks() {
     </section>
   );
 }
-
-export default Feedbacks;
+const t = (a) => a;
+export default connect(t)(Feedbacks);

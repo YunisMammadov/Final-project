@@ -1,7 +1,7 @@
 import "./My_wishlists.css";
 import { connect } from "react-redux";
 
-function My_wishlists({ products }) {
+function My_wishlists({ products, words, lang }) {
   const wishlists = products.filter((product) => product.wishlists);
   return (
     <>
@@ -32,7 +32,9 @@ function My_wishlists({ products }) {
                     </button>
                   </div>
                   <div className="wishlists-btn-cart">
-                    <button className="wishlists-cart">Move to Cart</button>
+                    <button className="wishlists-cart">
+                      {words[lang].movecard}
+                    </button>
                   </div>
                 </div>
               </div>

@@ -1,20 +1,20 @@
-import { useState, useEffect } from "react";
-function Our_bestseller() {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:1313/products")
-      .then((a) => a.json())
-      .then((a) => setProducts(a.filter((x) => x.bestseller === true)));
-  }, []);
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+
+function Our_bestseller({ products, words, lang }) {
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+  const bestsellers = products.filter((product) => product.bestseller);
   return (
     <section className="our_bestseller">
       <div className="container">
         <div className="our_best">
           <div className="our_bestseller-text">
-            <p>Our Bestseller</p>
+            <p>{words[lang].ourbestseller}</p>
           </div>
           <div className="our_bestseller-products">
-            {products.map((a) => (
+            {bestsellers.map((a) => (
               <div key={a.id} className="our_bestseller-product">
                 <div className="our_bestseller-img">
                   <img src={a.image} alt="" />
@@ -76,9 +76,15 @@ function Our_bestseller() {
                       </button>
                     </div>
                     <div className="btn-cart">
-                      <button className="our-bestseller-cart">
-                        Add to Cart
-                      </button>
+                      <Link
+                        key={a.id}
+                        to={`/${a.id}/product_detail`}
+                        onClick={handleLinkClick}
+                      >
+                        <button className="our-bestseller-cart">
+                          {words[lang].addtocart}
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -98,5 +104,5 @@ function Our_bestseller() {
     </section>
   );
 }
-
-export default Our_bestseller;
+const t = (a) => a;
+export default connect(t)(Our_bestseller);

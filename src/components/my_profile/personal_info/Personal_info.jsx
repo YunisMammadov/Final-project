@@ -1,6 +1,7 @@
 import "./Personal_info.css";
+import { connect } from "react-redux";
 
-function Personal_info() {
+function Personal_info({ words, lang }) {
   return (
     <div className="profile-down-right">
       <div className="profile-person-detail">
@@ -42,32 +43,33 @@ function Personal_info() {
                 stroke-linecap="round"
               />
             </svg>
-            <span>Edit Profile</span>
+            <span>{words[lang].editprofile}</span>
           </button>
         </div>
         <form className="profile-per-form">
           <div className="profile-per-inp">
             <div className="pro-per-up-inp">
-              <p>First name</p>
+              <p>{words[lang].firstname}</p>
               <input type="text" name="" id="" />
             </div>
             <div className="pro-per-up-inp">
-              <p>Last name</p>
+              <p>{words[lang].lastname}</p>
               <input type="text" name="" id="" />
             </div>
           </div>
           <div className="profile-per-inp">
             <div className="pro-per-up-inp">
-              <p>Phone Number</p>
+              <p>{words[lang].mobilenumber}</p>
               <input type="tel" name="" id="" />
             </div>
             <div className="pro-per-up-inp">
-              <p>Email Address</p>
+              <p>{words[lang].emailaddress}</p>
+
               <input type="email" name="" id="" />
             </div>
           </div>
           <div className="profile-per-inp1">
-            <p>Address</p>
+            <p>{words[lang].address}</p>
             <input type="address" />
           </div>
         </form>
@@ -76,4 +78,6 @@ function Personal_info() {
   );
 }
 
-export default Personal_info;
+
+const t = (a) => a;
+export default connect(t)(Personal_info);

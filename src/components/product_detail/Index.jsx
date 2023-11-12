@@ -3,7 +3,7 @@ import Checkout_modal from "../../pages/payment_process/checkout/Checkout_modal"
 import { useState } from "react";
 import { connect } from "react-redux";
 
-const AddToCard = ({ product, dispatch }) => {
+const AddToCard = ({ product, dispatch, words, lang }) => {
   const [amount, setAmount] = useState(1);
   const [open, setOpen] = useState(false);
 
@@ -65,10 +65,10 @@ const AddToCard = ({ product, dispatch }) => {
           </svg>
         </div>
       </div>
-      <button type="submit"  onClick={handleCheckout}>
-        Add to Cart
+      <button type="submit" onClick={handleCheckout}>
+        {words[lang].addtocart}
       </button>
-      {open && <Checkout_modal open={open} close={() => setOpen(false)}/>}
+      {open && <Checkout_modal open={open} close={() => setOpen(false)} />}
       <div className="product-add-heart">
         <svg
           xmlns="http://www.w3.org/2000/svg"

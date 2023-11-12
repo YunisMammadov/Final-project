@@ -1,6 +1,8 @@
 import CountUp from "react-countup";
 import { NavLink } from "react-router-dom";
-function Deals_month() {
+import { connect } from "react-redux";
+
+function Deals_month({ words, lang }) {
   return (
     <section className="deals">
       <div className="container">
@@ -8,13 +10,8 @@ function Deals_month() {
           <div className="deals-month-text">
             <div className="deals-month-txt">
               <div className="deals-month-info">
-                <p>Deals of the Month</p>
-                <span>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters
-                </span>
+                <p>{words[lang].dealsmonth}</p>
+                <span>{words[lang].dealmonth}</span>
               </div>
               <div className="counters">
                 <div className="counter">
@@ -28,7 +25,7 @@ function Deals_month() {
                     {({ countUpRef, start }) => (
                       <div className="counter__inner">
                         <span ref={countUpRef} />
-                        <p>Days</p>
+                        <p>{words[lang].days}</p>
                       </div>
                     )}
                   </CountUp>
@@ -44,7 +41,7 @@ function Deals_month() {
                     {({ countUpRef, start }) => (
                       <div className="counter__inner">
                         <span ref={countUpRef} />
-                        <p>Hours</p>
+                        <p>{words[lang].hours}</p>
                       </div>
                     )}
                   </CountUp>
@@ -60,7 +57,7 @@ function Deals_month() {
                     {({ countUpRef, start }) => (
                       <div className="counter__inner">
                         <span ref={countUpRef} />
-                        <p>Mins</p>
+                        <p>{words[lang].mins}</p>
                       </div>
                     )}
                   </CountUp>
@@ -76,7 +73,7 @@ function Deals_month() {
                     {({ countUpRef, start }) => (
                       <div className="counter__inner">
                         <span ref={countUpRef} />
-                        <p>Secs</p>
+                        <p>{words[lang].secs}</p>
                       </div>
                     )}
                   </CountUp>
@@ -85,7 +82,7 @@ function Deals_month() {
             </div>
             <button>
               <NavLink to="/product">
-                <p>Wiew All Products</p>
+                <p>{words[lang].wievproducts}</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="14"
@@ -112,4 +109,5 @@ function Deals_month() {
   );
 }
 
-export default Deals_month;
+const t = (a) => a;
+export default connect(t)(Deals_month);

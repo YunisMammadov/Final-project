@@ -59,7 +59,7 @@
   position: absolute;
   bottom: 30px;
   left: 20px;
-  color: var(--dark-500, #131118);
+  color: var(--dark-500, #131118) !important;
   font-family: Jost;
   font-size: 16px;
   font-style: normal;

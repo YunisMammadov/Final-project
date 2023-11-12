@@ -1,6 +1,8 @@
 import "./Saved_cards.css";
 import { useState } from "react";
-function Saved_cards() {
+import { connect } from "react-redux";
+
+function Saved_cards({ words, lang }) {
   const [savedCardVisible, setSavedCardVisible] = useState(true);
 
   const handleDeleteClick = () => {
@@ -25,7 +27,7 @@ function Saved_cards() {
                 fill="white"
               />
             </svg>
-            <span>Add New Card</span>
+            <span>{words[lang].addcard}</span>
           </button>
           {savedCardVisible && (
             <div className="saved-cards">
@@ -79,7 +81,7 @@ function Saved_cards() {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span>Delete</span>
+                  <span>{words[lang].del}</span>
                 </button>
               </div>
               <div className="saved-card-rect"></div>
@@ -91,4 +93,5 @@ function Saved_cards() {
   );
 }
 
-export default Saved_cards;
+const t = (a) => a;
+export default connect(t)(Saved_cards);

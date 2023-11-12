@@ -4,12 +4,18 @@ import { connect } from "react-redux";
 import { AiOutlineMenu } from "react-icons/ai";
 import "./Header.css";
 
-function Header({ dispatch }) {
+function Header({ dispatch, lang, words }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
+  const changeLang = (lang) => {
+    localStorage.setItem("language", lang);
+    dispatch({
+      type: "SET_LANG",
+      payload: lang,
+    });
+  };
   return (
     <header>
       <div className="container">
@@ -21,11 +27,11 @@ function Header({ dispatch }) {
           </div>
           <ul className={`header-menu ${menuOpen ? "open" : ""}`}>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">{words[lang].home}</NavLink>
             </li>
             <li className="has-dropdown">
               <NavLink to="/product">
-                Shop
+                {words[lang].shop}
                 <svg
                   width="24"
                   height="18"
@@ -256,16 +262,38 @@ function Header({ dispatch }) {
             </li>
 
             <li>
-              <NavLink to="our_story">Our Story</NavLink>
+              <NavLink to="our_story">{words[lang].ourstory}</NavLink>
             </li>
             <li>
-              <NavLink to="/blog">Blog</NavLink>
+              <NavLink to="/blog">{words[lang].blog}</NavLink>
             </li>
             <li>
-              <NavLink to="/contact_us">Contact us</NavLink>
+              <NavLink to="/contact_us">{words[lang].contact}</NavLink>
             </li>
           </ul>
           <ul className="breadcrumb">
+            <select
+              className="select_language"
+              value={lang}
+              onChange={(e) => changeLang(e.target.value)}
+              style={{
+                width: "50px",
+                color: lang === "az" || lang === "en" ? "red" : "#000",
+              }}
+            >
+              <option
+                value="az"
+                style={{ color: lang === "az" ? "red" : "#000" }}
+              >
+                AZE
+              </option>
+              <option
+                value="en"
+                style={{ color: lang === "en" ? "red" : "#000" }}
+              >
+                ENG
+              </option>
+            </select>
             <li
               onClick={() => {
                 dispatch({
@@ -339,7 +367,7 @@ function Header({ dispatch }) {
               </svg>
             </li>
             <button>
-              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/login">{words[lang].login}</NavLink>
             </button>
           </ul>
           <div

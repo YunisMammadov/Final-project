@@ -6,9 +6,9 @@ import Manage_address from "../../components/my_profile/manage_address/Manage_ad
 import Saved_cards from "../../components/my_profile/saved_cards/Saved_cards";
 import Notifications from "../../components/my_profile/notifications/Notifications";
 import Settings from "../../components/my_profile/settings/Settings";
-
+import { connect } from "react-redux";
 import "./My_profile.css";
-function My_profile() {
+function My_profile({ words, lang }) {
   const [activeTab, setActiveTab] = useState("Personal_Info");
 
   const handleTabClick = (tabName) => {
@@ -21,7 +21,7 @@ function My_profile() {
           <div className="my_prof">
             <div className="profile-up">
               <div className="profile-up-left">
-                <p>My Profile</p>
+                <p>{words[lang].MyProfile}</p>
               </div>
             </div>
             <div className="profile-down">
@@ -34,7 +34,7 @@ function My_profile() {
                     />
                   </div>
                   <div className="profile-left-up-info">
-                    <p>Hello 👋 </p>
+                    <p>{words[lang].hello} 👋 </p>
                     <h1>Robert Fox</h1>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ function My_profile() {
                           stroke-linejoin="round"
                         />
                       </svg>
-                      <span>Personal Information</span>
+                      <span>{words[lang].perinfo}</span>
                     </div>
                   </div>
                   <div
@@ -134,7 +134,7 @@ function My_profile() {
                           stroke-linejoin="round"
                         />
                       </svg>
-                      <span>My Orders</span>
+                      <span>{words[lang].myorders}</span>
                     </div>
                   </div>
                   <div
@@ -160,7 +160,7 @@ function My_profile() {
                           stroke-linejoin="round"
                         />
                       </svg>
-                      <span>My Wishlists</span>
+                      <span>{words[lang].mywishlists}</span>
                     </div>
                   </div>
                   <div
@@ -198,7 +198,7 @@ function My_profile() {
                           stroke-width="1.5"
                         />
                       </svg>
-                      <span>Manage Addresses</span>
+                      <span>{words[lang].manageaddress}</span>
                     </div>
                   </div>
                   <div
@@ -240,7 +240,7 @@ function My_profile() {
                           stroke-linecap="round"
                         />
                       </svg>
-                      <span>Saved Cards</span>
+                      <span>{words[lang].savedcard}</span>
                     </div>
                   </div>
                   <div
@@ -278,7 +278,7 @@ function My_profile() {
                           stroke-linecap="round"
                         />
                       </svg>
-                      <span>Notifications</span>
+                      <span>{words[lang].Notifications}</span>
                     </div>
                   </div>
                   <div
@@ -302,7 +302,7 @@ function My_profile() {
                           }
                         />
                       </svg>
-                      <span>Settings</span>
+                      <span>{words[lang].settings}</span>
                     </div>
                   </div>
                 </div>
@@ -322,4 +322,5 @@ function My_profile() {
   );
 }
 
-export default My_profile;
+const t = (a) => a;
+export default connect(t)(My_profile);

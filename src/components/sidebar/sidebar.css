@@ -1,7 +1,7 @@
 .aside {
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 101vh;
+  width: 101vw;
   background-color: white;
   display: flex;
   padding: 20px 0;
@@ -46,6 +46,30 @@
   transition: 0.5s;
   transform: translate(3%);
 }
+.icons {
+  display: flex;
+  align-items: center;
+}
+.icons button {
+  border: none;
+}
+.icons button a {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--dark-500, #131118);
+  color: var(--white-500, #fff);
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .cart {
   height: 100px;
   width: 100%;
@@ -57,8 +81,26 @@
   justify-content: space-around;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .sidebar {
     display: none;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .aside {
+    height: 105vh;
+    width: 101vw;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .aside {
+    height: 106vh;
+    width: 101vw;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .aside {
+    height: 107vh;
+    width: 101vw;
   }
 }

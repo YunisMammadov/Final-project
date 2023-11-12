@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Manage_address.css";
 import Address_modal from "./Address_modal";
-function Manage_address() {
+import { connect } from "react-redux";
+
+function Manage_address({ words, lang }) {
   const [open, setOpen] = useState(false);
   const handleAddNewAddressClick = () => {
     setOpen(true);
@@ -25,7 +27,7 @@ function Manage_address() {
               fill="white"
             />
           </svg>
-          <span>Add New Address</span>
+          <span>{words[lang].addaddress}</span>
         </button>
         <div className="address-cards">
           <div className="address-card">
@@ -71,7 +73,7 @@ function Manage_address() {
                     </clipPath>
                   </defs>
                 </svg>
-                <span>Edit</span>
+                <span>{words[lang].edit}</span>
               </button>
               <button className="address-delete-btn">
                 <svg
@@ -89,7 +91,7 @@ function Manage_address() {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span>Delete</span>
+                <span>{words[lang].del}</span>
               </button>
             </div>
           </div>
@@ -100,4 +102,5 @@ function Manage_address() {
   );
 }
 
-export default Manage_address;
+const t = (a) => a;
+export default connect(t)(Manage_address);

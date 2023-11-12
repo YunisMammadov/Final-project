@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./Manage_address.css";
 import { useState } from "react";
-function Address_modal() {
+import { connect } from "react-redux";
+
+function Address_modal({ words, lang }) {
   const [newAddresses, setNewAddresses] = useState([]);
   const [name, setName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
@@ -39,29 +41,29 @@ function Address_modal() {
       <section id="address-modal">
         <div className="address-modal">
           <div className="address-modal-up">
-            <p>Add a new address</p>
+            <p>{words[lang].addaddress}</p>
           </div>
           <form className="address-modal-down">
             <div className="address-modal-input">
-              <p>Name</p>
+              <p>{words[lang].name}</p>
               <input
                 type="text"
-                placeholder="Enter Name"
+                placeholder={words[lang].entername}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="address-modal-input">
-              <p>Mobile Number</p>
+              <p>{words[lang].mobilenumber}</p>
               <input
                 type="text"
-                placeholder="Enter Mobile Number"
+                placeholder={words[lang].addmobilenumber}
                 value={mobileNumber}
                 onChange={(e) => setMobileNumber(e.target.value)}
               />
             </div>
             <div className="address-modal-input">
-              <p>Flat, House no., Building, Company, Apartment</p>
+              <p>{words[lang].flat}</p>
               <input
                 type="text"
                 value={address1}
@@ -69,7 +71,7 @@ function Address_modal() {
               />
             </div>
             <div className="address-modal-input">
-              <p>Area, Colony, Street, Sector, Village</p>
+              <p>{words[lang].area}</p>
               <input
                 type="text"
                 value={address2}
@@ -77,9 +79,9 @@ function Address_modal() {
               />
             </div>
             <div className="address-modal-input">
-              <p>City</p>
+              <p>{words[lang].city}</p>
               <select value={city} onChange={(e) => setCity(e.target.value)}>
-                <option value="Baku">Baku</option>
+                <option value="Baku">{words[lang].baku}</option>
                 <option value="London">London</option>
                 <option value="Washington">Washington</option>
                 <option value="Berlin">Berlin</option>
@@ -89,18 +91,18 @@ function Address_modal() {
               </select>
             </div>
             <div className="address-modal-input">
-              <p>Pin Code</p>
+              <p>{words[lang].pinkod}</p>
               <input
                 type="text"
-                placeholder="Enter Pin Code"
+                placeholder={words[lang].addpinkod}
                 value={pinCode}
                 onChange={(e) => setPinCode(e.target.value)}
               />
             </div>
             <div className="address-modal-input">
-              <p>State</p>
+              <p>{words[lang].state}</p>
               <select value={state} onChange={(e) => setState(e.target.value)}>
-                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Azerbaijan">{words[lang].aze}</option>
                 <option value="England">England</option>
                 <option value="USA">USA</option>
                 <option value="Germany">Germany</option>
@@ -117,11 +119,11 @@ function Address_modal() {
                 checked={useAsDefault}
                 onChange={(e) => setUseAsDefault(e.target.checked)}
               />
-              <p>Use as my default address</p>
+              <p>{words[lang].useaddress}</p>
             </div>
             <div className="address-modal-buttons">
               <button className="modal-cancel-btn">
-                <NavLink>Cancel</NavLink>
+                <NavLink>{words[lang].addaddress}</NavLink>
               </button>
               <button
                 className="address-modal-btn"
@@ -138,4 +140,5 @@ function Address_modal() {
   );
 }
 
-export default Address_modal;
+const t = (a) => a;
+export default connect(t)(Address_modal);

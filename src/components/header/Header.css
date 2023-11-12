@@ -64,7 +64,10 @@ header button a {
   font-weight: 400;
   line-height: normal;
 }
-
+.select_language {
+  border: none;
+  outline: none;
+}
 .has-dropdown {
   position: relative;
 }

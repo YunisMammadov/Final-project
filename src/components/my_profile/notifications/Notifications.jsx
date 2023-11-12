@@ -1,5 +1,7 @@
 import "./Notifications.css";
-function Notifications() {
+import { connect } from "react-redux";
+
+function Notifications({ words, lang }) {
   return (
     <div className="profile-down-right">
       <div className="all-notifications">
@@ -12,12 +14,12 @@ function Notifications() {
               />
             </div>
             <div className="notifications-left-text">
-              <h1>Profile Update</h1>
-              <p>You just update your profile picture</p>
+              <h1>{words[lang].updateprofile}</h1>
+              <p>{words[lang].updateprofile1}</p>
             </div>
           </div>
           <div className="notifications-right">
-            <p>Just Now</p>
+            <p>{words[lang].pushnoti}</p>
           </div>
         </div>
         <div className="notifications-rect"></div>
@@ -62,8 +64,8 @@ function Notifications() {
               </svg>
             </div>
             <div className="notifications-left-text">
-              <h1>Your order placed successfullty</h1>
-              <p>You place a new order</p>
+              <h1>{words[lang].yourorder1}</h1>
+              <p>{words[lang].youplace}</p>
             </div>
           </div>
           <div className="notifications-right">
@@ -117,8 +119,8 @@ function Notifications() {
               </svg>
             </div>
             <div className="notifications-left-text">
-              <h1>Order delivered</h1>
-              <p>Your order has been delivered successfully</p>
+              <h1>{words[lang].orderdel}</h1>
+              <p>{words[lang].orderdel1}</p>
             </div>
           </div>
           <div className="notifications-right">
@@ -135,8 +137,8 @@ function Notifications() {
               />
             </div>
             <div className="notifications-left-text">
-              <h1>You share your feedback</h1>
-              <p>“It was an amazing experience with your company”</p>
+              <h1>{words[lang].sharefeedback}</h1>
+              <p>“{words[lang].sharefeedback1}”</p>
             </div>
           </div>
           <div className="notifications-right">
@@ -178,12 +180,12 @@ function Notifications() {
               </svg>
             </div>
             <div className="notifications-left-text">
-              <h1>Password Update successfully</h1>
-              <p>Your password has been updated successfully</p>
+              <h1>{words[lang].passwordupdate}</h1>
+              <p>{words[lang].passwordupdate1}</p>
             </div>
           </div>
           <div className="notifications-right">
-            <p>Yesterday</p>
+            <p>{words[lang].Yesterday}</p>
           </div>
         </div>
         <div className="notifications-rect"></div>
@@ -192,4 +194,6 @@ function Notifications() {
   );
 }
 
-export default Notifications;
+const t = (a) => a;
+export default connect(t)(Notifications);
+

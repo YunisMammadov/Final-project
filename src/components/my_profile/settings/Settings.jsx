@@ -1,7 +1,8 @@
 import "./Settings.css";
 import { useState, useEffect } from "react";
+import { connect } from "react-redux";
 
-function Settings() {
+function Settings({ dispatch, words, lang }) {
   const [switchStates, setSwitchStates] = useState({
     language: false,
     twoFactorAuth: false,
@@ -33,21 +34,21 @@ function Settings() {
       <div className="all-settings">
         <div className="settings-card">
           <div className="settings-left">
-            <h1>Language</h1>
-            <p>Select your language</p>
+            <h1>{words[lang].Language}</h1>
+            <p>{words[lang].Language1}</p>
           </div>
           <div className="settings-right">
             <select name="" id="">
-              <option value="">English</option>
-              <option value="">Azerbaijan</option>
+              <option value="az">{words[lang].aze}</option>
+              <option value="en">{words[lang].eng}</option>
             </select>
           </div>
         </div>
         <div className="settings-rect"></div>
         <div className="settings-card">
           <div className="settings-left">
-            <h1>Two-factor Authentication</h1>
-            <p>Keep your account secure by enabling 2FA via mail</p>
+            <h1>{words[lang].twofactor}</h1>
+            <p>{words[lang].twofactor1}</p>
           </div>
           <div className="settings-right">
             <div
@@ -63,8 +64,8 @@ function Settings() {
         <div className="settings-rect"></div>
         <div className="settings-card">
           <div className="settings-left">
-            <h1>Push Notifications</h1>
-            <p>Receive push notification</p>
+            <h1>{words[lang].pushnoti}</h1>
+            <p>{words[lang].pushnoti1}</p>
           </div>
           <div className="settings-right">
             <div
@@ -84,8 +85,8 @@ function Settings() {
         <div className="settings-rect"></div>
         <div className="settings-card">
           <div className="settings-left">
-            <h1>Desktop Notifications</h1>
-            <p>Receive push notification in desktop</p>
+            <h1>{words[lang].detskompnoti}</h1>
+            <p>{words[lang].detskompnoti1}</p>
           </div>
           <div className="settings-right">
             <div
@@ -105,8 +106,8 @@ function Settings() {
         <div className="settings-rect"></div>
         <div className="settings-card">
           <div className="settings-left">
-            <h1>Email Notifications</h1>
-            <p>Receive email notification</p>
+            <h1>{words[lang].emailnoti}</h1>
+            <p>{words[lang].emailnoti1}</p>
           </div>
           <div className="settings-right">
             <div
@@ -128,4 +129,5 @@ function Settings() {
   );
 }
 
-export default Settings;
+const t = (a) => a;
+export default connect(t)(Settings);

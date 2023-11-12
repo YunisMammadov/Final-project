@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useRef } from "react";
 
-function Shop_category({ category }) {
+function Shop_category({ category, lang, words }) {
   const sliderRef = useRef(null);
 
   const goToPrev = () => {
@@ -58,7 +58,7 @@ function Shop_category({ category }) {
         <div className="container">
           <div className="shop-category">
             <div className="shop-category-up">
-              <p>Shop by Categories</p>
+              <p>{words[lang].shop_category}</p>
               <div className="shop-category-arrow">
                 <div onClick={goToPrev} className="shop-category-arrow-left">
                   <svg

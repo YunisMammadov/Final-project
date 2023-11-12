@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { connect } from "react-redux";
+
 import "./My_orders.css";
-function My_orders() {
+function My_orders({ words, lang }) {
   const [searchText, setSearchText] = useState("");
   const handleInputChange = (e) => {
     setSearchText(e.target.value);
@@ -11,7 +13,7 @@ function My_orders() {
         <div className="profile-up-right-inp">
           <input
             type="text"
-            placeholder="Search"
+            placeholder={words[lang].search}
             value={searchText}
             onChange={handleInputChange}
           />
@@ -32,7 +34,7 @@ function My_orders() {
           </svg>
         </div>
         <button>
-          Filter
+          {words[lang].filter}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -106,8 +108,10 @@ function My_orders() {
                 </div>
               </div>
               <div className="order-left-bottom">
-                <button className="btn-delivered">Delivered</button>
-                <p>Your product has been delivered</p>
+                <button className="btn-delivered">
+                  {words[lang].Delivered}
+                </button>
+                <p>{words[lang].productdel}</p>
               </div>
             </div>
             <div className="order-right">
@@ -115,8 +119,10 @@ function My_orders() {
                 <p>$80.00</p>
               </div>
               <div className="order-right-right">
-                <button className="view-order">View Order</button>
-                <button className="write-order">Write A Review</button>
+                <button className="view-order">{words[lang].vieworder}</button>
+                <button className="write-order">
+                  {words[lang].writereview}
+                </button>
               </div>
             </div>
           </div>
@@ -137,8 +143,10 @@ function My_orders() {
                 </div>
               </div>
               <div className="order-left-bottom">
-                <button className="btn-inprocess">In Process</button>
-                <p>Your product has been Inprocess</p>
+                <button className="btn-inprocess">
+                  {words[lang].inprocess}
+                </button>
+                <p>{words[lang].productprocess}</p>
               </div>
             </div>
             <div className="order-right">
@@ -146,46 +154,20 @@ function My_orders() {
                 <p>$80.00</p>
               </div>
               <div className="order-right-right">
-                <button className="view-order">View Order</button>
-                <button className="cancel-order">Cancel Order</button>
+                <button className="view-order">{words[lang].vieworder}</button>
+                <button className="cancel-order">
+                  {words[lang].CancelOrder}
+                </button>
               </div>
             </div>
           </div>
           <div className="my-order-rect"></div>
-          <div className="my-order">
-            <div className="order-left">
-              <div className="order-left-up">
-                <div className="order-image">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/c15b/6611/5aa7889eb8f932cee010b2b597d38ce9?Expires=1695600000&Signature=TFeUJOT7yg0h7qzXaVZv7zFe7uPvtoH3lUWZhzALIiq2-BG47pdqtAOI7jpGSlKiwH~S5VNAVmAlrg80OnSUTajGnr6vVWcxiMPkrz~lcn51Gb8ytQ1Vlf-Dhh6-yTm4bsxmwbJ2z2BhAYj8oVIrX8qD6b3YkzvnAoSbPh9~ThkKbxMYvWNSN~034emqMx2DdFnz6BbRi1QplL7j7EhiT20laNy6I~NR79ytWKTxO3GveLMIYtx88mhb0SmFDUA3~~ufb~kAS9TsbCcF0h0iZjsMRx4QYh~EXcG5WgtdRTd3ykNIPcLv86PGBUco9Gc3zn6fnGlk7eJYK3D2QLkpfw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    alt=""
-                  />
-                </div>
-                <div className="order-info">
-                  <h3>Girls Pink Moana Printed Dress</h3>
-                  <p>Size: S</p>
-                  <p>Qyt: 1</p>
-                </div>
-              </div>
-              <div className="order-left-bottom">
-                <button className="btn-inprocess">In Process</button>
-                <p>Your product has been Inprocess</p>
-              </div>
-            </div>
-            <div className="order-right">
-              <div className="order-right-left">
-                <p>$40.00</p>
-              </div>
-              <div className="order-right-right">
-                <button className="view-order">View Order</button>
-                <button className="cancel-order">Cancel Order</button>
-              </div>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
   );
 }
 
-export default My_orders;
+const t = (a) => a;
+export default connect(t)(My_orders);
