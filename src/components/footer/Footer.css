@@ -96,10 +96,10 @@ footer {
   align-items: center;
   gap: 10px;
 }
-.footer-rect{
+.footer-rect {
   width: 100%;
   height: 1px;
-  background: var(--white-white-20, rgba(255, 255, 255, 0.20));
+  background: var(--white-white-20, rgba(255, 255, 255, 0.2));
 }
 .footer-down {
   margin-top: 20px;

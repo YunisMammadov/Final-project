@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-function Related_product({ products }) {
+function Related_product({ products, words, lang }) {
   const related = products.filter((product) => product.related);
 
   return (
@@ -9,7 +9,7 @@ function Related_product({ products }) {
         <div className="container">
           <div className="our_related">
             <div className="related-text">
-              <p>Related Products</p>
+              <p>{words[lang].relatedpro}</p>
             </div>
             <div className="related-products">
               {related.map((a) => (
@@ -74,7 +74,9 @@ function Related_product({ products }) {
                         </button>
                       </div>
                       <div className="related-btn-cart">
-                        <button className="related-cart">Add to Cart</button>
+                        <button className="related-cart">
+                          {words[lang].addtocart}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -96,5 +98,4 @@ function Related_product({ products }) {
   );
 }
 const t = (a) => a;
-
 export default connect(t)(Related_product);

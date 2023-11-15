@@ -2,10 +2,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { forgotpasswordSchema } from "../../schemas";
 import "./Registration.css"
+import { connect } from "react-redux";
 
 
-function Forgot_password() {
-  const navigate = useNavigate()
+function Forgot_password({ words, lang }) {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -43,24 +44,21 @@ function Forgot_password() {
                 </g>
               </g>
             </svg>
-            <p>Back</p>
+            <p>{words[lang].back}</p>
           </NavLink>
         </div>
         <div className="forgot_password-txt">
-          <h1>Forgot Password</h1>
-          <h2>
-            Enter your registered email address. we'll send you a code to reset
-            your password
-          </h2>
+          <h1>{words[lang].forgotpassword}</h1>
+          <h2>{words[lang].enterforgotpassword}</h2>
         </div>
         <form className="forgot_password-form" onSubmit={formik.handleSubmit}>
           <div className="forgot_password-address">
-            <p>Email Address</p>
+            <p>{words[lang].emailaddress}</p>
             <input
               id="email"
               name="email"
               type="email"
-              placeholder="please write your email"
+              placeholder={words[lang].enteremail}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
@@ -70,12 +68,13 @@ function Forgot_password() {
             )}
           </div>
           <button type="submit" style={{ border: "none" }}>
-            Send OTP
+            {words[lang].sentotp}
           </button>
         </form>
       </div>
     </section>
   );
 }
+const t = (a) => a;
+export default connect(t)(Forgot_password);
 
-export default Forgot_password;

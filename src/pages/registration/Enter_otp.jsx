@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Enter_otp_modal from "./Enter_otp_modal";
 import "./Registration.css"
+import { connect } from "react-redux";
 
-function Enter_otp() {
+function Enter_otp({ words, lang }) {
   const [open, setOpen] = useState(false);
   const inputCount = 5;
   const [otpInputs, setOtpInputs] = useState(new Array(inputCount).fill(""));
@@ -57,15 +58,12 @@ function Enter_otp() {
                 </g>
               </g>
             </svg>
-            <p>Back</p>
+            <p>{words[lang].back}</p>
           </NavLink>
         </div>
         <div className="enter_otp-txt">
-          <h1>Enter OTP</h1>
-          <h2>
-            We have share a code of your registered email address
-            robertfox@example.com
-          </h2>
+          <h1>{words[lang].enterotp}</h1>
+          <h2>{words[lang].registeremail}</h2>
         </div>
         <form className="enter_otp-form">
           {otpInputs.map((inputValue, index) => (
@@ -79,7 +77,7 @@ function Enter_otp() {
             />
           ))}
           <button onClick={handleVerifyClick} type="button">
-            Verify
+            {words[lang].verify}
           </button>
           {open && <Enter_otp_modal />}
         </form>
@@ -87,5 +85,5 @@ function Enter_otp() {
     </section>
   );
 }
-
-export default Enter_otp;
+const t = (a) => a;
+export default connect(t)(Enter_otp);

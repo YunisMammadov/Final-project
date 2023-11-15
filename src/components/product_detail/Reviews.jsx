@@ -1,11 +1,12 @@
 import React from "react";
+import { connect } from "react-redux";
 
-function Reviews() {
+function Reviews({ words, lang }) {
   return (
     <div className="product-down-text">
       <div className="product-text-up">
         <div className="product-text-up-title">
-          <p>Customer Reviews</p>
+          <p>{words[lang].customerrev}</p>
         </div>
         <div className="product-text-up-reviews">
           <div className="product-text-up-review">
@@ -188,11 +189,11 @@ function Reviews() {
       </div>
       <div className="product-text-down">
         <div className="product-text-down-title">
-          <p>Add your Review</p>
+          <p>{words[lang].addrev}</p>
         </div>
         <form className="product-review">
           <div className="prod-review-name">
-            <p>Your Rating</p>
+            <p>{words[lang].yourrate}</p>
             <div className="prod-review-stars">
               <div className="prod-review-star1">
                 <svg
@@ -422,23 +423,24 @@ function Reviews() {
           </div>
           <div className="prod-review-inputs">
             <div className="prod-review-input-name">
-              <span>Name</span>
-              <input type="text" placeholder="Enter Your Name" />
+              <span>{words[lang].name}</span>
+              <input type="text" placeholder={words[lang].entername} />
             </div>
             <div className="prod-review-input-name">
-              <span>Email Address</span>
-              <input type="email" placeholder="Enter Your Email" />
+              <span>{words[lang].emailaddress}</span>
+              <input type="email" placeholder={words[lang].enteremail} />
             </div>
             <div className="prod-review-input-name">
-              <span>Your Review</span>
-              <input type="text" placeholder="Enter Your Review" />
+              <span>{words[lang].yourrev}</span>
+              <input type="text" placeholder={words[lang].addrev} />
             </div>
           </div>
-          <button>Submit</button>
+          <button>{words[lang].submit}</button>
         </form>
       </div>
     </div>
   );
 }
 
-export default Reviews;
+const t = (a) => a;
+export default connect(t)(Reviews);

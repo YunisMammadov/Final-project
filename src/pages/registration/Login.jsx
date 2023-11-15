@@ -1,8 +1,9 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { loginSchema } from "../../schemas";
+import { connect } from "react-redux";
 import "./Registration.css"
-function Login() {
+function Login({ words, lang }) {
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
@@ -26,12 +27,12 @@ function Login() {
       </div>
       <div className="login-text">
         <div className="login-txt">
-          <h1>Welcome 👋 </h1>
-          <h2>Please login here</h2>
+          <h1>{words[lang].welcome} 👋 </h1>
+          <h2>{words[lang].pleaselogin}</h2>
         </div>
         <form className="login-form" onSubmit={formik.handleSubmit}>
           <div className="login-address">
-            <p>Email Address</p>
+            <p>{words[lang].emailaddress}</p>
             <input
               className={
                 formik.errors.email && formik.touched.email ? "input-error" : ""
@@ -39,7 +40,7 @@ function Login() {
               id="email"
               name="email"
               type="email"
-              placeholder="please write your email"
+              placeholder={words[lang].enteremail}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
@@ -50,7 +51,7 @@ function Login() {
             )}
           </div>
           <div className="login-address">
-            <p>Password</p>
+            <p>{words[lang].password}</p>
             <input
               className={
                 formik.errors.password && formik.touched.password
@@ -60,7 +61,7 @@ function Login() {
               id="password"
               name="password"
               type="password"
-              placeholder="please write your password"
+              placeholder={words[lang].pleasepassword}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.password}
@@ -73,19 +74,19 @@ function Login() {
           <div className="login-remember">
             <div className="login-rem">
               <input type="checkbox" />
-              <p>Remember Me</p>
+              <p>{words[lang].rememberme}</p>
             </div>
             <div className="login-forgot">
-              <span>Forgot Password?</span>
+              <span>{words[lang].forgotpassword}</span>
             </div>
           </div>
           <button type="submit" style={{ border: "none" }}>
-            Submit
+          {words[lang].submit}
           </button>
         </form>
       </div>
     </section>
   );
 }
-
-export default Login;
+const t = (a) => a;
+export default connect(t)(Login);

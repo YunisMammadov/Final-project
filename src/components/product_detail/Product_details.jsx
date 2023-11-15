@@ -5,7 +5,7 @@ import Descriptions from "./Descriptions";
 import Additional from "./Additional";
 import Reviews from "./Reviews";
 import AddToCard from "./Index";
-function Product_details() {
+function Product_details({ words, lang }) {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState({});
   useEffect(() => {
@@ -23,7 +23,7 @@ function Product_details() {
       <div className="container">
         <div className="product">
           <div className="product-detail-up">
-            <p>Shop</p>
+            <p>{words[lang].shop}</p>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ function Product_details() {
                 />
               </svg>
             </span>
-            <p>All Products</p>
+            <p>{words[lang].allpro}</p>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +200,7 @@ function Product_details() {
                   }`}
                   onClick={() => handleTabClick("Descriptions")}
                 >
-                  Descriptions
+                  {words[lang].description}
                 </button>
                 <div
                   className={`product-down-rec${
@@ -217,7 +217,7 @@ function Product_details() {
                   }`}
                   onClick={() => handleTabClick("Additional")}
                 >
-                  Additional
+                  {words[lang].additional}
                 </button>
                 <div
                   className={`product-down-rec${
@@ -234,7 +234,7 @@ function Product_details() {
                   }`}
                   onClick={() => handleTabClick("Reviews")}
                 >
-                  Reviews
+                  {words[lang].reviews}
                 </button>
                 <div
                   className={`product-down-rec${

@@ -1,7 +1,33 @@
 import { NavLink } from "react-router-dom";
 import "./ShippingAddress.css";
+import { connect } from "react-redux";
 import { useState } from "react";
-function ShippingAddress() {
+function ShippingAddress({ totalAmount, words, lang }) {
+  const [discountCode, setDiscountCode] = useState("");
+  const [isDiscountApplied, setIsDiscountApplied] = useState(false);
+  const [appliedDiscount, setAppliedDiscount] = useState(0);
+  const applyDiscount = () => {
+    if (isDiscountApplied) {
+      alert("Discount code has already been used.");
+      return;
+    }
+    if (discountCode === "Discount") {
+      const discountAmount = totalAmount * 0.1;
+      setAppliedDiscount(discountAmount);
+      setIsDiscountApplied(true);
+      localStorage.setItem("discountCode", "Discount");
+    } else {
+      alert("Geçersiz indirim kodu.");
+    }
+  };
+  useEffect(() => {
+    const storedDiscountCode = localStorage.getItem("discountCode");
+    if (storedDiscountCode === "Discount") {
+      setIsDiscountApplied(true);
+      setAppliedDiscount(totalAmount * 0.1);
+    }
+  }, []);
+
   const [newAddresses, setNewAddresses] = useState([]);
   const [name, setName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
@@ -11,7 +37,47 @@ function ShippingAddress() {
   const [pinCode, setPinCode] = useState("");
   const [state, setState] = useState("Azerbaijan");
   const [useAsDefault, setUseAsDefault] = useState(false);
+  const [editIndex, setEditIndex] = useState(null);
 
+  const handleInputChange = (e, field) => {
+    const value = e.target.value;
+    if (editIndex !== null) {
+      const updatedAddress = { ...newAddresses[editIndex] };
+      updatedAddress[field] = value;
+      const updatedAddresses = [...newAddresses];
+      updatedAddresses[editIndex] = updatedAddress;
+      setNewAddresses(updatedAddresses);
+    } else {
+      switch (field) {
+        case "name":
+          setName(value);
+          break;
+        case "mobileNumber":
+          setMobileNumber(value);
+          break;
+        case "address1":
+          setAddress1(value);
+          break;
+        case "address2":
+          setAddress2(value);
+          break;
+        case "city":
+          setCity(value);
+          break;
+        case "pinCode":
+          setPinCode(value);
+          break;
+        case "state":
+          setState(value);
+          break;
+        case "useAsDefault":
+          setUseAsDefault(!useAsDefault);
+          break;
+        default:
+          break;
+      }
+    }
+  };
   const addNewAddress = () => {
     const newAddress = {
       name: name,
@@ -23,16 +89,26 @@ function ShippingAddress() {
       state: state,
       useAsDefault: useAsDefault,
     };
-
-    setNewAddresses([...newAddresses, newAddress]);
-    setName("");
-    setMobileNumber("");
-    setAddress1("");
-    setAddress2("");
-    setCity("Baku");
-    setPinCode("");
-    setState("Azerbaijan");
-    setUseAsDefault(false);
+    if (editIndex !== null) {
+      const updatedAddresses = [...newAddresses];
+      updatedAddresses[editIndex] = newAddress;
+      setNewAddresses(updatedAddresses);
+      setEditIndex(null);
+    } else {
+      setNewAddresses([...newAddresses, newAddress]);
+    }
+  };
+  const handleEditAddress = (index) => {
+    setEditIndex(index);
+    const addressToEdit = newAddresses[index];
+    setName(addressToEdit.name);
+    setMobileNumber(addressToEdit.mobileNumber);
+    setAddress1(addressToEdit.address1);
+    setAddress2(addressToEdit.address2);
+    setCity(addressToEdit.city);
+    setPinCode(addressToEdit.pinCode);
+    setState(addressToEdit.state);
+    setUseAsDefault(addressToEdit.useAsDefault);
   };
   const deleteAddress = (index) => {
     const updatedAddresses = [...newAddresses];
@@ -46,7 +122,7 @@ function ShippingAddress() {
       <div className="container">
         <div className="shipping">
           <div className="shipping-address-name">
-            <p>Shipping Address</p>
+            <p>{words[lang].shipaddress}</p>
           </div>
           <div className="shipping-address">
             <div className="shipping-address-left">
@@ -67,7 +143,7 @@ function ShippingAddress() {
                       />
                     </svg>
                   </div>
-                  <p>Address</p>
+                  <p>{words[lang].address}</p>
                 </div>
                 <div className="process-rect2"></div>
                 <div className="payment-method">
@@ -99,7 +175,7 @@ function ShippingAddress() {
                       />
                     </svg>
                   </div>
-                  <p>Payment Method</p>
+                  <p>{words[lang].payment}</p>
                 </div>
                 <div className="process-rect"></div>
                 <div className="payment-review">
@@ -137,18 +213,14 @@ function ShippingAddress() {
                       />
                     </svg>
                   </div>
-                  <p>Review</p>
+                  <p>{words[lang].reviews}</p>
                 </div>
               </div>
               <div className="shipping-address-center">
                 <div className="delivery">
                   <div className="delivery-info">
-                    <h1>Select a delivery address</h1>
-                    <p>
-                      Is the address you'd like to use displayed below? If so,
-                      click the corresponding "Deliver to this address" button.
-                      Or you can enter a new delivery address.
-                    </p>
+                    <h1>{words[lang].shipadddel}</h1>
+                    <p>{words[lang].shipadddel1}</p>
                   </div>
                   <div className="delivery-rects">
                     {newAddresses.map((address, index) => (
@@ -158,11 +230,15 @@ function ShippingAddress() {
                           <input type="checkbox" />
                         </div>
                         <span>
-                          {address.address1}, {address.address2}, {address.city}{" "}
-                          - {address.pinCode}, {address.state}
+                          {address.mobileNumber},{address.address1},{" "}
+                          {address.address2}, {address.city}- {address.pinCode},{" "}
+                          {address.state}
                         </span>
                         <div className="delivery-rect-buttons">
-                          <button className="edit-btn">
+                          <button
+                            className="edit-btn"
+                            onClick={() => handleEditAddress(index)}
+                          >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="18"
@@ -184,7 +260,7 @@ function ShippingAddress() {
                                 </clipPath>
                               </defs>
                             </svg>
-                            Edit
+                            {words[lang].edit}
                           </button>
                           <button
                             className="delete-btn"
@@ -205,7 +281,7 @@ function ShippingAddress() {
                                 stroke-linejoin="round"
                               />
                             </svg>
-                            Delete
+                            {words[lang].del}
                           </button>
                         </div>
                       </div>
@@ -213,86 +289,110 @@ function ShippingAddress() {
                   </div>
                 </div>
                 <button className="delivery-btn">
-                  <NavLink to="/payment_method">Delivery Here</NavLink>
+                  <NavLink to="/payment_method">
+                    {words[lang].deliveryhere}
+                  </NavLink>
                 </button>
                 <div className="delivery-big-rect"></div>
               </div>
               <div className="shipping-address-down">
                 <div className="new-address-up">
-                  <p>Add a new address</p>
+                  <p>{words[lang].addaddress}</p>
                 </div>
                 <form className="new-address-down">
                   <div className="new-address-input">
-                    <p>Name</p>
+                    <p>{words[lang].name}</p>
                     <input
                       type="text"
-                      placeholder="Enter Name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      placeholder={words[lang].entername}
+                      value={
+                        editIndex !== null ? newAddresses[editIndex].name : name
+                      }
+                      onChange={(e) => handleInputChange(e, "name")}
                     />
                   </div>
                   <div className="new-address-input">
-                    <p>Mobile Number</p>
+                    <p>{words[lang].mobilenumber}</p>
                     <input
                       type="text"
-                      placeholder="Enter Mobile Number"
-                      value={mobileNumber}
-                      onChange={(e) => setMobileNumber(e.target.value)}
+                      placeholder={words[lang].addmobilenumber}
+                      value={
+                        editIndex !== null
+                          ? newAddresses[editIndex].mobileNumber
+                          : mobileNumber
+                      }
+                      onChange={(e) => handleInputChange(e, "mobileNumber")}
                     />
                   </div>
                   <div className="new-address-input">
-                    <p>Flat, House no., Building, Company, Apartment</p>
+                    <p>{words[lang].flat}</p>
                     <input
                       type="text"
-                      value={address1}
-                      onChange={(e) => setAddress1(e.target.value)}
+                      value={
+                        editIndex !== null
+                          ? newAddresses[editIndex].address1
+                          : address1
+                      }
+                      onChange={(e) => handleInputChange(e, "address1")}
                     />
                   </div>
                   <div className="new-address-input">
-                    <p>Area, Colony, Street, Sector, Village</p>
+                    <p>{words[lang].area}</p>
                     <input
                       type="text"
-                      value={address2}
-                      onChange={(e) => setAddress2(e.target.value)}
+                      value={
+                        editIndex !== null
+                          ? newAddresses[editIndex].address2
+                          : address2
+                      }
+                      onChange={(e) => handleInputChange(e, "address2")}
                     />
                   </div>
                   <div className="new-address-input">
-                    <p>City</p>
+                    <p>{words[lang].city}</p>
                     <select
-                      value={city}
-                      onChange={(e) => setCity(e.target.value)}
+                      value={
+                        editIndex !== null ? newAddresses[editIndex].city : city
+                      }
+                      onChange={(e) => handleInputChange(e, "city")}
                     >
-                      <option value="Baku">Baku</option>
+                      <option value="Baku">{words[lang].baku}</option>
                       <option value="London">London</option>
                       <option value="Washington">Washington</option>
                       <option value="Berlin">Berlin</option>
                       <option value="Ankara">Ankara</option>
                       <option value="Paris">Paris</option>
-                      <option value="Other">Other</option>
                     </select>
                   </div>
                   <div className="new-address-input">
-                    <p>Pin Code</p>
+                    <p>{words[lang].pinkod}</p>
                     <input
                       type="text"
-                      placeholder="Enter Pin Code"
-                      value={pinCode}
-                      onChange={(e) => setPinCode(e.target.value)}
+                      placeholder={words[lang].addpinkod}
+                      value={
+                        editIndex !== null
+                          ? newAddresses[editIndex].pinCode
+                          : pinCode
+                      }
+                      onChange={(e) => handleInputChange(e, "pinCode")}
                     />
                   </div>
                   <div className="new-address-input">
-                    <p>State</p>
+                    <p>{words[lang].state}</p>
                     <select
-                      value={state}
-                      onChange={(e) => setState(e.target.value)}
+                      value={
+                        editIndex !== null
+                          ? newAddresses[editIndex].state
+                          : state
+                      }
+                      onChange={(e) => handleInputChange(e, "state")}
                     >
-                      <option value="Azerbaijan">Azerbaijan</option>
+                      <option value="Azerbaijan">{words[lang].aze}</option>
                       <option value="England">England</option>
                       <option value="USA">USA</option>
                       <option value="Germany">Germany</option>
-                      <option value="Turkey">Turkey</option>
+                      <option value="Turkey">Türkiye</option>
                       <option value="France">France</option>
-                      <option value="Other">Other</option>
                     </select>
                   </div>
                   <div className="default-address">
@@ -300,10 +400,14 @@ function ShippingAddress() {
                       type="checkbox"
                       name="useAsDefault"
                       id="useAsDefault"
-                      checked={useAsDefault}
-                      onChange={(e) => setUseAsDefault(e.target.checked)}
+                      checked={
+                        editIndex !== null
+                          ? newAddresses[editIndex].useAsDefault
+                          : useAsDefault
+                      }
+                      onChange={(e) => handleInputChange(e, "useAsDefault")}
                     />
-                    <p>Use as my default address</p>
+                    <p>{words[lang].useaddress}</p>
                   </div>
 
                   <button
@@ -311,32 +415,38 @@ function ShippingAddress() {
                     type="button"
                     onClick={addNewAddress}
                   >
-                    Add New Address
+                    {editIndex !== null
+                      ? words[lang].updateaddress
+                      : words[lang].addaddress}
                   </button>
                 </form>
               </div>
             </div>
             <div className="subtotal-right1">
-              <div className="subtotal-subtotal">
-                <p>Subtotal</p>
-                <p>$200.00</p>
+              <div className="subtotal-total">
+                <p>{words[lang].subtotal}</p>
+                <p>${totalAmount}</p>
               </div>
               <div className="subtotal-rect1"></div>
               <div className="subtotal-input">
-                <p>Enter Discount Code</p>
+                <p>{words[lang].discount}</p>
                 <div className="subtotal-apply">
-                  <input type="text" />
-                  <button>Apply</button>
+                  <input
+                    type="text"
+                    value={discountCode}
+                    onChange={(e) => setDiscountCode(e.target.value)}
+                  />
+                  <button onClick={applyDiscount}>{words[lang].apply}</button>
                 </div>
               </div>
               <div className="subtotal-delivery">
-                <p>Delivery Charge</p>
-                <p>$5.00</p>
+                <p>{words[lang].delcharge}</p>
+                <p>$5</p>
               </div>
               <div className="subtotal-rect1"></div>
               <div className="subtotal-total">
-                <p>Grand Total</p>
-                <p>$205.00</p>
+                <p>{words[lang].grandtotal}</p>
+                <p>${totalAmount + 5 - appliedDiscount}</p>
               </div>
             </div>
           </div>
@@ -346,4 +456,5 @@ function ShippingAddress() {
   );
 }
 
-export default ShippingAddress;
+const t = (a) => a;
+export default connect(t)(ShippingAddress);

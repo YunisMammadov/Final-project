@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 import "./Footer.css";
 import "./Footer_resp.css";
-function Footer() {
+function Footer({ lang, words }) {
   return (
     <footer>
       <div className="container">
@@ -123,50 +124,45 @@ function Footer() {
               </div>
             </div>
             <ul>
-              Information
+              {words[lang].info}
               <li></li>
               <li>
-                <NavLink>My Account</NavLink>
+                <NavLink to="/My_profile">{words[lang].myacc}</NavLink>
               </li>
               <li>
-                <NavLink>Login</NavLink>
+                <NavLink to="/login">{words[lang].login}</NavLink>
               </li>
               <li>
-                <NavLink>My Cart</NavLink>
+                <NavLink to="/checkout">{words[lang].mycart}</NavLink>
               </li>
               <li>
-                <NavLink>My Wishlist</NavLink>
+                <NavLink to="/My_profile">{words[lang].mywish}</NavLink>
               </li>
               <li>
-                <NavLink>Checkout</NavLink>
+                <NavLink to="/checkout">{words[lang].checkout}</NavLink>
               </li>
             </ul>
             <ul>
-              Service
-              <li></li>
-
+              {words[lang].service}
               <li>
-                <a href="#">About us</a>
+                <a href="#">{words[lang].aboutus}</a>
               </li>
               <li>
-                <a href="#">Careers</a>
+                <a href="#">{words[lang].careers}</a>
               </li>
               <li>
-                <a href="#">Delivery Information</a>
+                <a href="#">{words[lang].delinfo}</a>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <a href="#">{words[lang].privacy}</a>
               </li>
               <li>
-                <a href="#">Terms & Conditions</a>
+                <a href="#">{words[lang].terms}</a>
               </li>
             </ul>
             <div className="subscribe">
-              <p>Subscribe</p>
-              <span>
-                Enter your email below to be the first to know about new
-                collections and product launches.
-              </span>
+              <p>{words[lang].subscribe}</p>
+              <span>{words[lang].subsinfo}</span>
               <button>
                 <NavLink to="/login">
                   <div className="footer-btn">
@@ -194,7 +190,7 @@ function Footer() {
                         stroke-linejoin="round"
                       />
                     </svg>
-                    <span>Your Email</span>
+                    <span>{words[lang].emailaddress}</span>
                   </div>
                   <div className="footer-right">
                     <svg
@@ -365,7 +361,7 @@ function Footer() {
               </a>
             </div>
             <div className="footer-down-info">
-              <span>©2023 Krist All Rights are reserved️ </span>
+              <span>{words[lang].kristres}</span>
             </div>
             <ul className="footer-down-sm">
               <li>
@@ -437,4 +433,5 @@ function Footer() {
   );
 }
 
-export default Footer;
+const t = (a) => a;
+export default connect(t)(Footer);

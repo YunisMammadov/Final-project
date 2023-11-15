@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Search.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-function Search({ searchVisible, products, dispatch }) {
+function Search({ searchVisible, products, dispatch, words, lang }) {
   const search = useRef("");
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -32,7 +32,7 @@ function Search({ searchVisible, products, dispatch }) {
               className="searchBar"
               ref={search}
               type="search"
-              placeholder="Search"
+              placeholder={words[lang].search}
             />
             <button style={{ color: "white", cursor: "pointer" }} type="submit">
               <svg

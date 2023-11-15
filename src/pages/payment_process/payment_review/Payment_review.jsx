@@ -1,7 +1,32 @@
 import "./Payment_review.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import Place_order_modal from "./Place_order_modal";
-function Payment_review() {
+function Payment_review({ totalAmount, words, lang }) {
+  const [discountCode, setDiscountCode] = useState("");
+  const [isDiscountApplied, setIsDiscountApplied] = useState(false);
+  const [appliedDiscount, setAppliedDiscount] = useState(0);
+  const applyDiscount = () => {
+    if (isDiscountApplied) {
+      alert("Discount code has already been used.");
+      return;
+    }
+    if (discountCode === "Discount") {
+      const discountAmount = totalAmount * 0.1;
+      setAppliedDiscount(discountAmount);
+      setIsDiscountApplied(true);
+      localStorage.setItem("discountCode", "Discount");
+    } else {
+      alert("Geçersiz indirim kodu.");
+    }
+  };
+  useEffect(() => {
+    const storedDiscountCode = localStorage.getItem("discountCode");
+    if (storedDiscountCode === "Discount") {
+      setIsDiscountApplied(true);
+      setAppliedDiscount(totalAmount * 0.1);
+    }
+  }, []);
   const [open, setOpen] = useState(false);
   const handleAddNewAddressClick = () => {
     setOpen(true);
@@ -11,7 +36,7 @@ function Payment_review() {
       <div className="container">
         <div className="payment_review">
           <div className="payment_review-name">
-            <p>Review Your Order</p>
+            <p>{words[lang].revorder}</p>
           </div>
           <div className="payment_reviews">
             <div className="payment_review-left">
@@ -32,7 +57,7 @@ function Payment_review() {
                       />
                     </svg>
                   </div>
-                  <p>Address</p>
+                  <p>{words[lang].address}</p>
                 </div>
                 <div className="process-rect1"></div>
                 <div className="payment-method">
@@ -64,7 +89,7 @@ function Payment_review() {
                       />
                     </svg>
                   </div>
-                  <p>Payment Method</p>
+                  <p>{words[lang].payment}</p>
                 </div>
                 <div className="process-rect3"></div>
                 <div className="payment-review">
@@ -102,13 +127,13 @@ function Payment_review() {
                       />
                     </svg>
                   </div>
-                  <p>Review</p>
+                  <p>{words[lang].reviews}</p>
                 </div>
               </div>
               <div className="payment_review-down">
                 <div className="payment_review-details">
                   <div className="pay_rev-det-name">
-                    <p>Estimated delivery: 22 Feb 2022</p>
+                    <p>{words[lang].estimated} : 22 Feb 2022</p>
                   </div>
                   <div className="pay_rev-det-products">
                     <div className="pay_rev-det-product">
@@ -131,7 +156,7 @@ function Payment_review() {
                 </div>
                 <div className="payment_review-shipping">
                   <div className="payment_review-shipping-name">
-                    <p>Shipping Address</p>
+                    <p>{words[lang].shipaddress}</p>
                   </div>
                   <div className="payment_review-shipping-info">
                     <div className="payment_review-shipping-text">
@@ -168,7 +193,7 @@ function Payment_review() {
                 </div>
                 <div className="payment_review-pay-met">
                   <div className="payment_review-pay-met-name">
-                    <p>Payment Method</p>
+                    <p>{words[lang].payment}</p>
                   </div>
                   <div className="payment_review-pay-met-info">
                     <div className="payment_review-pay-met-text">
@@ -203,33 +228,37 @@ function Payment_review() {
               </div>
             </div>
             <div className="subtotal-right">
-              <div className="subtotal-subtotal">
-                <p>Subtotal</p>
-                <p>$200.00</p>
+              <div className="subtotal-total">
+                <p>{words[lang].subtotal}</p>
+                <p>${totalAmount}</p>
               </div>
               <div className="subtotal-rect1"></div>
               <div className="subtotal-input">
-                <p>Enter Discount Code</p>
+                <p>{words[lang].discount}</p>
                 <div className="subtotal-apply">
-                  <input type="text" />
-                  <button>Apply</button>
+                  <input
+                    type="text"
+                    value={discountCode}
+                    onChange={(e) => setDiscountCode(e.target.value)}
+                  />
+                  <button onClick={applyDiscount}>{words[lang].apply}</button>
                 </div>
               </div>
               <div className="subtotal-delivery">
-                <p>Delivery Charge</p>
-                <p>$5.00</p>
+                <p>{words[lang].delcharge}</p>
+                <p>$5</p>
               </div>
               <div className="subtotal-rect1"></div>
               <div className="subtotal-total">
-                <p>Grand Total</p>
-                <p>$205.00</p>
+                <p>{words[lang].grandtotal}</p>
+                <p>${totalAmount + 5 - appliedDiscount}</p>
               </div>
               <button
                 className="place-order-btn"
                 onClick={handleAddNewAddressClick}
               >
                 {open && <Place_order_modal />}
-                Place Order
+                {words[lang].placeorders}
               </button>
             </div>
           </div>
@@ -239,4 +268,5 @@ function Payment_review() {
   );
 }
 
-export default Payment_review;
+const t = (a) => a;
+export default connect(t)(Payment_review);

@@ -1,9 +1,33 @@
 import "./Checkout.css";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
+import { useState, useEffect } from "react";
 
 function Checkout({ cartItems, totalAmount, dispatch }) {
-  console.log(cartItems);
+  const [discountCode, setDiscountCode] = useState("");
+  const [isDiscountApplied, setIsDiscountApplied] = useState(false);
+  const [appliedDiscount, setAppliedDiscount] = useState(0);
+  const applyDiscount = () => {
+    if (isDiscountApplied) {
+      alert("Discount code has already been used.");
+      return;
+    }
+    if (discountCode === "Discount") {
+      const discountAmount = totalAmount * 0.1;
+      setAppliedDiscount(discountAmount);
+      setIsDiscountApplied(true);
+      localStorage.setItem("discountCode", "Discount");
+    } else {
+      alert("Geçersiz indirim kodu.");
+    }
+  };
+  useEffect(() => {
+    const storedDiscountCode = localStorage.getItem("discountCode");
+    if (storedDiscountCode === "Discount") {
+      setIsDiscountApplied(true);
+      setAppliedDiscount(totalAmount * 0.1);
+    }
+  }, []);
   return (
     <>
       <div className="container">
@@ -122,7 +146,7 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
               )}
             </div>
             <div className="subtotal-right">
-              <div className="subtotal-subtotal">
+              <div className="subtotal-total">
                 <p>Subtotal</p>
                 <p>${totalAmount}</p>
               </div>
@@ -130,8 +154,12 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
               <div className="subtotal-input">
                 <p>Enter Discount Code</p>
                 <div className="subtotal-apply">
-                  <input type="text" />
-                  <button>Apply</button>
+                  <input
+                    type="text"
+                    value={discountCode}
+                    onChange={(e) => setDiscountCode(e.target.value)}
+                  />
+                  <button onClick={applyDiscount}>Apply</button>
                 </div>
               </div>
               <div className="subtotal-delivery">
@@ -141,7 +169,7 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
               <div className="subtotal-rect1"></div>
               <div className="subtotal-total">
                 <p>Grand Total</p>
-                <p>${totalAmount + 5}</p>
+                <p>${totalAmount + 5 - appliedDiscount}</p>
               </div>
               <button className="proceed-btn">
                 <NavLink to="/shippingaddress">Proceed to Checkout</NavLink>

@@ -5,7 +5,13 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import { Link } from "react-router-dom";
 
-function Product_listing({ products, dispatch, filteredCategories }) {
+function Product_listing({
+  products,
+  dispatch,
+  filteredCategories,
+  words,
+  lang,
+}) {
   const [priceFilter, setPriceFilter] = useState([0, 1000]);
   const [filteredProducts, setFilteredProducts] = useState(products);
   const sliderStyles = {
@@ -80,15 +86,18 @@ function Product_listing({ products, dispatch, filteredCategories }) {
     parseInt(localStorage.getItem("currentPage")) || 1
   );
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentProducts = products.slice(startIndex, endIndex);
+  let startIndex = (currentPage - 1) * itemsPerPage;
+  let endIndex = startIndex + itemsPerPage;
+  let currentProducts = products.slice(startIndex, endIndex);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
   useEffect(() => {
     localStorage.setItem("currentPage", currentPage.toString());
+    startIndex = (currentPage - 1) * itemsPerPage;
+    endIndex = startIndex + itemsPerPage;
+    currentProducts = products.slice(startIndex, endIndex);
   }, [currentPage]);
   const mergedProducts = [
     ...filteredCategories,
@@ -101,7 +110,7 @@ function Product_listing({ products, dispatch, filteredCategories }) {
       <div className="container">
         <div className="product">
           <div className="product-up">
-            <p>Shop</p>
+            <p>{words[lang].shop}</p>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +127,7 @@ function Product_listing({ products, dispatch, filteredCategories }) {
                 />
               </svg>
             </span>
-            <p>All Products</p>
+            <p>{words[lang].allpro}</p>
           </div>
           <div className="product-down">
             <div className="product-left">
@@ -133,7 +142,7 @@ function Product_listing({ products, dispatch, filteredCategories }) {
                   }`}
                   onClick={() => handleAccordionClick(1)}
                 >
-                  <p>Filter by Price</p>
+                  <p>{words[lang].procategory}</p>
                   {activeAccordions.includes(1) ? activeSvg : inactiveSVG}
                 </div>
 
@@ -244,13 +253,13 @@ function Product_listing({ products, dispatch, filteredCategories }) {
                   }`}
                   onClick={() => handleAccordionClick(2)}
                 >
-                  <p>Filter by Price</p>
+                  <p>{words[lang].filprice}</p>
                   {activeAccordions.includes(2) ? activeSvg : inactiveSVG}
                 </div>
                 <div className="product-category-body accordion-content">
                   <div className="product-txt">
                     <p>
-                      Price: ${priceFilter[0]} - ${priceFilter[1]}
+                      {words[lang].price}: ${priceFilter[0]} - ${priceFilter[1]}
                     </p>
                     <Slider
                       range
@@ -277,49 +286,49 @@ function Product_listing({ products, dispatch, filteredCategories }) {
                   }`}
                   onClick={() => handleAccordionClick(3)}
                 >
-                  <p>Filter by Color</p>
+                  <p>{words[lang].filcolor}</p>
                   {activeAccordions.includes(3) ? activeSvg : inactiveSVG}
                 </div>
                 <div className="product-category-body accordion-content">
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <div className="product-check-rect1"></div>
-                      <p>Red</p>
+                      <p> {words[lang].red}</p>
                     </div>
                     <p>(6)</p>
                   </div>
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <div className="product-check-rect2"></div>
-                      <p>Blue</p>
+                      <p> {words[lang].blue}</p>
                     </div>
                     <p>(20)</p>
                   </div>
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <div className="product-check-rect3"></div>
-                      <p>Orange</p>
+                      <p> {words[lang].orange}</p>
                     </div>
                     <p>(7)</p>
                   </div>
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <div className="product-check-rect4"></div>
-                      <p>Black</p>
+                      <p> {words[lang].black}</p>
                     </div>
                     <p>(16)</p>
                   </div>
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <div className="product-check-rect5"></div>
-                      <p>Green</p>
+                      <p> {words[lang].green}</p>
                     </div>
                     <p>(10)</p>
                   </div>
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <div className="product-check-rect6"></div>
-                      <p>Yellow</p>
+                      <p> {words[lang].yellow}</p>
                     </div>
                     <p>(2)</p>
                   </div>
@@ -337,7 +346,7 @@ function Product_listing({ products, dispatch, filteredCategories }) {
                   }`}
                   onClick={() => handleAccordionClick(4)}
                 >
-                  <p>Filter by Size</p>
+                  <p>{words[lang].filsize}</p>
                   {activeAccordions.includes(4) ? activeSvg : inactiveSVG}
                 </div>
                 <div className="product-category-body accordion-content">
@@ -435,10 +444,10 @@ function Product_listing({ products, dispatch, filteredCategories }) {
                       stroke-linecap="round"
                     />
                   </svg>
-                  <p>Showing 1-16 of 72 results</p>
+                  <p>{words[lang].show}</p>
                 </div>
                 <div className="product-shotlatest">
-                  <p>Shot by latest</p>
+                  <p>{words[lang].shotby}</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -525,7 +534,7 @@ function Product_listing({ products, dispatch, filteredCategories }) {
                               </button>
                             </div>
                             <button className="product-listing-cart">
-                              Add to Cart
+                              {words[lang].addtocart}
                             </button>
                           </div>
                         </div>

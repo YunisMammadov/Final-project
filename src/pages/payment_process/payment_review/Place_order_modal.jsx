@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
-import "./Payment_review.css"
-function Place_order_modal() {
+import { connect } from "react-redux";
+
+import "./Payment_review.css";
+function Place_order_modal({ words, lang }) {
   return (
     <section className="place_order-modal">
       <div className="place_order-confirm">
@@ -72,18 +74,15 @@ function Place_order_modal() {
         </div>
         <div className="place_order-text">
           <div className="place_order-txt">
-            <h1>Your order is confirmed</h1>
-            <h2>
-              Thanks for shopping! your order hasn’t shipped yet, but we will
-              send you and email when it done.
-            </h2>
+            <h1>{words[lang].yourorder}</h1>
+            <h2>{words[lang].thanksshop}</h2>
           </div>
           <div className="place_order-buttons">
             <NavLink to="/my_profile" className="view-order-btn">
-              View Order
+              {words[lang].vieworder}
             </NavLink>
             <NavLink to="/" className="back-home-btn">
-              Back to Home
+              {words[lang].backhome}
             </NavLink>
           </div>
         </div>
@@ -92,4 +91,5 @@ function Place_order_modal() {
   );
 }
 
-export default Place_order_modal;
+const t = (a) => a;
+export default connect(t)(Place_order_modal);

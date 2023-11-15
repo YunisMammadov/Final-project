@@ -1,7 +1,32 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import "./Payment_method.css";
-function Payment_method() {
+function Payment_method({ totalAmount, words, lang }) {
+  const [discountCode, setDiscountCode] = useState("");
+  const [isDiscountApplied, setIsDiscountApplied] = useState(false);
+  const [appliedDiscount, setAppliedDiscount] = useState(0);
+  const applyDiscount = () => {
+    if (isDiscountApplied) {
+      alert("Discount code has already been used.");
+      return;
+    }
+    if (discountCode === "Discount") {
+      const discountAmount = totalAmount * 0.1;
+      setAppliedDiscount(discountAmount);
+      setIsDiscountApplied(true);
+      localStorage.setItem("discountCode", "Discount");
+    } else {
+      alert("Geçersiz indirim kodu.");
+    }
+  };
+  useEffect(() => {
+    const storedDiscountCode = localStorage.getItem("discountCode");
+    if (storedDiscountCode === "Discount") {
+      setIsDiscountApplied(true);
+      setAppliedDiscount(totalAmount * 0.1);
+    }
+  }, []);
   const activeSVG = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +102,7 @@ function Payment_method() {
       <div className="container">
         <div className="payment_method">
           <div className="payment_method-name">
-            <p>Payment Method</p>
+            <p>{words[lang].payment}</p>
           </div>
           <div className="payment_methods">
             <div className="payment_method-left">
@@ -98,7 +123,7 @@ function Payment_method() {
                       />
                     </svg>
                   </div>
-                  <p>Address</p>
+                  <p>{words[lang].address}</p>
                 </div>
                 <div className="process-rect1"></div>
                 <div className="payment-method">
@@ -130,7 +155,7 @@ function Payment_method() {
                       />
                     </svg>
                   </div>
-                  <p>Payment Method</p>
+                  <p>{words[lang].payment}</p>
                 </div>
                 <div className="process-rect"></div>
                 <div className="payment-review">
@@ -168,12 +193,12 @@ function Payment_method() {
                       />
                     </svg>
                   </div>
-                  <p>Review</p>
+                  <p>{words[lang].reviews}</p>
                 </div>
               </div>
               <div className="payment_method-down">
                 <div className="select-payment-method">
-                  <p>Select a payment method</p>
+                  <p>{words[lang].selpayment}</p>
                 </div>
                 <form className="payment-form">
                   <div
@@ -188,20 +213,23 @@ function Payment_method() {
                       onClick={() => handleAccordionClick(0)}
                     >
                       {activeAccordion === 0 ? activeSVG : inactiveSVG}
-                      <span>Debit/Credit Card</span>
+                      <span>{words[lang].debit}</span>
                     </div>
                     <div class="accordion-content">
                       <div className="payment-form-input">
-                        <p>Card Number</p>
+                        <p>{words[lang].cardnum}</p>
                         <input type="tel" placeholder="XXXX XXXX XXXX XXXX" />
                       </div>
                       <div className="payment-form-input">
-                        <p>Card Name</p>
-                        <input type="text" placeholder="Enter Card Name" />
+                        <p>{words[lang].cardname}</p>
+                        <input
+                          type="text"
+                          placeholder={words[lang].entercardname}
+                        />
                       </div>
                       <div className="payment-form-input-big">
                         <div className="payment-form-input-lit">
-                          <p>Expire Date</p>
+                          <p>{words[lang].expiredate}</p>
                           <input type="tel" placeholder="XX/XX" />
                         </div>
                         <div className="payment-form-input-lit">
@@ -209,7 +237,9 @@ function Payment_method() {
                           <input type="tel" placeholder="XXX" />
                         </div>
                       </div>
-                      <button className="add-card-btn">Add Card</button>
+                      <button className="add-card-btn">
+                        {words[lang].addcard}
+                      </button>
                     </div>
                   </div>
                   <div
@@ -230,16 +260,19 @@ function Payment_method() {
                     </div>
                     <div class="accordion-content">
                       <div className="payment-form-input">
-                        <p>Card Number</p>
+                        <p>{words[lang].cardnum}</p>
                         <input type="tel" placeholder="XXXX XXXX XXXX XXXX" />
                       </div>
                       <div className="payment-form-input">
-                        <p>Card Name</p>
-                        <input type="text" placeholder="Enter Card Name" />
+                        <p>{words[lang].cardname}</p>
+                        <input
+                          type="text"
+                          placeholder={words[lang].entercardname}
+                        />
                       </div>
                       <div className="payment-form-input-big">
                         <div className="payment-form-input-lit">
-                          <p>Expire Date</p>
+                          <p>{words[lang].expiredate}</p>
                           <input type="tel" placeholder="XX/XX" />
                         </div>
                         <div className="payment-form-input-lit">
@@ -247,7 +280,9 @@ function Payment_method() {
                           <input type="tel" placeholder="XXX" />
                         </div>
                       </div>
-                      <button className="add-card-btn">Add Card</button>
+                      <button className="add-card-btn">
+                        {words[lang].addcard}
+                      </button>
                     </div>
                   </div>
                   <div
@@ -267,16 +302,19 @@ function Payment_method() {
                     </div>
                     <div class="accordion-content">
                       <div className="payment-form-input">
-                        <p>Card Number</p>
+                        <p>{words[lang].cardnum}</p>
                         <input type="tel" placeholder="XXXX XXXX XXXX XXXX" />
                       </div>
                       <div className="payment-form-input">
-                        <p>Card Name</p>
-                        <input type="text" placeholder="Enter Card Name" />
+                        <p>{words[lang].cardname}</p>
+                        <input
+                          type="text"
+                          placeholder={words[lang].entercardname}
+                        />
                       </div>
                       <div className="payment-form-input-big">
                         <div className="payment-form-input-lit">
-                          <p>Expire Date</p>
+                          <p>{words[lang].expiredate}</p>
                           <input type="tel" placeholder="XX/XX" />
                         </div>
                         <div className="payment-form-input-lit">
@@ -284,7 +322,9 @@ function Payment_method() {
                           <input type="tel" placeholder="XXX" />
                         </div>
                       </div>
-                      <button className="add-card-btn">Add Card</button>
+                      <button className="add-card-btn">
+                        {words[lang].addcard}
+                      </button>
                     </div>
                   </div>
                   <div
@@ -299,20 +339,23 @@ function Payment_method() {
                       onClick={() => handleAccordionClick(3)}
                     >
                       {activeAccordion === 3 ? activeSVG : inactiveSVG}
-                      <span>Cash on Delivery</span>
+                      <span>{words[lang].cash}</span>
                     </div>
                     <div class="accordion-content">
                       <div className="payment-form-input">
-                        <p>Card Number</p>
+                        <p>{words[lang].cardnum}</p>
                         <input type="tel" placeholder="XXXX XXXX XXXX XXXX" />
                       </div>
                       <div className="payment-form-input">
-                        <p>Card Name</p>
-                        <input type="text" placeholder="Enter Card Name" />
+                        <p>{words[lang].cardname}</p>
+                        <input
+                          type="text"
+                          placeholder={words[lang].entercardname}
+                        />
                       </div>
                       <div className="payment-form-input-big">
                         <div className="payment-form-input-lit">
-                          <p>Expire Date</p>
+                          <p>{words[lang].expiredate}</p>
                           <input type="tel" placeholder="XX/XX" />
                         </div>
                         <div className="payment-form-input-lit">
@@ -320,37 +363,45 @@ function Payment_method() {
                           <input type="tel" placeholder="XXX" />
                         </div>
                       </div>
-                      <button className="add-card-btn">Add Card</button>
+                      <button className="add-card-btn">
+                        {words[lang].addcard}
+                      </button>
                     </div>
                   </div>
 
                   <button className="continue-btn">
-                    <NavLink to="/payment_review">Continue</NavLink>
+                    <NavLink to="/payment_review">
+                      {words[lang].continue}
+                    </NavLink>
                   </button>
                 </form>
               </div>
             </div>
             <div className="subtotal-right1">
-              <div className="subtotal-subtotal">
-                <p>Subtotal</p>
-                <p>$200.00</p>
+              <div className="subtotal-total">
+                <p>{words[lang].subtotal}</p>
+                <p>${totalAmount}</p>
               </div>
               <div className="subtotal-rect1"></div>
               <div className="subtotal-input">
-                <p>Enter Discount Code</p>
+                <p>{words[lang].discount}</p>
                 <div className="subtotal-apply">
-                  <input type="text" />
-                  <button>Apply</button>
+                  <input
+                    type="text"
+                    value={discountCode}
+                    onChange={(e) => setDiscountCode(e.target.value)}
+                  />
+                  <button onClick={applyDiscount}>{words[lang].apply}</button>
                 </div>
               </div>
               <div className="subtotal-delivery">
-                <p>Delivery Charge</p>
-                <p>$5.00</p>
+                <p>{words[lang].delcharge}</p>
+                <p>$5</p>
               </div>
               <div className="subtotal-rect1"></div>
               <div className="subtotal-total">
-                <p>Grand Total</p>
-                <p>$205.00</p>
+                <p>{words[lang].grandtotal}</p>
+                <p>${totalAmount + 5 - appliedDiscount}</p>
               </div>
             </div>
           </div>
@@ -360,4 +411,5 @@ function Payment_method() {
   );
 }
 
-export default Payment_method;
+const t = (a) => a;
+export default connect(t)(Payment_method);

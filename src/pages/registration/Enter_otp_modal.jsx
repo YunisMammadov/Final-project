@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
-import "./Registration.css"
+import "./Registration.css";
+import { connect } from "react-redux";
 
-function Enter_otp_modal() {
+function Enter_otp_modal({ words, lang }) {
   return (
     <section className="enter-modal">
       <div className="enter-modal-password">
@@ -69,14 +70,14 @@ function Enter_otp_modal() {
         </div>
         <div className="enter-modal-text">
           <div className="enter-modal-txt">
-            <h1>Password Changed Successfully</h1>
-            <h2>Your password has been updated succesfully</h2>
+            <h1>{words[lang].PasswordChanged}</h1>
+            <h2>{words[lang].passwordsuccess}</h2>
           </div>
-          <NavLink to="/login">Back to Login</NavLink>
+          <NavLink to="/login">{words[lang].backlogin}</NavLink>
         </div>
       </div>
     </section>
   );
 }
-
-export default Enter_otp_modal;
+const t = (a) => a;
+export default connect(t)(Enter_otp_modal);

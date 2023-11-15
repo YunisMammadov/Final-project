@@ -2,12 +2,19 @@ import { NavLink } from "react-router-dom";
 import "./Checkout.css";
 import { connect } from "react-redux";
 
-function Checkout_modal({ cartItems, totalAmount, open, close, dispatch }) {
+function Checkout_modal({
+  cartItems,
+  totalAmount,
+  open,
+  close,
+  dispatch,
+  words,
+  lang,
+}) {
   return (
     <div onClick={close} className={`checkout_modal ${open ? "active" : ""}`}>
       <div onClick={(e) => e.stopPropagation()} className="minicart">
         <div className="minicart-up">
-          <p>You have {cartItems.length} items in your cart</p>
         </div>
         <div className="minicart-down">
           <div className="minicart-products">
@@ -59,13 +66,13 @@ function Checkout_modal({ cartItems, totalAmount, open, close, dispatch }) {
             )}
           </div>
           <div className="minicart-subtotal">
-            <p>Subtotal</p>
+          <p>{words[lang].subtotal}</p>
             <p>{totalAmount}</p>
           </div>
           <div className="minicart-buttons">
             <div className="view-cart-btn">View Cart</div>
             <NavLink to="/checkout" className="checkout-btn">
-              Checkout
+            {words[lang].checkout}
             </NavLink>
           </div>
         </div>
