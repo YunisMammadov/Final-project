@@ -1,43 +1,59 @@
 import "./Contact.css";
-function Contact() {
+import { connect } from "react-redux";
+
+function Contact({ lang, words }) {
   return (
     <main>
       <div className="container">
         <div className="contact">
           <div className="contact-text">
             <h1>
-              <span>Contact Us</span>
+              <span>{words[lang].contactus}</span>
             </h1>
-            <h2>Don't hesitate to get in touch with me using below form :)</h2>
+            <h2>{words[lang].contactus1}:)</h2>
             <form>
               <div
                 className="inp"
-                style={{ display: "flex", justifyContent: "space-between" }}
+                style={{
+                  display: "flex",
+                  gap: 5,
+                  justifyContent: "space-between",
+                }}
               >
-                <input name="Name" placeholder="Name" type="text" required />
+                <input
+                  name="Name"
+                  placeholder={words[lang].name}
+                  type="text"
+                  required
+                />
                 <input
                   name="Surname"
-                  placeholder="Surname"
+                  placeholder={words[lang].surname}
                   type="text"
                   required
                 />
               </div>
-              <input name="Email" placeholder="Email" type="email" required />
+              <input
+                name="Email"
+                placeholder={words[lang].emailaddress}
+                type="email"
+                required
+              />
               <textarea
                 name="Message"
-                placeholder="Message"
+                placeholder={words[lang].message}
                 cols="30"
                 rows="10"
               ></textarea>
               <button type="submit" className="formSubmitBtn">
-                Let's talk
+                {words[lang].submit}
               </button>
             </form>
           </div>
           <div className="contact-map">
             <div className="contact-map-info">
-              <span>Yunis Mammadov,</span>
-              <span>Azerbaijan,</span>
+              <span>Yunis {words[lang].Mammadov},</span>
+              <span> {words[lang].aze},</span>
               <span>C.Cabbarli 8b/26</span>
               <span>Mmmdov1905@gmail.com</span>
             </div>
@@ -54,4 +70,5 @@ function Contact() {
   );
 }
 
-export default Contact;
+const t = (a) => a;
+export default connect(t)(Contact);

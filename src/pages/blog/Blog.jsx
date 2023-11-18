@@ -1,6 +1,8 @@
 import React from "react";
 import "./Blog.css";
-function Blog() {
+import { connect } from "react-redux";
+
+function Blog({ lang, words }) {
   return (
     <section className="blog">
       <div className="container">
@@ -13,21 +15,13 @@ function Blog() {
               />
               <div className="blog-time">
                 <h3>07</h3>
-                <p>November</p>
+                <p>{words[lang].november}</p>
                 <span>2023</span>
               </div>
             </div>
             <div className="blog-text">
-              <h4>Office of the Florida</h4>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <div className="blog-btn">
-                <button>
-                  Read More <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              <h4>{words[lang].floridaoff}</h4>
+              <p>{words[lang].Consonantia}</p>
             </div>
           </div>
           <div className="blog-card">
@@ -38,21 +32,13 @@ function Blog() {
               />
               <div className="blog-time">
                 <h3>10</h3>
-                <p>October</p>
+                <p>{words[lang].october}</p>
                 <span>2023</span>
               </div>
             </div>
             <div className="blog-text">
-              <h4>Office of the Oclohoma</h4>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <div className="blog-btn">
-                <button>
-                  Read More <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              <h4>{words[lang].Oclohomaoff}</h4>
+              <p>{words[lang].Consonantia}</p>
             </div>
           </div>
           <div className="blog-card">
@@ -63,21 +49,13 @@ function Blog() {
               />
               <div className="blog-time">
                 <h3>17</h3>
-                <p>September</p>
+                <p>{words[lang].September}</p>
                 <span>2023</span>
               </div>
             </div>
             <div className="blog-text">
-              <h4>Office of the Miami</h4>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <div className="blog-btn">
-                <button>
-                  Read More <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              <h4>{words[lang].Miamioff}</h4>
+              <p>{words[lang].Consonantia}</p>
             </div>
           </div>
           <div className="blog-card">
@@ -88,21 +66,13 @@ function Blog() {
               />
               <div className="blog-time">
                 <h3>23</h3>
-                <p>August</p>
+                <p>{words[lang].August}</p>
                 <span>2023</span>
               </div>
             </div>
             <div className="blog-text">
-              <h4>Office of the Houston</h4>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <div className="blog-btn">
-                <button>
-                  Read More <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              <h4>{words[lang].Houstonoff}</h4>
+              <p>{words[lang].Consonantia}</p>
             </div>
           </div>
           <div className="blog-card">
@@ -113,21 +83,13 @@ function Blog() {
               />
               <div className="blog-time">
                 <h3>30</h3>
-                <p>July</p>
+                <p>{words[lang].July}</p>
                 <span>2023</span>
               </div>
             </div>
             <div className="blog-text">
-              <h4>Office of the Philadelphia</h4>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <div className="blog-btn">
-                <button>
-                  Read More <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              <h4>{words[lang].Philadelphiaoff}</h4>
+              <p>{words[lang].Consonantia}</p>
             </div>
           </div>
           <div className="blog-card">
@@ -138,21 +100,13 @@ function Blog() {
               />
               <div className="blog-time">
                 <h3>18</h3>
-                <p>February</p>
+                <p>{words[lang].February}</p>
                 <span>2023</span>
               </div>
             </div>
             <div className="blog-text">
-              <h4>Office of the Charlotte</h4>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <div className="blog-btn">
-                <button>
-                  Read More <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+              <h4>{words[lang].Charlotteoff}</h4>
+              <p>{words[lang].Consonantia}</p>
             </div>
           </div>
         </div>
@@ -160,5 +114,5 @@ function Blog() {
     </section>
   );
 }
-
-export default Blog;
+const t = (a) => a;
+export default connect(t)(Blog);

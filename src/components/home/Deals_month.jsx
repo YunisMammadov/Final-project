@@ -1,7 +1,6 @@
 import CountUp from "react-countup";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-
 function Deals_month({ words, lang }) {
   return (
     <section className="deals">
@@ -108,6 +107,5 @@ function Deals_month({ words, lang }) {
     </section>
   );
 }
-
 const t = (a) => a;
 export default connect(t)(Deals_month);

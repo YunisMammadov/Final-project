@@ -2,10 +2,106 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import "./Payment_method.css";
+import { array } from "yup";
 function Payment_method({ totalAmount, words, lang }) {
   const [discountCode, setDiscountCode] = useState("");
   const [isDiscountApplied, setIsDiscountApplied] = useState(false);
   const [appliedDiscount, setAppliedDiscount] = useState(0);
+
+  const [cardNum, setCardNum] = useState("");
+  const [cardName, setCardName] = useState("");
+  const [expire, setExpire] = useState("");
+  const [cvv, setCvv] = useState("");
+
+  const debetHandler = (e) => {
+    e.preventDefault();
+
+    let debet = {
+      num: cardNum,
+      name: cardName,
+      expire: expire,
+      cvv: cvv,
+      type: "debet",
+    };
+
+    let array = [];
+    array.push(debet);
+
+    if (localStorage.getItem("payments")) {
+      let payments = JSON.parse(localStorage.getItem("payments"));
+      payments.push(debet);
+      localStorage.setItem("payments", JSON.stringify(payments));
+    } else {
+      localStorage.setItem("payments", JSON.stringify(array));
+    }
+  };
+  const googlePayHandler = (e) => {
+    e.preventDefault();
+
+    let googlepay = {
+      num: cardNum,
+      name: cardName,
+      expire: expire,
+      cvv: cvv,
+      type: "googlepay",
+    };
+
+    let array = [];
+    array.push(googlepay);
+
+    if (localStorage.getItem("payments")) {
+      let payments = JSON.parse(localStorage.getItem("payments"));
+      payments.push(googlepay);
+      localStorage.setItem("payments", JSON.stringify(payments));
+    } else {
+      localStorage.setItem("payments", JSON.stringify(array));
+    }
+  };
+  const paypalHandler = (e) => {
+    e.preventDefault();
+
+    let paypal = {
+      num: cardNum,
+      name: cardName,
+      expire: expire,
+      cvv: cvv,
+      type: "paypal",
+    };
+
+    let array = [];
+    array.push(paypal);
+
+    if (localStorage.getItem("payments")) {
+      let payments = JSON.parse(localStorage.getItem("payments"));
+      payments.push(paypal);
+      localStorage.setItem("payments", JSON.stringify(payments));
+    } else {
+      localStorage.setItem("payments", JSON.stringify(array));
+    }
+  }
+  const cashHandler = (e) => {
+    e.preventDefault();
+
+    let cashHandler = {
+      num: cardNum,
+      name: cardName,
+      expire: expire,
+      cvv: cvv,
+      type: "cashHandler",
+    };
+
+    let array = [];
+    array.push(cashHandler);
+
+    if (localStorage.getItem("payments")) {
+      let payments = JSON.parse(localStorage.getItem("payments"));
+      payments.push(cashHandler);
+      localStorage.setItem("payments", JSON.stringify(payments));
+    } else {
+      localStorage.setItem("payments", JSON.stringify(array));
+    }
+  };
+
   const applyDiscount = () => {
     if (isDiscountApplied) {
       alert("Discount code has already been used.");
@@ -200,7 +296,7 @@ function Payment_method({ totalAmount, words, lang }) {
                 <div className="select-payment-method">
                   <p>{words[lang].selpayment}</p>
                 </div>
-                <form className="payment-form">
+                <form className="payment-form" onSubmit={debetHandler}>
                   <div
                     className={`debit-card accordion-item ${
                       activeAccordion === 0 ? "active" : ""
@@ -218,30 +314,49 @@ function Payment_method({ totalAmount, words, lang }) {
                     <div class="accordion-content">
                       <div className="payment-form-input">
                         <p>{words[lang].cardnum}</p>
-                        <input type="tel" placeholder="XXXX XXXX XXXX XXXX" />
+                        <input
+                          type="tel"
+                          placeholder="XXXX XXXX XXXX XXXX"
+                          value={cardNum}
+                          onChange={(e) => setCardNum(e.target.value)}
+                        />
                       </div>
                       <div className="payment-form-input">
                         <p>{words[lang].cardname}</p>
                         <input
                           type="text"
                           placeholder={words[lang].entercardname}
+                          value={cardName}
+                          onChange={(e) => setCardName(e.target.value)}
                         />
                       </div>
                       <div className="payment-form-input-big">
                         <div className="payment-form-input-lit">
                           <p>{words[lang].expiredate}</p>
-                          <input type="tel" placeholder="XX/XX" />
+                          <input
+                            type="tel"
+                            placeholder="XX/XX"
+                            value={expire}
+                            onChange={(e) => setExpire(e.target.value)}
+                          />
                         </div>
                         <div className="payment-form-input-lit">
                           <p>CVV</p>
-                          <input type="tel" placeholder="XXX" />
+                          <input
+                            type="tel"
+                            placeholder="XXX"
+                            value={cvv}
+                            onChange={(e) => setCvv(e.target.value)}
+                          />
                         </div>
                       </div>
-                      <button className="add-card-btn">
+                      <button type="submit" className="add-card-btn">
                         {words[lang].addcard}
                       </button>
                     </div>
                   </div>
+                </form>
+                <form className="payment-form" onSubmit={googlePayHandler}>
                   <div
                     className={`google-pay accordion-item ${
                       activeAccordion === 1 ? "active" : ""
@@ -261,30 +376,49 @@ function Payment_method({ totalAmount, words, lang }) {
                     <div class="accordion-content">
                       <div className="payment-form-input">
                         <p>{words[lang].cardnum}</p>
-                        <input type="tel" placeholder="XXXX XXXX XXXX XXXX" />
+                        <input
+                          type="tel"
+                          placeholder="XXXX XXXX XXXX XXXX"
+                          value={cardNum}
+                          onChange={(e) => setCardNum(e.target.value)}
+                        />
                       </div>
                       <div className="payment-form-input">
                         <p>{words[lang].cardname}</p>
                         <input
                           type="text"
                           placeholder={words[lang].entercardname}
+                          value={cardName}
+                          onChange={(e) => setCardName(e.target.value)}
                         />
                       </div>
                       <div className="payment-form-input-big">
                         <div className="payment-form-input-lit">
                           <p>{words[lang].expiredate}</p>
-                          <input type="tel" placeholder="XX/XX" />
+                          <input
+                            type="tel"
+                            placeholder="XX/XX"
+                            value={expire}
+                            onChange={(e) => setExpire(e.target.value)}
+                          />
                         </div>
                         <div className="payment-form-input-lit">
                           <p>CVV</p>
-                          <input type="tel" placeholder="XXX" />
+                          <input
+                            type="tel"
+                            placeholder="XXX"
+                            value={cvv}
+                            onChange={(e) => setCvv(e.target.value)}
+                          />
                         </div>
                       </div>
-                      <button className="add-card-btn">
+                      <button type="submit" className="add-card-btn">
                         {words[lang].addcard}
                       </button>
                     </div>
                   </div>
+                </form>
+                <form className="payment-form" onSubmit={paypalHandler}>
                   <div
                     className={`paypal accordion-item ${
                       activeAccordion === 2 ? "active" : ""
@@ -303,30 +437,49 @@ function Payment_method({ totalAmount, words, lang }) {
                     <div class="accordion-content">
                       <div className="payment-form-input">
                         <p>{words[lang].cardnum}</p>
-                        <input type="tel" placeholder="XXXX XXXX XXXX XXXX" />
+                        <input
+                          type="tel"
+                          placeholder="XXXX XXXX XXXX XXXX"
+                          value={cardNum}
+                          onChange={(e) => setCardNum(e.target.value)}
+                        />
                       </div>
                       <div className="payment-form-input">
                         <p>{words[lang].cardname}</p>
                         <input
                           type="text"
                           placeholder={words[lang].entercardname}
+                          value={cardName}
+                          onChange={(e) => setCardName(e.target.value)}
                         />
                       </div>
                       <div className="payment-form-input-big">
                         <div className="payment-form-input-lit">
                           <p>{words[lang].expiredate}</p>
-                          <input type="tel" placeholder="XX/XX" />
+                          <input
+                            type="tel"
+                            placeholder="XX/XX"
+                            value={expire}
+                            onChange={(e) => setExpire(e.target.value)}
+                          />
                         </div>
                         <div className="payment-form-input-lit">
                           <p>CVV</p>
-                          <input type="tel" placeholder="XXX" />
+                          <input
+                            type="tel"
+                            placeholder="XXX"
+                            value={cvv}
+                            onChange={(e) => setCvv(e.target.value)}
+                          />
                         </div>
                       </div>
-                      <button className="add-card-btn">
+                      <button type="submit" className="add-card-btn">
                         {words[lang].addcard}
                       </button>
                     </div>
                   </div>
+                </form>
+                <form className="payment-form" onSubmit={cashHandler}>
                   <div
                     className={`cash-on-delivery accordion-item ${
                       activeAccordion === 3 ? "active" : ""
@@ -342,39 +495,17 @@ function Payment_method({ totalAmount, words, lang }) {
                       <span>{words[lang].cash}</span>
                     </div>
                     <div class="accordion-content">
-                      <div className="payment-form-input">
-                        <p>{words[lang].cardnum}</p>
-                        <input type="tel" placeholder="XXXX XXXX XXXX XXXX" />
-                      </div>
-                      <div className="payment-form-input">
-                        <p>{words[lang].cardname}</p>
-                        <input
-                          type="text"
-                          placeholder={words[lang].entercardname}
-                        />
-                      </div>
-                      <div className="payment-form-input-big">
-                        <div className="payment-form-input-lit">
-                          <p>{words[lang].expiredate}</p>
-                          <input type="tel" placeholder="XX/XX" />
-                        </div>
-                        <div className="payment-form-input-lit">
-                          <p>CVV</p>
-                          <input type="tel" placeholder="XXX" />
-                        </div>
-                      </div>
+                     
                       <button className="add-card-btn">
                         {words[lang].addcard}
                       </button>
                     </div>
                   </div>
-
-                  <button className="continue-btn">
-                    <NavLink to="/payment_review">
-                      {words[lang].continue}
-                    </NavLink>
-                  </button>
                 </form>
+
+                <button className="continue-btn">
+                  <NavLink to="/payment_review">{words[lang].continue}</NavLink>
+                </button>
               </div>
             </div>
             <div className="subtotal-right1">

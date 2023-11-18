@@ -1,11 +1,94 @@
 import { NavLink } from "react-router-dom";
 import "./ShippingAddress.css";
 import { connect } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 function ShippingAddress({ totalAmount, words, lang }) {
   const [discountCode, setDiscountCode] = useState("");
   const [isDiscountApplied, setIsDiscountApplied] = useState(false);
   const [appliedDiscount, setAppliedDiscount] = useState(0);
+
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [address2, setAddress2] = useState("");
+  const [city, setCity] = useState("");
+  const [pin, setPin] = useState("");
+  const [country, setCountry] = useState("");
+  const [cards, setCards] = useState([]);
+
+  const [updateTrigger, setUpdateTrigger] = useState({});
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    let card = {
+      name: name,
+      number: number,
+      address: address,
+      address2: address2,
+      city: city,
+      pin: pin,
+      country: country,
+    };
+
+    setCards([...cards, card]);
+    
+    let items = [...cards, card]
+    localStorage.setItem('cards', JSON.stringify(items))
+
+    setName("");
+    setNumber("");
+    setAddress("");
+    setAddress2("");
+    setCity("");
+    setPin("");
+    setCountry("");
+  };
+
+  const deleteHandler = (index) => {
+    let deleteCards = cards.filter((item, i) => i !== index);
+    console.log(deleteCards);
+    setCards(deleteCards);
+    let items = [...deleteCards]
+    localStorage.setItem('cards', JSON.stringify(items))
+  };
+
+  const updateFinder = (index) => {
+    let updateCard = cards.find((item, i) => i == index);
+    setUpdateTrigger({ ...updateCard, index: index });
+  };
+
+  const updateHandler = (e) => {
+    e.preventDefault();
+
+    let updatedArr = cards.map((item, i) => {
+      if (i == updateTrigger.index) {
+        item.name = name;
+        item.number = number;
+        item.address = address;
+        item.address2 = address2;
+        item.city = city;
+        item.pin = pin;
+        item.country = country;
+      }
+      return item;
+    });
+
+    setCards(updatedArr);
+
+    let items = [...updatedArr]
+    localStorage.setItem('cards', JSON.stringify(items))
+
+    setName("");
+    setNumber("");
+    setAddress("");
+    setAddress2("");
+    setCity("");
+    setPin("");
+    setCountry("");
+    setUpdateTrigger({});
+  };
+
   const applyDiscount = () => {
     if (isDiscountApplied) {
       alert("Discount code has already been used.");
@@ -20,102 +103,33 @@ function ShippingAddress({ totalAmount, words, lang }) {
       alert("Geçersiz indirim kodu.");
     }
   };
+
   useEffect(() => {
     const storedDiscountCode = localStorage.getItem("discountCode");
     if (storedDiscountCode === "Discount") {
       setIsDiscountApplied(true);
       setAppliedDiscount(totalAmount * 0.1);
     }
+
+
+    if(localStorage.getItem('cards')){
+      console.log('var')
+      setCards(JSON.parse(localStorage.getItem('cards')))
+    }
+    else{
+      setCards([])
+    }
   }, []);
 
-  const [newAddresses, setNewAddresses] = useState([]);
-  const [name, setName] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [address1, setAddress1] = useState("");
-  const [address2, setAddress2] = useState("");
-  const [city, setCity] = useState("Baku");
-  const [pinCode, setPinCode] = useState("");
-  const [state, setState] = useState("Azerbaijan");
-  const [useAsDefault, setUseAsDefault] = useState(false);
-  const [editIndex, setEditIndex] = useState(null);
-
-  const handleInputChange = (e, field) => {
-    const value = e.target.value;
-    if (editIndex !== null) {
-      const updatedAddress = { ...newAddresses[editIndex] };
-      updatedAddress[field] = value;
-      const updatedAddresses = [...newAddresses];
-      updatedAddresses[editIndex] = updatedAddress;
-      setNewAddresses(updatedAddresses);
-    } else {
-      switch (field) {
-        case "name":
-          setName(value);
-          break;
-        case "mobileNumber":
-          setMobileNumber(value);
-          break;
-        case "address1":
-          setAddress1(value);
-          break;
-        case "address2":
-          setAddress2(value);
-          break;
-        case "city":
-          setCity(value);
-          break;
-        case "pinCode":
-          setPinCode(value);
-          break;
-        case "state":
-          setState(value);
-          break;
-        case "useAsDefault":
-          setUseAsDefault(!useAsDefault);
-          break;
-        default:
-          break;
-      }
-    }
-  };
-  const addNewAddress = () => {
-    const newAddress = {
-      name: name,
-      mobileNumber: mobileNumber,
-      address1: address1,
-      address2: address2,
-      city: city,
-      pinCode: pinCode,
-      state: state,
-      useAsDefault: useAsDefault,
-    };
-    if (editIndex !== null) {
-      const updatedAddresses = [...newAddresses];
-      updatedAddresses[editIndex] = newAddress;
-      setNewAddresses(updatedAddresses);
-      setEditIndex(null);
-    } else {
-      setNewAddresses([...newAddresses, newAddress]);
-    }
-  };
-  const handleEditAddress = (index) => {
-    setEditIndex(index);
-    const addressToEdit = newAddresses[index];
-    setName(addressToEdit.name);
-    setMobileNumber(addressToEdit.mobileNumber);
-    setAddress1(addressToEdit.address1);
-    setAddress2(addressToEdit.address2);
-    setCity(addressToEdit.city);
-    setPinCode(addressToEdit.pinCode);
-    setState(addressToEdit.state);
-    setUseAsDefault(addressToEdit.useAsDefault);
-  };
-  const deleteAddress = (index) => {
-    const updatedAddresses = [...newAddresses];
-    updatedAddresses.splice(index, 1);
-
-    setNewAddresses(updatedAddresses);
-  };
+  useEffect(() => {
+    setName(updateTrigger.name);
+    setNumber(updateTrigger.number);
+    setAddress(updateTrigger.address);
+    setAddress2(updateTrigger.address2);
+    setCity(updateTrigger.city);
+    setPin(updateTrigger.pin);
+    setCountry(updateTrigger.country);
+  }, [updateTrigger]);
 
   return (
     <>
@@ -223,21 +237,22 @@ function ShippingAddress({ totalAmount, words, lang }) {
                     <p>{words[lang].shipadddel1}</p>
                   </div>
                   <div className="delivery-rects">
-                    {newAddresses.map((address, index) => (
+                    {cards.map((address, index) => (
                       <div className="delivery-rect" key={index}>
                         <div className="delivery-rect-name">
                           <h1>{address.name}</h1>
-                          <input type="checkbox" />
+                          {/* <input type="checkbox" /> */}
                         </div>
                         <span>
-                          {address.mobileNumber},{address.address1},{" "}
-                          {address.address2}, {address.city}- {address.pinCode},{" "}
-                          {address.state}
+                          {address.number},{address.address}, {address.address2}
+                          , {address.city}- {address.pin}, {address.country}
                         </span>
                         <div className="delivery-rect-buttons">
                           <button
                             className="edit-btn"
-                            onClick={() => handleEditAddress(index)}
+                            onClick={() => {
+                              updateFinder(index);
+                            }}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -264,7 +279,9 @@ function ShippingAddress({ totalAmount, words, lang }) {
                           </button>
                           <button
                             className="delete-btn"
-                            onClick={() => deleteAddress(index)}
+                            onClick={() => {
+                              deleteHandler(index);
+                            }}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +316,7 @@ function ShippingAddress({ totalAmount, words, lang }) {
                 <div className="new-address-up">
                   <p>{words[lang].addaddress}</p>
                 </div>
-                <form className="new-address-down">
+                {/* <form className="new-address-down">
                   <div className="new-address-input">
                     <p>{words[lang].name}</p>
                     <input
@@ -419,7 +436,192 @@ function ShippingAddress({ totalAmount, words, lang }) {
                       ? words[lang].updateaddress
                       : words[lang].addaddress}
                   </button>
-                </form>
+                </form> */}
+                {Object.keys(updateTrigger).length == 0 ? (
+                  <form className="new-address-down" onSubmit={submitHandler}>
+                    <div className="new-address-input">
+                      <p>{words[lang].name}</p>
+                      <input
+                        type="text"
+                        placeholder={words[lang].entername}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].mobilenumber}</p>
+                      <input
+                        type="text"
+                        placeholder={words[lang].addmobilenumber}
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].flat}</p>
+                      <input
+                        type="text"
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].area}</p>
+                      <input
+                        type="text"
+                        value={address2}
+                        onChange={(e) => setAddress2(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].city}</p>
+                      <select
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
+                      >
+                        <option value="Baku">{words[lang].baku}</option>
+                        <option value="London">London</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Ankara">Ankara</option>
+                        <option value="Paris">Paris</option>
+                      </select>
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].pinkod}</p>
+                      <input
+                        type="text"
+                        placeholder={words[lang].addpinkod}
+                        value={pin}
+                        onChange={(e) => setPin(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].state}</p>
+                      <select
+                        value={country}
+                        onChange={(e) => setCountry(e.target.value)}
+                      >
+                        <option value="Azerbaijan">{words[lang].aze}</option>
+                        <option value="England">England</option>
+                        <option value="USA">USA</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Turkey">Türkiye</option>
+                        <option value="France">France</option>
+                      </select>
+                    </div>
+                    {/* <div className="default-address">
+                    <input
+                      type="checkbox"
+                      name="useAsDefault"
+                      id="useAsDefault"
+                      checked={
+                        editIndex !== null
+                          ? newAddresses[editIndex].useAsDefault
+                          : useAsDefault
+                      }
+                      onChange={(e) => handleInputChange(e, "useAsDefault")}
+                    />
+                    <p>{words[lang].useaddress}</p>
+                  </div> */}
+
+                    <button className="new-address-btn" type="submit">
+                      {words[lang].submit}
+                    </button>
+                  </form>
+                ) : (
+                  <form className="new-address-down" onSubmit={updateHandler}>
+                    <div className="new-address-input">
+                      <p>{words[lang].name}</p>
+                      <input
+                        type="text"
+                        placeholder={words[lang].entername}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].mobilenumber}</p>
+                      <input
+                        type="text"
+                        placeholder={words[lang].addmobilenumber}
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].flat}</p>
+                      <input
+                        type="text"
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].area}</p>
+                      <input
+                        type="text"
+                        value={address2}
+                        onChange={(e) => setAddress2(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].city}</p>
+                      <select
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
+                      >
+                        <option value="Baku">{words[lang].baku}</option>
+                        <option value="London">London</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Ankara">Ankara</option>
+                        <option value="Paris">Paris</option>
+                      </select>
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].pinkod}</p>
+                      <input
+                        type="text"
+                        placeholder={words[lang].addpinkod}
+                        value={pin}
+                        onChange={(e) => setPin(e.target.value)}
+                      />
+                    </div>
+                    <div className="new-address-input">
+                      <p>{words[lang].state}</p>
+                      <select
+                        value={country}
+                        onChange={(e) => setCountry(e.target.value)}
+                      >
+                        <option value="Azerbaijan">{words[lang].aze}</option>
+                        <option value="England">England</option>
+                        <option value="USA">USA</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Turkey">Türkiye</option>
+                        <option value="France">France</option>
+                      </select>
+                    </div>
+                    {/* <div className="default-address">
+                    <input
+                      type="checkbox"
+                      name="useAsDefault"
+                      id="useAsDefault"
+                      checked={
+                        editIndex !== null
+                          ? newAddresses[editIndex].useAsDefault
+                          : useAsDefault
+                      }
+                      onChange={(e) => handleInputChange(e, "useAsDefault")}
+                    />
+                    <p>{words[lang].useaddress}</p>
+                  </div> */}
+
+                    <button className="new-address-btn" type="submit">
+                      {words[lang].updateaddress}
+                    </button>
+                  </form>
+                )}
               </div>
             </div>
             <div className="subtotal-right1">

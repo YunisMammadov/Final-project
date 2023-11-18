@@ -123,7 +123,7 @@ function Address_modal({ words, lang }) {
             </div>
             <div className="address-modal-buttons">
               <button className="modal-cancel-btn">
-                <NavLink>{words[lang].addaddress}</NavLink>
+                <NavLink>{words[lang].cancel}</NavLink>
               </button>
               <button
                 className="address-modal-btn"

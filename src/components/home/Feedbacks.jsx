@@ -4,11 +4,9 @@ import { connect } from "react-redux";
 
 function Feedbacks({ words, lang }) {
   const sliderRef = useRef(null);
-
   const goToPrev = () => {
     sliderRef.current.slickPrev();
   };
-
   const goToNext = () => {
     sliderRef.current.slickNext();
   };
@@ -27,6 +25,8 @@ function Feedbacks({ words, lang }) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          infinite: true,
+          dots: false,
         },
       },
       {

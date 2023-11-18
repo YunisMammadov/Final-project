@@ -81,24 +81,24 @@
   justify-content: space-around;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (max-width: 1024px) {
   .sidebar {
     display: none;
   }
 }
-@media only screen and (min-width: 425px) {
+@media only screen and (max-width: 425px) {
   .aside {
     height: 105vh;
     width: 101vw;
   }
 }
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 375px) {
   .aside {
     height: 106vh;
     width: 101vw;
   }
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 320px) {
   .aside {
     height: 107vh;
     width: 101vw;

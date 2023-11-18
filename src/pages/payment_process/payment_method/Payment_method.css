@@ -209,9 +209,9 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 10px;
-  background: var(--Dark-500, #131118);
-  color: var(--White-500, #fff);
+  border-radius: 10px !important;
+  background: var(--Dark-500, #131118) !important;
+  color: var(--White-500, #fff) !important;
   font-family: Jost;
   font-size: 16px;
   font-style: normal;

@@ -337,9 +337,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background: var(--Dark-500, #131118);
+  background: var(--Dark-500, #131118) !important;
   gap: 10px;
-  color: var(--White-500, #fff);
+  color: var(--White-500, #fff) !important;
   font-family: Jost;
   font-size: 16px;
   font-style: normal;
@@ -425,7 +425,7 @@
   top: 0;
   right: 0;
   display: flex;
-  width: 102px;
+  width: 120px;
   height: 56px;
   padding: 20px;
   justify-content: center;

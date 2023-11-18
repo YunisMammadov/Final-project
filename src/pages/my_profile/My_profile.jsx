@@ -9,7 +9,7 @@ import Settings from "../../components/my_profile/settings/Settings";
 import { connect } from "react-redux";
 import "./My_profile.css";
 function My_profile({ words, lang }) {
-  const [activeTab, setActiveTab] = useState("Personal_Info");
+  const [activeTab, setActiveTab] = useState("My_orders");
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);

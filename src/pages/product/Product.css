@@ -33,7 +33,6 @@ body {
 }
 .product-up {
   display: flex;
-  gap: 10px;
 }
 .product-left {
   width: 244px;

@@ -14,8 +14,7 @@ function Checkout_modal({
   return (
     <div onClick={close} className={`checkout_modal ${open ? "active" : ""}`}>
       <div onClick={(e) => e.stopPropagation()} className="minicart">
-        <div className="minicart-up">
-        </div>
+        <div className="minicart-up"></div>
         <div className="minicart-down">
           <div className="minicart-products">
             {cartItems ? (
@@ -66,13 +65,12 @@ function Checkout_modal({
             )}
           </div>
           <div className="minicart-subtotal">
-          <p>{words[lang].subtotal}</p>
+            <p>{words[lang].subtotal}</p>
             <p>{totalAmount}</p>
           </div>
           <div className="minicart-buttons">
-            <div className="view-cart-btn">View Cart</div>
             <NavLink to="/checkout" className="checkout-btn">
-            {words[lang].checkout}
+              {words[lang].checkout}
             </NavLink>
           </div>
         </div>

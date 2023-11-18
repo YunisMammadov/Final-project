@@ -27,11 +27,6 @@ header {
   align-items: center;
   gap: 30px;
 }
-.header-ul {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
 .header ul li {
   color: var(--dark-500, #dd8a15);
   text-align: center;
@@ -73,7 +68,7 @@ header button a {
 }
 .dropdown {
   position: absolute;
-  top: 70px;
+  top: 47px;
   left: -300px;
   display: flex;
   padding: 40px;
@@ -81,8 +76,7 @@ header button a {
   align-items: center;
   gap: 50px;
   display: flex;
-  width: 1100px;
-  padding: 40px;
+  width: 1050px;
   justify-content: center;
   align-items: center;
   background-color: rgb(235, 237, 237);
@@ -109,14 +103,12 @@ header button a {
   gap: 30px;
 }
 .megamenu-up {
-  width: 106px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
 }
 .megamenu-down {
-  width: 165px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -138,9 +130,7 @@ header button a {
   font-weight: 700;
   line-height: normal;
 }
-.megamenu-inner li {
-  width: 150px;
-}
+
 .megamenu-inner a {
   color: var(--dark-500, #131118);
   font-family: Jost;
@@ -155,7 +145,7 @@ header button a {
   opacity: 0.1;
   height: 357px;
 }
-.menu-btn{
+.menu-btn {
   display: none;
 }
 
@@ -163,11 +153,11 @@ header button a {
   .header-menu {
     display: none !important;
   }
-  .menu-btn{
+  .menu-btn {
     display: block;
     cursor: pointer;
   }
-  .header{
+  .header {
     padding: 0 40px;
   }
 }
@@ -175,7 +165,7 @@ header button a {
   .breadcrumb {
     display: none !important  ;
   }
-  .header{
+  .header {
     padding: 0 40px;
     justify-content: space-between;
     align-items: center;

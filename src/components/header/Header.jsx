@@ -96,37 +96,37 @@ function Header({ dispatch, lang, words }) {
                     <div className="megamenu-up">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>Men</NavLink>
+                          <NavLink>{words[lang].men}</NavLink>
                         </li>
                       </div>
 
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>T-Shirts</NavLink>
+                          <NavLink>{words[lang].Tshirts}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Casual Shirts</NavLink>
+                          <NavLink>{words[lang].casualshirt}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Formal Shirts</NavLink>
+                          <NavLink>{words[lang].formalshirt}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Jackets</NavLink>
+                          <NavLink>{words[lang].Jackets}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Blazers & Coats</NavLink>
+                          <NavLink>{words[lang].Blazerscoats}</NavLink>
                         </li>
                       </div>
                     </div>
                     <div className="megamenu-down">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>Indian & Festive Wear</NavLink>
+                          <NavLink>{words[lang].indian}</NavLink>
                         </li>
                       </div>
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>Kurtas & Kurta Sets</NavLink>
+                          <NavLink>{words[lang].kurtas}</NavLink>
                         </li>
                         <li>
                           <NavLink>Sherwanis</NavLink>
@@ -139,40 +139,40 @@ function Header({ dispatch, lang, words }) {
                     <div className="megamenu-up">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>Women</NavLink>
+                          <NavLink>{words[lang].women}</NavLink>
                         </li>
                       </div>
 
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>Kurtas & Suits</NavLink>
+                          <NavLink>{words[lang].kurtas1}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Sarees</NavLink>
+                          <NavLink>{words[lang].Sarees}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Ethnic Wear</NavLink>
+                          <NavLink>{words[lang].EthnicWear}</NavLink>
                         </li>
                         <li>
                           <NavLink>Lehenga Cholis</NavLink>
                         </li>
                         <li>
-                          <NavLink>Jackets</NavLink>
+                          <NavLink>{words[lang].Jackets}</NavLink>
                         </li>
                       </div>
                     </div>
                     <div className="megamenu-down">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>Western Wear</NavLink>
+                          <NavLink>{words[lang].western}</NavLink>
                         </li>
                       </div>
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>Dresses</NavLink>
+                          <NavLink>{words[lang].Dresses}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Jumpsuits</NavLink>
+                          <NavLink>{words[lang].Jumpsuits}</NavLink>
                         </li>
                       </div>
                     </div>
@@ -182,40 +182,40 @@ function Header({ dispatch, lang, words }) {
                     <div className="megamenu-up">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>Footwear</NavLink>
+                          <NavLink>{words[lang].Footwear}</NavLink>
                         </li>
                       </div>
 
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>Flats</NavLink>
+                          <NavLink>{words[lang].Flats}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Casual Shoes</NavLink>
+                          <NavLink>{words[lang].CasualShoes}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Heels</NavLink>
+                          <NavLink>{words[lang].Heels}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Boots</NavLink>
+                          <NavLink>{words[lang].Boots}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Sports Shoes</NavLink>
+                          <NavLink>{words[lang].SportsShoes}</NavLink>
                         </li>
                       </div>
                     </div>
                     <div className="megamenu-down">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>Product Features</NavLink>
+                          <NavLink>{words[lang].ProductFeatures}</NavLink>
                         </li>
                       </div>
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>360 Product Viewers</NavLink>
+                          <NavLink>{words[lang].ProductViewers}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Product with Video</NavLink>
+                          <NavLink>{words[lang].ProductVideo}</NavLink>
                         </li>
                       </div>
                     </div>
@@ -225,34 +225,34 @@ function Header({ dispatch, lang, words }) {
                     <div className="megamenu-up">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>Kids</NavLink>
+                          <NavLink>{words[lang].kids}</NavLink>
                         </li>
                       </div>
 
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>T-Shirts</NavLink>
+                          <NavLink>{words[lang].Tshirts}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Shirts</NavLink>
+                          <NavLink>{words[lang].shirt}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Jeans</NavLink>
+                          <NavLink>{words[lang].Jeans}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Trousers</NavLink>
+                          <NavLink>{words[lang].Trousers}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Party Wear</NavLink>
+                          <NavLink>{words[lang].PartyWear}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Innerwear & Thermal</NavLink>
+                          <NavLink>{words[lang].InnerwearThermal}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Track Pants</NavLink>
+                          <NavLink>{words[lang].TrackPants}</NavLink>
                         </li>
                         <li>
-                          <NavLink>Value Pack</NavLink>
+                          <NavLink>{words[lang].ValuePack}</NavLink>
                         </li>
                       </div>
                     </div>

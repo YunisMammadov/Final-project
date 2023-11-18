@@ -225,8 +225,135 @@ const init = {
       passwordsuccess: "Parolunuz uğurla yeniləndi",
       backlogin: "Giriş səhifəsinə qayıt",
       movecard: "Səbətə köçürün",
+      floridaoff: "Florida ofisi",
+      Oclohomaoff: "Oclohoma ofisi",
+      Miamioff: "Miami ofisi",
+      Houstonoff: "Oclohoma ofisi",
+      Philadelphiaoff: "Philadelphia ofisi",
+      Charlotteoff: "Charlotte ofisi",
+      Consonantia:
+        "Çox uzaqlarda, söz dağlarının arxasında, Vokalia və Consonantia ölkələrindən uzaqlarda, kor mətnlər yaşayır.",
+      november: "Noyabr",
+      october: "Oktyabr",
+      September: "Sentyabr",
+      August: "Avqust",
+      July: "İyul",
+      February: "Fevral",
+      contactus: "Bizimlə əlaqə saxlayın",
+      contactus1:
+        "Aşağıdakı formadan istifadə edərək mənimlə əlaqə saxlamaqdan çəkinməyin",
+      surname: " Soyad",
+      message: "Mesaj",
+      Mammadov: "Məmmədov",
+      foundcompany: "Şirkətin yaradılması",
+      foundcompany1:
+        "Səyahətimiz, ruhumuzu alovlandıran və bizi qeyri-adi bir şey yaratmaq üçün yola qoyan bir vizyona sahib olan ehtiraslı fərdlərdən ibarət kiçik bir komanda ilə başladı.",
+      MilestoneAchieved: "Mərhələ Əldə Edildi",
+      MilestoneAchieved1:
+        "Bu il nəinki hekayəmizdə dönüş nöqtəsi olmaqla, həm də daha böyük zirvələrə çatmaq əzmimizə təkan verən mühüm bir mərhələyə nail olundu.",
+      ExpandingHorizons: "Üfüqlərin genişləndirilməsi",
+      ExpandingHorizons1:
+        "Biz beynəlxalq miqyasda əməliyyatlarımızı genişləndirdik, yeni bazarlara girişdik və dünya üzrə müxtəlif müştərilərlə əlaqə yaratdıq. Bu genişlənmə üfüqlərimizi genişləndirdi və qlobal mövcudluğumuzu zənginləşdirdi.",
+      DecadeSuccess: "Uğur Onilliyi",
+      DecadeSuccess1:
+        "On illik amansız zəhməti, sarsılmaz sədaqətini və dəyərli müştərilərimizin daimi sədaqətini qeyd edirik. Bu əlamətdar səyahət, bizi bu mühüm mərhələyə gətirən ortaq öhdəlik və dəstək ilə əlamətdar oldu.",
+      men: "Kişi",
+      Tshirts: "Koftalar",
+      casualshirt: "Gündəlik köynəklər",
+      formalshirt: "Formal köynəklər",
+      Jackets: "Gödəkçələr",
+      Blazerscoats: "Bleyzerlər və Paltolar",
+      indian: "Hind & Bayram Geyimi",
+      kurtas: "Kurtas & Kurta Dəstləri",
+      women: "Qadınlar",
+      kurtas1: "Kurtas & Kostyumlar",
+      Sarees: "Sariler",
+      EthnicWear: "Etnik Geyim",
+      western: "Qərb geyimi",
+      Dresses: "Paltarlar",
+      Jumpsuits: "kombinezonlar",
+      Footwear: "Ayaqqabı",
+      Flats: "Mənzillər",
+      CasualShoes: "Gündəlik Ayaqqabılar",
+      Heels: "Dikdaban Ayaqqabılar",
+      Boots: "Çəkmələr",
+      SportsShoes: "İdman Ayaqqabıları",
+      ProductFeatures: "Məhsul Xüsusiyyətləri",
+      ProductViewers: "360 Məhsul Görüntüləyici",
+      ProductVideo: "Video ilə məhsul",
+      kids: "Uşaqlar",
+      shirt: "Köynəklər",
+      Jeans: "Cinslər",
+      Trousers: "Şalvar",
+      PartyWear: "Ziyafət geyimi",
+      InnerwearThermal: "Daxili Geyim və Termal",
+      TrackPants: "İdman şalvarı",
+      ValuePack: "Değer paketi",
     },
     en: {
+      ValuePack: "Value Pack",
+      TrackPants: "Track Pants",
+      InnerwearThermal: "Innerwear & Thermal",
+      PartyWear: "Party Wear",
+      Trousers: "Trousers",
+      Jeans: "Jeans",
+      shirt: "Shirts",
+      kids: "Kids",
+      ProductVideo: "Product with Video",
+      ProductViewers: "360 Product Viewer",
+      ProductFeatures: "Product Features",
+      SportsShoes: "Sports Shoes",
+      Boots: "Boots",
+      Heels: "Heels",
+      CasualShoes: "Casual Shoes",
+      Flats: "Flats",
+      Footwear: "Footwear",
+      Jumpsuits: "Jumpsuits",
+      Dresses: "Dresses",
+      western: "Western Wear",
+      EthnicWear: "Ethnic Wear",
+      Sarees: "Sarees",
+      kurtas1: "Kurtas & Suits",
+      women: "Women",
+      kurtas: "Kurtas & Kurta Sets",
+      indian: "Indian & Festive Wear",
+      Blazerscoats: "Blazers & Coats",
+      Jackets: "Jackets",
+      formalshirt: "Formal Shirts",
+      casualshirt: "Casual Shirts",
+      Tshirts: "T-shirts",
+      men: "Men",
+      DecadeSuccess1:
+        "Celebrating ten years of relentless hard work, unwavering dedication, and the steadfast loyalty of our valued customers. This remarkable journey has been marked by the shared commitment and support that have brought us to this significant milestone.",
+      DecadeSuccess: "A Decade of Success",
+      ExpandingHorizons1:
+        "We expanded our operations internationally, venturing into new markets and connecting with a diverse range of customers around the world. This expansion broadened our horizons and enriched our global presence.",
+      ExpandingHorizons: "Expanding Horizons",
+      MilestoneAchieved1:
+        "A significant milestone was achieved in this year, a milestone that not only marked a turning point in our story but also fueled our determination to reach even greater heights.",
+      MilestoneAchieved: "Milestone Achieved",
+      foundcompany1:
+        "Our journey began with a small team of passionate individuals who had a vision, a vision that ignited our spirits and set us on a path to create something extraordinary.",
+      foundcompany: "Founding of the Company",
+      Mammadov: "Mammadov",
+      message: "Message",
+      surname: "Surname",
+      contactus1: "Don't hesitate to get in touch with me using below form",
+      contactus: "Contact Us",
+      February: "February",
+      July: "July",
+      August: "August",
+      September: "September",
+      november: "November",
+      october: "October",
+      Consonantia:
+        "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      Charlotteoff: "Office of the Charlotte",
+      Philadelphiaoff: "Office of the Philadelphia",
+      Houstonoff: "Office of the Houston",
+      Miamioff: "Office of the Miami",
+      Oclohomaoff: "Office of the Oclohoma",
+      floridaoff: "Office of the Florida",
       movecard: "Move to Cart",
       backlogin: "Back to Login",
       passwordsuccess: "Your password has been updated succesfully",
@@ -459,6 +586,27 @@ export default function Reducer(state = init, action) {
       localStorage.setItem("basket", JSON.stringify(state.cartItems));
       localStorage.setItem("totalamount", JSON.stringify(totalAmount));
       return { ...state, totalAmount: totalAmount };
+    case "BASKETITEMDEC":
+      let tempArrDec = state.cartItems;
+      let itemDec = tempArrDec.find((x) => x.title === action.payload.title);
+
+      if (itemDec.amount > 1) {
+        itemDec.amount -= 1;
+        itemDec.subtotal = itemDec.amount * itemDec.price;
+        state.totalAmount -= +itemDec.price;
+
+        localStorage.setItem("basket", JSON.stringify(tempArrDec));
+        localStorage.setItem("totalamount", JSON.stringify(state.totalAmount));
+      } else {
+        tempArrDec = tempArrDec.filter((x) => x.title !== action.payload.title);
+
+        state.totalAmount -= itemDec.subtotal;
+
+        localStorage.setItem("basket", JSON.stringify(tempArrDec));
+        localStorage.setItem("totalamount", JSON.stringify(state.totalAmount));
+      }
+
+      return { ...state, cartItems: tempArrDec };
     case "BASKETITEMINC":
       let tempArr = state.cartItems;
       let item = tempArr.find((x) => x.title === action.payload.title);

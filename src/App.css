@@ -5,15 +5,16 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  font-family: Jost;
 }
 body {
   background: var(--White-500, #FFF);
   width: 100%;
 }
 .container {
-  width: 1200px;
-  max-width: 95%;
-  margin: 0 auto;
+  width: 1200px !important;
+  max-width: 95% !important;
+  margin: 0 auto !important;
 }
 
 

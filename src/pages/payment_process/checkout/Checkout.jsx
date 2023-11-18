@@ -66,7 +66,18 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
                       <div className="checkout-row-right">
                         <p>{item.price}</p>
                         <div className="checkout-dec-inc">
-                          <div className="checkout-dec">
+                          <div
+                            className="checkout-dec"
+                            onClick={() =>
+                              dispatch({
+                                type: "BASKETITEMDEC",
+                                payload: {
+                                  title: item.title,
+                                  amount: item.amount - 1,
+                                },
+                              })
+                            }
+                          >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="14"
@@ -182,5 +193,11 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
   );
 }
 
-const t = (a) => a;
-export default connect(t)(Checkout);
+const mapStateToProps = (state) => ({
+  cartItems: state.cartItems,
+  totalAmount: state.totalAmount,
+});
+export default connect(mapStateToProps)(Checkout);
+
+// const t = (a) => a;
+// export default connect(t)(Checkout);
