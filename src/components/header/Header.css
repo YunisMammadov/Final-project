@@ -85,6 +85,27 @@ header button a {
   transition: 0.3s;
   z-index: 9;
 }
+.language-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown1 {
+  position: absolute;
+  display: flex;
+  padding-top: 2px;
+  flex-direction: column;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.menu-btn {
+  cursor: pointer;
+}
+
 .has-dropdown:hover .dropdown {
   visibility: visible;
   opacity: 1;
@@ -149,7 +170,7 @@ header button a {
   display: none;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   .header-menu {
     display: none !important;
   }

@@ -32,9 +32,9 @@ function ShippingAddress({ totalAmount, words, lang }) {
     };
 
     setCards([...cards, card]);
-    
-    let items = [...cards, card]
-    localStorage.setItem('cards', JSON.stringify(items))
+
+    let items = [...cards, card];
+    localStorage.setItem("cards", JSON.stringify(items));
 
     setName("");
     setNumber("");
@@ -49,8 +49,8 @@ function ShippingAddress({ totalAmount, words, lang }) {
     let deleteCards = cards.filter((item, i) => i !== index);
     console.log(deleteCards);
     setCards(deleteCards);
-    let items = [...deleteCards]
-    localStorage.setItem('cards', JSON.stringify(items))
+    let items = [...deleteCards];
+    localStorage.setItem("cards", JSON.stringify(items));
   };
 
   const updateFinder = (index) => {
@@ -76,8 +76,8 @@ function ShippingAddress({ totalAmount, words, lang }) {
 
     setCards(updatedArr);
 
-    let items = [...updatedArr]
-    localStorage.setItem('cards', JSON.stringify(items))
+    let items = [...updatedArr];
+    localStorage.setItem("cards", JSON.stringify(items));
 
     setName("");
     setNumber("");
@@ -111,13 +111,11 @@ function ShippingAddress({ totalAmount, words, lang }) {
       setAppliedDiscount(totalAmount * 0.1);
     }
 
-
-    if(localStorage.getItem('cards')){
-      console.log('var')
-      setCards(JSON.parse(localStorage.getItem('cards')))
-    }
-    else{
-      setCards([])
+    if (localStorage.getItem("cards")) {
+      console.log("var");
+      setCards(JSON.parse(localStorage.getItem("cards")));
+    } else {
+      setCards([]);
     }
   }, []);
 
@@ -526,7 +524,7 @@ function ShippingAddress({ totalAmount, words, lang }) {
                   </div> */}
 
                     <button className="new-address-btn" type="submit">
-                      {words[lang].submit}
+                      {words[lang].addaddress}
                     </button>
                   </form>
                 ) : (

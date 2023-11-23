@@ -78,28 +78,6 @@ function Payment_method({ totalAmount, words, lang }) {
     } else {
       localStorage.setItem("payments", JSON.stringify(array));
     }
-  }
-  const cashHandler = (e) => {
-    e.preventDefault();
-
-    let cashHandler = {
-      num: cardNum,
-      name: cardName,
-      expire: expire,
-      cvv: cvv,
-      type: "cashHandler",
-    };
-
-    let array = [];
-    array.push(cashHandler);
-
-    if (localStorage.getItem("payments")) {
-      let payments = JSON.parse(localStorage.getItem("payments"));
-      payments.push(cashHandler);
-      localStorage.setItem("payments", JSON.stringify(payments));
-    } else {
-      localStorage.setItem("payments", JSON.stringify(array));
-    }
   };
 
   const applyDiscount = () => {
@@ -479,7 +457,7 @@ function Payment_method({ totalAmount, words, lang }) {
                     </div>
                   </div>
                 </form>
-                <form className="payment-form" onSubmit={cashHandler}>
+                <form className="payment-form" onSubmit={debetHandler}>
                   <div
                     className={`cash-on-delivery accordion-item ${
                       activeAccordion === 3 ? "active" : ""
@@ -495,7 +473,6 @@ function Payment_method({ totalAmount, words, lang }) {
                       <span>{words[lang].cash}</span>
                     </div>
                     <div class="accordion-content">
-                     
                       <button className="add-card-btn">
                         {words[lang].addcard}
                       </button>

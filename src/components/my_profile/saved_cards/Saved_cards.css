@@ -9,23 +9,30 @@
   align-items: flex-start;
   gap: 30px;
 }
-.saved-btn {
+.saved-btn a {
   display: flex;
+  border: none;
   width: 320px;
   height: 56px;
   padding: 20px;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.saved-btn {
+  background: var(--Dark-500, #131118) !important;
   border-radius: 10px;
-  background: var(--Dark-500, #131118);
-  color: var(--White-500, #fff);
-  font-family: Jost;
+  color: var(--White-500, #fff) !important;
+}
+.saved-btn span {
+  color: var(--Dark-500, #fff);
+  font-family: "Jost", sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 .saved-cards {
   display: flex;
   flex-direction: column;

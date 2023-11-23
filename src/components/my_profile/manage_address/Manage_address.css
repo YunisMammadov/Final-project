@@ -11,7 +11,7 @@
 }
 .address-btn {
   display: flex;
-  width: 320px;
+  width: 320px ;
   height: 56px;
   padding: 20px;
   justify-content: center;
@@ -83,16 +83,19 @@
   gap: 10px;
 }
 .address-edit-btn {
+  border: none !important;
+  border-radius: 8px;
+  background: var(--gray-gray-10, rgba(164, 161, 170, 0.1));
+}
+.address-edit-btn a {
   display: flex;
   width: 130px;
   height: 40px;
   padding: 10px;
   justify-content: center;
+  border: none;
   align-items: center;
   gap: 10px;
-  border: none;
-  border-radius: 8px;
-  background: var(--gray-gray-10, rgba(164, 161, 170, 0.1));
 }
 
 .address-edit-btn span {
@@ -148,7 +151,7 @@
 }
 .address-modal {
   padding: 20px 0;
-  margin-top: 400px;
+  margin-top: 390px;
   background-color: #fff;
 }
 .address-modal-down {

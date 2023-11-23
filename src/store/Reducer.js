@@ -37,10 +37,10 @@ const init = {
       dealsmonth: "Ayın Endirimləri",
       dealmonth:
         "Ayın endirimləri ilə əldə etmək istədiyiniz hər şey indi çox ucuzdur! Yalnız bir ay üçün nəzərdə tutulan bu kampaniyanı qaçırmayın. Yüzlərlə məhsula böyük endirimlər sizi gözləyir. İndi alış-verişə başlayın və qənaətdən zövq alın!",
-      days: "Günlər",
-      hours: "Saatlar",
-      mins: "Dəqiqələr",
-      secs: "Saniyələr",
+      days: "Gün",
+      hours: "Saat",
+      mins: "Dəqiqə",
+      secs: "Saniyə",
       wievproducts: "Bütün Məhsullara Baxın",
       customersays: "Müştərimiz nə deyir",
       feedbacks:
@@ -289,8 +289,10 @@ const init = {
       InnerwearThermal: "Daxili Geyim və Termal",
       TrackPants: "İdman şalvarı",
       ValuePack: "Değer paketi",
+      nodata: "Məlumat yoxdur.",
     },
     en: {
+      nodata: "There is no information.",
       ValuePack: "Value Pack",
       TrackPants: "Track Pants",
       InnerwearThermal: "Innerwear & Thermal",

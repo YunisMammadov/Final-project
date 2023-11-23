@@ -16,8 +16,8 @@ function Shop_category({ category, lang, words }) {
     sliderRef.current.slickNext();
   };
   var settings = {
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     loop: true,
     dots: false,
     infinite: true,

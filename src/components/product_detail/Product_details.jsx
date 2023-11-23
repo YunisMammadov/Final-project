@@ -18,6 +18,7 @@ function Product_details({ words, lang }) {
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
+  
   return (
     <section className="products">
       <div className="container">

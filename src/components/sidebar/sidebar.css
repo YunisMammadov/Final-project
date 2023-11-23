@@ -80,27 +80,24 @@
   padding: 5%;
   justify-content: space-around;
 }
-
-@media only screen and (max-width: 1024px) {
-  .sidebar {
-    display: none;
+@media only screen and (max-width: 800px) {
+  .aside {
+    height: 102vh;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 630px) {
   .aside {
-    height: 105vh;
-    width: 101vw;
+    height: 103vh;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .aside {
+    height: 106vh;
+    width: 105vw;
   }
 }
 @media only screen and (max-width: 375px) {
   .aside {
-    height: 106vh;
-    width: 101vw;
-  }
-}
-@media only screen and (max-width: 320px) {
-  .aside {
     height: 107vh;
-    width: 101vw;
   }
 }

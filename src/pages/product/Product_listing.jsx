@@ -99,6 +99,7 @@ function Product_listing({
     endIndex = startIndex + itemsPerPage;
     currentProducts = products.slice(startIndex, endIndex);
   }, [currentPage]);
+  
   const mergedProducts = [
     ...filteredCategories,
     ...filteredProducts,

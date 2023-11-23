@@ -1,41 +1,53 @@
 import { NavLink } from "react-router-dom";
 import "./Manage_address.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
-function Address_modal({ words, lang }) {
-  const [newAddresses, setNewAddresses] = useState([]);
+function Address_modal({ words, lang, onClose }) {
   const [name, setName] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [address1, setAddress1] = useState("");
+  const [number, setNumber] = useState("");
+  const [address, setAddress] = useState("");
   const [address2, setAddress2] = useState("");
-  const [city, setCity] = useState("Baku");
-  const [pinCode, setPinCode] = useState("");
-  const [state, setState] = useState("Azerbaijan");
-  const [useAsDefault, setUseAsDefault] = useState(false);
+  const [city, setCity] = useState("");
+  const [pin, setPin] = useState("");
+  const [country, setCountry] = useState("");
+  const [cards, setCards] = useState([]);
 
-  const addNewAddress = () => {
-    const newAddress = {
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    let card = {
       name: name,
-      mobileNumber: mobileNumber,
-      address1: address1,
+      number: number,
+      address: address,
       address2: address2,
       city: city,
-      pinCode: pinCode,
-      state: state,
-      useAsDefault: useAsDefault,
+      pin: pin,
+      country: country,
     };
 
-    setNewAddresses([...newAddresses, newAddress]);
+    let items = [...cards, card];
+    setCards(items);
+
+    localStorage.setItem("cards", JSON.stringify(items));
+
     setName("");
-    setMobileNumber("");
-    setAddress1("");
+    setNumber("");
+    setAddress("");
     setAddress2("");
-    setCity("Baku");
-    setPinCode("");
-    setState("Azerbaijan");
-    setUseAsDefault(false);
+    setCity("");
+    setPin("");
+    setCountry("");
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("cards")) {
+      setCards(JSON.parse(localStorage.getItem("cards")));
+    } else {
+      setCards([]);
+    }
+  }, []);
+
   return (
     <>
       <section id="address-modal">
@@ -43,7 +55,8 @@ function Address_modal({ words, lang }) {
           <div className="address-modal-up">
             <p>{words[lang].addaddress}</p>
           </div>
-          <form className="address-modal-down">
+
+          <form className="address-modal-down" onSubmit={submitHandler}>
             <div className="address-modal-input">
               <p>{words[lang].name}</p>
               <input
@@ -58,16 +71,16 @@ function Address_modal({ words, lang }) {
               <input
                 type="text"
                 placeholder={words[lang].addmobilenumber}
-                value={mobileNumber}
-                onChange={(e) => setMobileNumber(e.target.value)}
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
               />
             </div>
             <div className="address-modal-input">
               <p>{words[lang].flat}</p>
               <input
                 type="text"
-                value={address1}
-                onChange={(e) => setAddress1(e.target.value)}
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
               />
             </div>
             <div className="address-modal-input">
@@ -87,7 +100,6 @@ function Address_modal({ words, lang }) {
                 <option value="Berlin">Berlin</option>
                 <option value="Ankara">Ankara</option>
                 <option value="Paris">Paris</option>
-                <option value="Other">Other</option>
               </select>
             </div>
             <div className="address-modal-input">
@@ -95,42 +107,35 @@ function Address_modal({ words, lang }) {
               <input
                 type="text"
                 placeholder={words[lang].addpinkod}
-                value={pinCode}
-                onChange={(e) => setPinCode(e.target.value)}
+                value={pin}
+                onChange={(e) => setPin(e.target.value)}
               />
             </div>
             <div className="address-modal-input">
               <p>{words[lang].state}</p>
-              <select value={state} onChange={(e) => setState(e.target.value)}>
+              <select
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+              >
                 <option value="Azerbaijan">{words[lang].aze}</option>
                 <option value="England">England</option>
                 <option value="USA">USA</option>
                 <option value="Germany">Germany</option>
-                <option value="Turkey">Turkey</option>
+                <option value="Turkey">Türkiye</option>
                 <option value="France">France</option>
-                <option value="Other">Other</option>
               </select>
             </div>
-            <div className="default-address-modal">
-              <input
-                type="checkbox"
-                name="useAsDefault"
-                id="useAsDefault"
-                checked={useAsDefault}
-                onChange={(e) => setUseAsDefault(e.target.checked)}
-              />
-              <p>{words[lang].useaddress}</p>
-            </div>
+
             <div className="address-modal-buttons">
-              <button className="modal-cancel-btn">
-                <NavLink>{words[lang].cancel}</NavLink>
+              <button className="modal-cancel-btn" onClick={onClose}>
+                {words[lang].cancel}
               </button>
               <button
                 className="address-modal-btn"
-                type="button"
-                onClick={addNewAddress}
+                onClick={onClose}
+                type="submit"
               >
-                <NavLink>Add New Address</NavLink>
+                {words[lang].addaddress}
               </button>
             </div>
           </form>

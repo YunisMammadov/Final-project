@@ -39,7 +39,7 @@ const Sidebar = ({ sidebar, dispatch }) => {
   return (
     <>
       <div className="sidebar">
-        <aside className={sidebar === true ? "sidebarActive aside" : "aside"}>
+        <aside className={sidebar ? "sidebarActive aside" : "aside"}>
           <div className="container">
             <div className="logoClose">
               <div className="header-logo">

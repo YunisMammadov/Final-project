@@ -15,6 +15,7 @@ function Header({ dispatch, lang, words }) {
       type: "SET_LANG",
       payload: lang,
     });
+    setMenuOpen(false);
   };
   return (
     <header>
@@ -272,28 +273,51 @@ function Header({ dispatch, lang, words }) {
             </li>
           </ul>
           <ul className="breadcrumb">
-            <select
-              className="select_language"
-              value={lang}
-              onChange={(e) => changeLang(e.target.value)}
-              style={{
-                width: "50px",
-                color: lang === "az" || lang === "en" ? "red" : "#000",
-              }}
-            >
-              <option
-                value="az"
-                style={{ color: lang === "az" ? "red" : "#000" }}
-              >
-                AZE
-              </option>
-              <option
-                value="en"
-                style={{ color: lang === "en" ? "red" : "#000" }}
-              >
-                ENG
-              </option>
-            </select>
+            <div style={{ position: "relative" }}>
+              <button className="language-button" onClick={toggleMenu}>
+                <img
+                  style={{ width: 50 }}
+                  src={
+                    lang === "az"
+                      ? "https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Azerbaijan_%281991%E2%80%932013%29.svg"
+                      : "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png"
+                  }
+                  alt=""
+                />
+              </button>
+              {menuOpen && (
+                <div className="dropdown1">
+                  {lang === "az" ? (
+                    <button
+                      className="language-button"
+                      style={{ color: lang === "en" ? "red" : "#000" }}
+                      onClick={() => changeLang("en")}
+                    >
+                      <img
+                        style={{ width: 50 }}
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png"
+                        alt=""
+                      />
+                    </button>
+                  ) : (
+                    <>
+                      <button
+                        className="language-button"
+                        style={{ color: lang === "az" ? "red" : "#000" }}
+                        onClick={() => changeLang("az")}
+                      >
+                        <img
+                          style={{ width: 50 }}
+                          src="https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Azerbaijan_%281991%E2%80%932013%29.svg"
+                          alt=""
+                        />
+                      </button>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+
             <li
               onClick={() => {
                 dispatch({
