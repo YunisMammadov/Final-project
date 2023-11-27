@@ -142,7 +142,7 @@ function Notifications({ words, lang }) {
             </div>
           </div>
           <div className="notifications-right">
-            <p>Yesterday</p>
+            <p>{words[lang].Yesterday}</p>
           </div>
         </div>
         <div className="notifications-rect"></div>
@@ -193,7 +193,5 @@ function Notifications({ words, lang }) {
     </div>
   );
 }
-
 const t = (a) => a;
 export default connect(t)(Notifications);
-

@@ -10,7 +10,21 @@ function Checkout_modal({
   dispatch,
   words,
   lang,
+  selectedSize,
 }) {
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      return;
+    }
+
+    dispatch({
+      type: "BASKET",
+      payload: {
+        // ... other item properties
+        size: selectedSize,
+      },
+    });
+  };
   return (
     <div onClick={close} className={`checkout_modal ${open ? "active" : ""}`}>
       <div onClick={(e) => e.stopPropagation()} className="minicart">
@@ -30,12 +44,16 @@ function Checkout_modal({
                         {item.amount} x ${item.price}
                       </h1>
                       <div className="minicart-product-det">
-                        <span>Size: S</span>
+                        <span>Size: {selectedSize}</span>
                         <button
                           id="check-modal-del-btn"
-                          onClick={() =>
-                            dispatch({ type: "BASKETDELETE", payload: item.id })
-                          }
+                          onClick={() => {
+                            handleAddToCart();
+                            dispatch({
+                              type: "BASKETDELETE",
+                              payload: item.id,
+                            });
+                          }}
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

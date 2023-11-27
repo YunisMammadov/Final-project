@@ -146,7 +146,7 @@
   line-height: normal;
   text-transform: capitalize;
 }
-.write-order {
+.write-order a {
   display: flex;
   width: 127px;
   height: 40px;
@@ -155,9 +155,11 @@
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  border: none;
   background: var(--Dark-500, #131118);
   color: var(--White-500, #fff);
+}
+.write-order {
+  border: none;
   font-family: Jost;
   font-size: 14px;
   font-style: normal;
@@ -165,20 +167,19 @@
   line-height: normal;
   text-transform: capitalize;
 }
-
-.cancel-order {
+.cancel-order{
   display: flex;
   width: 127px;
   height: 40px;
   padding: 10px;
   justify-content: center;
-  border: none;
   align-items: center;
   gap: 10px;
   border-radius: 8px;
   background: #ff7262;
   color: var(--White-500, #fff);
   font-feature-settings: "clig" off, "liga" off;
+  border: none;
   font-family: Jost;
   font-size: 14px;
   font-style: normal;

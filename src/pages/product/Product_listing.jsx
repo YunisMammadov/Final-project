@@ -81,7 +81,7 @@ function Product_listing({
     }
   };
 
-  const itemsPerPage = 9;
+  const itemsPerPage = 15;
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("currentPage")) || 1
   );
@@ -99,13 +99,17 @@ function Product_listing({
     endIndex = startIndex + itemsPerPage;
     currentProducts = products.slice(startIndex, endIndex);
   }, [currentPage]);
-  
+
   const mergedProducts = [
     ...filteredCategories,
     ...filteredProducts,
     ...currentProducts,
   ];
+  console.log(mergedProducts);
 
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <section className="products">
       <div className="container">
@@ -161,7 +165,7 @@ function Product_listing({
                       />
                       <p>Men</p>
                     </div>
-                    <svg
+                    {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
                       height="14"
@@ -174,14 +178,14 @@ function Product_listing({
                         d="M7.75 1C7.75 0.585786 7.41421 0.25 7 0.25C6.58579 0.25 6.25 0.585786 6.25 1V6.25H1C0.585786 6.25 0.25 6.58579 0.25 7C0.25 7.41421 0.585786 7.75 1 7.75H6.25V13C6.25 13.4142 6.58579 13.75 7 13.75C7.41421 13.75 7.75 13.4142 7.75 13V7.75H13C13.4142 7.75 13.75 7.41421 13.75 7C13.75 6.58579 13.4142 6.25 13 6.25H7.75V1Z"
                         fill="#28303F"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <input type="checkbox" />
                       <p>Women</p>
                     </div>
-                    <svg
+                    {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
                       height="14"
@@ -194,14 +198,14 @@ function Product_listing({
                         d="M7.75 1C7.75 0.585786 7.41421 0.25 7 0.25C6.58579 0.25 6.25 0.585786 6.25 1V6.25H1C0.585786 6.25 0.25 6.58579 0.25 7C0.25 7.41421 0.585786 7.75 1 7.75H6.25V13C6.25 13.4142 6.58579 13.75 7 13.75C7.41421 13.75 7.75 13.4142 7.75 13V7.75H13C13.4142 7.75 13.75 7.41421 13.75 7C13.75 6.58579 13.4142 6.25 13 6.25H7.75V1Z"
                         fill="#28303F"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                   <div className="product-text1 ">
                     <div className="product-checkbox">
                       <input type="checkbox" />
                       <p>Kids</p>
                     </div>
-                    <svg
+                    {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
                       height="14"
@@ -214,7 +218,7 @@ function Product_listing({
                         d="M7.75 1C7.75 0.585786 7.41421 0.25 7 0.25C6.58579 0.25 6.25 0.585786 6.25 1V6.25H1C0.585786 6.25 0.25 6.58579 0.25 7C0.25 7.41421 0.585786 7.75 1 7.75H6.25V13C6.25 13.4142 6.58579 13.75 7 13.75C7.41421 13.75 7.75 13.4142 7.75 13V7.75H13C13.4142 7.75 13.75 7.41421 13.75 7C13.75 6.58579 13.4142 6.25 13 6.25H7.75V1Z"
                         fill="#28303F"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                   <div className="product-text">
                     <input type="checkbox" />
@@ -397,7 +401,7 @@ function Product_listing({
               </div>
             </div>
             <div className="product-right">
-              <div className="product-show">
+              {/* <div className="product-show">
                 <div className="product-show-svg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -465,13 +469,14 @@ function Product_listing({
                     />
                   </svg>
                 </div>
-              </div>
+              </div> */}
               <div className="products-listing">
-                {mergedProducts.slice(0, 9).map((a) => {
+                {mergedProducts.slice(0, 15).map((a) => {
                   return (
                     <div key={a.id} className="product-listing">
                       <Link
                         key={a.id}
+                        onClick={handleLinkClick}
                         to={`/${a.id}/product_detail`}
                         className="product-listing-img"
                       >

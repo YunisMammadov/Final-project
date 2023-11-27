@@ -72,7 +72,7 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
                               dispatch({
                                 type: "BASKETITEMDEC",
                                 payload: {
-                                  title: item.title,
+                                  id: item.id,
                                   amount: item.amount - 1,
                                 },
                               })
@@ -102,7 +102,7 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
                               dispatch({
                                 type: "BASKETITEMINC",
                                 payload: {
-                                  title: item.title,
+                                  id: item.id,
                                   amount: item.amount + 1,
                                 },
                               })

@@ -4,13 +4,17 @@ import { connect } from "react-redux";
 import Place_order_modal from "./Place_order_modal";
 import { NavLink } from "react-router-dom";
 
-function Payment_review({ totalAmount, words, lang }) {
+function Payment_review({ totalAmount, words, lang, cartItems }) {
   const [cards, setCards] = useState(
     JSON.parse(localStorage.getItem("cards")) || []
   );
   const [payments, setPayments] = useState(
     JSON.parse(localStorage.getItem("payments")) || []
   );
+
+  const today = new Date();
+  const estimatedDate = new Date(today.getTime() + 10 * 24 * 60 * 60 * 1000);
+  const formattedEstimatedDate = estimatedDate.toLocaleDateString();
 
   const [discountCode, setDiscountCode] = useState("");
   const [isDiscountApplied, setIsDiscountApplied] = useState(false);
@@ -142,25 +146,30 @@ function Payment_review({ totalAmount, words, lang }) {
               <div className="payment_review-down">
                 <div className="payment_review-details">
                   <div className="pay_rev-det-name">
-                    <p>{words[lang].estimated} : 22.02.2022</p>
+                    <p>
+                      {words[lang].estimated} : {formattedEstimatedDate}
+                    </p>
                   </div>
-                  <div className="pay_rev-det-products">
-                    <div className="pay_rev-det-product">
-                      <div className="pay-rev-card">
-                        <div className="pay_rev-det-rect">
-                          <img
-                            src="https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1696204800&Signature=UQ5eomleNvpUUSpQS86uDad~u8vuI2lMK3UmMNd2HGHrDm-LwoHSHnpwdF0pWECGqHV0ObidoR8tVgt6oPBcocqVcH9VHJ5AyiN2fQbTbnC7m26jLNo2uxt6EI9apCNtZsqZhtus0zKa68zyKUXOb34VzKeiVeM77gdYnw0HVzxFDaPMX9pmPoz3kIXLl6S1pIjk0LRAbMgstkiivTsDoP9GsfIFZtFx1net-wUjmRr2oY1znxHRZO2LVMNfuU6rjZdjzrjSp2~b1akf4ZliTim5z4Na60zrm1NGW1y5zogBwcupGqkRLjNDBTGKr5S-rZ1y~-pYdg~XimIJ-YFHxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                            alt=""
-                          />
-                        </div>
-                        <div className="pay_rev-pro-details">
-                          <p>Girls Pink Moana Printed Dress</p>
-                          <span>$80.00</span>
-                          <span>Size: S</span>
+                  {cartItems ? (
+                    cartItems.map((item) => (
+                      <div key={item} className="pay_rev-det-products">
+                        <div className="pay_rev-det-product">
+                          <div className="pay-rev-card">
+                            <div className="pay_rev-det-rect">
+                              <img src={item.image} alt="" />
+                            </div>
+                            <div className="pay_rev-pro-details">
+                              <p>{item.title}</p>
+                              <span>{item.price}</span>
+                              <span>Size:none</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    ))
+                  ) : (
+                    <span></span>
+                  )}
                   <div className="payment_review-rect"></div>
                 </div>
                 <div className="payment_review-shipping">

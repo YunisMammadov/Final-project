@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "image": "https://s3-alpha-sig.figma.com/img/3d30/4ae5/ab098881655b8003736dc40c7b639ebf?Expires=1693180800&Signature=jCtncFKvvKHOlkkNAhUEk3LHNYFPehnQHV4Ee8GTlEMfHuKsS2jXXAYWh28vxmI2siEfYRplrxvRj9in5DuAAnsF7YZZcovBDexMba1mcvktvsuBPWhYmWl0nCLdTKpWL1wN9YUy1pzOlGJIo8EjzbiKlNmYV9EQafFejpZkxK8VubDVTSPpdeekxDp413uZYa9p~bCO05wu1qJXMdv8v-fnJw4J06VDPNkKe4UCThp-Zh6M6NEPnpbkEBTH5kDXKkxrhCJXW57BrB4idDLr68OGkPv0LkJssaK4mSEuIe~cuY34D1OEmLDv5QM6jFkTiqeMfMgW~s4zho-BNrevcw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil1.png",
       "title": "Allen Solly",
       "text": "Women Textured Handheld Bag",
       "old_price": "80",
@@ -12,18 +12,18 @@
     },
     {
       "id": 2,
-      "image": "https://s3-alpha-sig.figma.com/img/5d25/dde6/8ec77190e6faf67ae13935c85f14034a?Expires=1693180800&Signature=aCsaSZljtuXnSu2jthtU28ULGH0dydpLaI9JfLqoN334u4r1VHYtn~I-Y6bGMwy3JI1hYZh-1-VxzKBCrmVWthVvIVsgQdDWr7cSwlcB5a5c6wEA7IDHiYg58AanULYFhz4r2K35G0uaKBVNXVQt3WqC4QUkQklBM5-DUd0r0canEMq1nOfwaQe5gFkVZLsuIi2zM3lNWLVNTETB~9lHnCQom9y2X0AYYhaWE4NhivIQiCCkILDUvFyrqUZLmb0iQJy6844IT8CGuFt0FWnoH4ZyAYnzWBMGCiv~CXOi-a9ehguyZJtGUAhFZ~oH805BjZcegMy7taxRvY9SfPRbTA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil2.png",
       "title": "Louis Philippe Sport",
       "text": "Polo Collar T-Shirt",
       "old_price": "55",
       "new_price": "50",
       "bestseller": true,
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men"
     },
     {
       "id": "3",
-      "image": "https://s3-alpha-sig.figma.com/img/fff4/ed7f/01220167c04b1d88291901c2f95869c3?Expires=1693180800&Signature=jjPFMWQUOl2senIVYnDa469-M~Ma0thYU3Gw8YZH8zoKe18y6cPxRv81jEoLYbYLI~GREn~5mkt-3nWLEc8WGpyQjVW5~tzXTWph72~MgK7Tamo1dmEs7dYMPCzgG3XR9QT~0u1T0NC45IVpsiiUnK4~Ud1EsIGrWiwH7LY8nh8hes55JwiaCCrQehWv1OR3IN8kmuZWscHiJHC7ngGPCpm9Xo-RE2cdnyUQFx99ikJlaGWsGgK0vSNnG3-GOurpliSZ5BSZfysCVvwCXfU0yPy-ADUnZukgDJ6GYBvtSDY~hgDZz9rqD4~iU8aYulGFokq9rrdeMqUN11TsG6S7sQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil3.png",
       "title": "Adidas",
       "text": "Men adi-dash Running Shoes",
       "old_price": "75",
@@ -33,18 +33,18 @@
     },
     {
       "id": "4",
-      "image": "https://s3-alpha-sig.figma.com/img/373a/817f/9cbafc8169e90c04a4cbb70ec0d04900?Expires=1693180800&Signature=l1XybJIcA9Ze27xTLL-f83sptvgcLL5kW3PDr3PiW1eIhD8GeP9i8o23PyCLFZ4KLnOtb6bUGFF9xP-7CRgfgU0T~KWWOm~BDNp63j8SrcZt1dbfbylNEIbz6jYbvd0vqUG5cN-ovhIrRuQIbIEiGy-33SxzQfswSbEmhbJZtrC~PeBHM~geB5ZQ-3w92xL3ZCx2TFKE0S0gRiuM2d4jl4tn7Olzrtx8HCHdcfLk21SXxD6SItGOTnhRvySLQBRMeP9KOQQFB1HPS-kguAEQaOhYScLgXftTdDGy3cGwGJUOgfEzB8cvexjyAyWfpzRgujrsrDqo0uDKLKurLlCSvw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil4.png",
       "title": "Roadstar",
       "text": "Printed Cotton T-Shirt",
       "old_price": "40",
       "new_price": "38",
       "bestseller": true,
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men"
     },
     {
       "id": "5",
-      "image": "https://s3-alpha-sig.figma.com/img/c15b/6611/5aa7889eb8f932cee010b2b597d38ce9?Expires=1693180800&Signature=TkrMb0K8vORTUeyQMZqFY4xHU5j~teiXpgRUhbad9PzXVyp6poQvHoASyOD28z8hZObhounj2SNV9WDAtM2iZN7WkUByZuWXgHvH37sPkxMCTEcQ4Ipk7L3HZtgmFgtGHyIyn48coPbdJmOqXKhHXW9sgaruBOaUKNnRJq5syEn09Kq2Mphz2f~7FCK~oIRhucM-Ywcom2rs3Ooflab5aKyboi13Mae1ZB8n7INsxc9W5Ekh4Rv9tqEMmm2mCFsLpk-9wj3BQyfauUpKFR-VUhbqT0arJo45Qlr-GNJkvHd1-cK-5z0sD-m-7KQ4D6cwIwie3hiP2k9GbM3PfJb-EQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil5.png",
       "title": "US Polo",
       "text": "Tailored Cotton Casual Shirt",
       "old_price": "50",
@@ -54,7 +54,7 @@
     },
     {
       "id": "6",
-      "image": "https://s3-alpha-sig.figma.com/img/db1e/7c90/645492a82cd4ccd31a45a80a0fff9a97?Expires=1693180800&Signature=JP~TGCDQL3hwf97PPoXMyVMyHEUY3uIcSkGgbAJYrYh5jMeNFr5dVwojENPCCnsp7zvAs8-5XLeRVeOfGxYl-HFKMTXSXhnWjixXA8Zrld~BYOVdkd-kKBAOR5-7a72Wvc9Ga0mlve6Ra3WLL5VGi5~kDpNn7gQRzaizKmN6-vXIdEYcht0rbAU9VoNvTUQJ7bwDVLcnRyznMlaImmZb9aankX7STZUteOqnnzfgY3qbm6gJ0m08JZXAgQkO18PL8XsJ6~JQf02Ok--ipckOxHxJhxzxLYQf~CBlT9ErZ6GvHxSdZLgLwKZDavWJBCyKrACekG3yZD3QC2035Ofb-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil6.png",
       "title": "Zyla",
       "text": "Women Sandals",
       "old_price": "40",
@@ -63,7 +63,7 @@
     },
     {
       "id": "7",
-      "image": "https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1693180800&Signature=GsBDGbm3k5gwj-2YuobMyG7AoZ-vLUIHGllEhhDvfNIl83DGstprjqDJ9nDqk0CLw6SHes84POeOVAQCDuZ3675MH2XXTv4lK0RWuGNB3J5Gv9tVp57DxCaoXYcifXGLu~4THAs5wEpOJzcgYXM6bWZDmaRcXlABcgMJn3K0XyYqCPfvA2xGA0UibWK6q41OGpF~tlDpepHL420pk9~3kab-9IR2m2jAb4rd-6s8ek6fE5UnIPajzRpw5SO8i4EzGr7UVR-y6qIngQZyBptj4xHgYYaFOMUgVWMjSJYfv6mbj73T~m8KKCGXqM17dF4A1gQbKeOj5v~o0xvkj8I9BA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil7.png",
       "title": "YK Disney",
       "text": "Girls Pink Moana Printed Dress",
       "old_price": "100",
@@ -72,18 +72,18 @@
     },
     {
       "id": "8",
-      "image": "https://s3-alpha-sig.figma.com/img/49d4/6f9d/2d81d0e9c910a80bbff19ff8c4ecdab4?Expires=1693180800&Signature=Ui35AJelMw2yDYQ3QnDPkS8gpv5chneGZqiQXQJMH-fQC8D1wPUu0pfQ6Vn6jL5zcvlvKGsXydaJ55pT0ppOVodIj~x-1Eg7SIuFFEHxrNdL898bsGFXnRjt8l2R-2PFpdO8hSDXb6xNa2Mv8Iyh2MPk~fQtEz2rCXpG53tIwJ26aJV-a1IWv34WzNYFCOfRvVFs6lpOD79PqDzSmiSTqW3uSi97WWg8bcJbf2SPEFUe8quoSBI-RJBeSixxSubCXdDjfWtJwUqSsrBIdZojLk0G5Aiu5JRy4KH4vCsr-6-uUNZRxeYdTZ~RjvwzYnz4zOtuTm2e57CsDblSAY9lVQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil8.png",
       "title": "Arrow",
       "text": "Casual Blue Jeans",
       "old_price": "60",
       "new_price": "50",
       "bestseller": true,
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men"
     },
     {
       "id": "9",
-      "image": "https://s3-alpha-sig.figma.com/img/cc6e/e907/dd51b4589c1ea30518b48a0368de16fe?Expires=1693180800&Signature=NVQOixnvW93lnBB7BYkpSlkjwyndLyEo8cZa~q0Bzrb7BWcIAhC4Iv~URWanSTKPBJ3p5taoQrIZgIKle1lcJYKnMs8gzT2pNbcJRE2tbn5NWiCk8o4t5blKnb~YdJFbsSM10Qv8ervjdhrkzwSY~GEQyoN937QtfZJShm9croIuvaMGgvDrDkLsEw0q7WbU0~--uAwwS166xnKSsiLZxY--URJQxR59Fm92zGoE-JqEt9rJd0IdsQ5caO1VTPD5C1aBnySyv4ZmfTYh8h4K7WewQJQJq5v4egC~hZp9BegJ3MnPN~E6mT-pJD1w06dpaUI61RC7Bj-dZn49yeZE2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil9.png",
       "title": "Trendyol",
       "text": "Floral Embroidered Maxi Dress",
       "old_price": "45",
@@ -92,17 +92,17 @@
     },
     {
       "id": "10",
-      "image": "https://s3-alpha-sig.figma.com/img/8cb1/8520/f667435f525e9929a2824cad05e2495f?Expires=1693180800&Signature=DKLheyjy8C1LcVeZdhfEe~-TMnzUOW3YYGkhhntgXcqoilwaUDy9gF6QL1VQ9guC9QQDua1phSpzwoYP2w4Hud4cIwgQwUChCO7z8Rhy5klnK6h9Pl0ZuzilbLGzjtM19F50haaR-45-~1a1y08uBZR~CdmjE7ylKmbTdMKtMaZJgjCATSmr9sZxsPIFS4yyljbnnMZnzhkVpU5m4U-dEz5fZdz6uOp2w-irNsO~JM2awuZbeqh0gqD2eYGRShGODcJdnxue-XeRzbG~Cg2ssoiu0dGzpV~5J7tNl9UAm2pJ1Gf-oPcSGTURQ6EyI~9DzrcqP~oeEvcE~DmXb-amwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil10.png",
       "title": "Allen Solly",
       "text": "Brown Leather Jacket",
       "old_price": "70",
       "new_price": "60",
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men"
     },
     {
       "id": "11",
-      "image": "https://s3-alpha-sig.figma.com/img/5e83/925b/1a30786a109eec94cc8d81984e4bd9b1?Expires=1693180800&Signature=n80et6u7VnJcEGDyQUDrx0VYpC4DKxhJMK4xZSG7cJ2jeOxpsUrUwhv3quxQBbfOQZ6KveqRxCs7a4YPSg~54C~OIbTtVdT8ZPuc1gJZRVUN-vveKhc5by72Pf0rWa~NMJxNiFFCzHoboR3FTJ04GVMKuefM7pog7APS8JN2U-6MCxDEHVrEOOxbEra-ABHJ6AEIbdwADUFIRj7~ZBxGdpP5yRVTPlZ3ACABj583Gvp8JmjPwHIzTkaGIT4TuxRR~ONpO9B3Dzmdpz9SNCDZG-brtcJSQc0DH-okiswrsLdfENyJvZT5gmOdBQX851Rdr6yW7C8eYvi8ehaJty3Clw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil11.png",
       "title": "US Polo",
       "text": "Casual Shoe for Men",
       "old_price": "50",
@@ -112,7 +112,7 @@
     },
     {
       "id": "12",
-      "image": "https://s3-alpha-sig.figma.com/img/943c/c0ca/cbc28be755daabf6cd2ee5d85018029a?Expires=1693180800&Signature=kiT5qGJ9pn3zTRFqH8vJKSEb7WTc8-Vfc9fCTMRpYGZlL7mM8gsGsZfQX8akqpeSFMKxdJkxzNmbaCJWGKLq7EaY7ltriUow4yk2AE-3bEY79sT7l5kZRqqyuh5lPsb5Z69bfRMrj27hQ48ijPxpFnN71u-I-tKDajhitG965YHQmLbFOncxyQEKcYWAQUnUdwhHRl14vCrGPNiffoYc9u5StJ31owF~ZpVBw9WAorS4zZrpOrv6uX5LlccKM4mcNd94u9VLRVpQPfQwWyaSft0EaQ135NGdjQZyNUwtL02zswm6hZIumOTbDnAMl64v4kH9HdeNlOtMUom7N8tDTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil12.png",
       "title": "Gucci",
       "text": "Leather Hand Purse",
       "old_price": "60",
@@ -121,7 +121,7 @@
     },
     {
       "id": "13",
-      "image": "https://s3-alpha-sig.figma.com/img/4f9a/2e3b/8430fbebba65039e7c6624c9cd9eaf2e?Expires=1693180800&Signature=ARV1H~mVnVlaeWOL1oL5Qz7UhkRIryWN8uqZH~shqmM3ozNp4qynrOBn7E7tReTRwhzbWjNnSkFf7X-mkFqNNh5gILRNFuCJy8djfr9MTjIJMq9-EIwuHx4KhIUW7N0LBrSsQIhT18wtf1XF1lnWmsZFBY-A94ZsLGrA4ARpEGr40XBaj7JYmJp01-3~GTe864zA9nuEePtYlNPg5fRMvjbdRekC2k-ebZANaa7wiYLRVQaVvRuHBQplRBjlDtzUntT9evjKKh-2LNGrP9feR-zpD4MccN1ZLjglWZpXXHXlXISEg927SBS7I5WN5HyJ9Ur7l9JdiGVOijWZrZm0nA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil13.png",
       "title": "YK Disney",
       "text": "Red Printed T-Shirt",
       "old_price": "35",
@@ -130,7 +130,7 @@
     },
     {
       "id": "14",
-      "image": "https://s3-alpha-sig.figma.com/img/8cca/fe73/0b55e70fbe9571a1da4230c9ee3df8a6?Expires=1693180800&Signature=iZzbvYtU7dfNy7yG~3zT2Cejfh1s7bJAr2yOmEfSplXNEokdqjmVVUKWrIdbxIRMddqKMP4y~00ZxQeVdMSLmCI9~CZJDi5q43iReJKiLRAGc~U9o4gzNnFeJuczB-7yv3wxZ-C8JR09sNEkCeUql-IMhzwuncS4LIp2oJNkIxMii1pPyOCN8OqpylqCBl5EVwV4S02176PWngNlCLklN~nh~B6uZ6eATCWoMZp4q3oOvUm3BsPCS85jASn~H8ipZs~zipkLJBqbJoxRzsTjTUSEgCbKiLUp56HgjRn5Ktz416ZUx9~ZP7TXbs81G4YGBWpuDKTraxFgOJuuBn72vw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil14.png",
       "title": "Roadstar",
       "text": "Printed Blazer for Men",
       "old_price": "70",
@@ -145,12 +145,12 @@
       "text": "Tailored Cotton Casual Shirt",
       "old_price": "45",
       "new_price": "95",
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men"
     },
     {
       "id": "16",
-      "image": "https://s3-alpha-sig.figma.com/img/5977/3776/b1382aaebb76ffab74213f0f325dfd6e?Expires=1693785600&Signature=RFC3t7RQFQapX9SC7XaNSx6fNDTBDhIliELjuvO~9cpu3bbbx~iPSkVr1Bk0dEJf2n8lLQXIGCcgoljXNcrVg83bD9UfXDZEcmlGzXR1s04k3YpiwQHqIlYDmKiLTpty1rh7zili5FeJLJFT7QmYDdqptFaWxxRkqJdPRHB8UrmPy4~GE3KI9CIDgJusk579U04s2BGoLkyGlKQmgeMsRncBfTYRDdugdq52d3TrT5vIS45hC4W~uy~RJFUUu6hR3ZD70wpSF9q5n~uOUCI~TV0k1DbIn96O92C1s-Iv6r7G~Je1nhu8arsuTwQU0kiZcAgs23zP~cR1nwJil4h2Uw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/sekil15.png",
       "title": "Flora",
       "text": "Leather Hand Purse",
       "old_price": "105",
@@ -246,7 +246,7 @@
       "text": "Tailored Cotton Casual Shirt",
       "old_price": "130",
       "new_price": "110",
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men",
       "related": true
     },
@@ -257,7 +257,7 @@
       "text": "Cottton Men Plain Formal Shirts",
       "old_price": "75",
       "new_price": "85",
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men",
       "related": true
     },
@@ -268,7 +268,7 @@
       "text": "Cottton Men Plain Formal Shirts",
       "old_price": "75",
       "new_price": "90",
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men",
       "related": true
     },
@@ -279,7 +279,7 @@
       "text": "Men's Leather Jackets",
       "old_price": "85",
       "new_price": "90",
-      "wishlists": true , 
+      "wishlists": true,
       "category": "Men"
     },
     {
@@ -365,9 +365,9 @@
     },
     {
       "id": "39",
-      "image": "https://www.efootwear.eu/media/catalog/product/cache/image/650x650/0/0/0000207777187_01_mk.jpg",
+      "image": "https://5.imimg.com/data5/CA/CP/MY-54923456/roadster-men-black.png",
       "title": "Roadstar",
-      "text": "Adidas Runfalcon 2.0 Cloud White Core Black ",
+      "text": "Roadster Men Black Casual Shirt ",
       "old_price": "140",
       "new_price": "120",
       "category": "Footwear"
@@ -464,19 +464,721 @@
     },
     {
       "id": "50",
-      "image": "https://www.spurwesternwear.com/images/category/medium/140.jpg",
+      "image": "https://images.wrangler.com/is/image/Wrangler/LWD708D-HERO?$KDP-LARGE2$",
       "title": "Western",
       "text": "Old West Clothing | Spur Western Wear",
       "old_price": "120",
       "new_price": "95",
       "category": "Western Wear"
+    },
+    {
+      "id": "51",
+      "image": "https://m.media-amazon.com/images/I/618Cj+MpPAL._AC_SL1500_.jpg",
+      "title": "AVVA",
+      "text": "Avva Men's Crew Neck T-Shirt",
+      "old_price": "300",
+      "new_price": "250",
+      "category": "Men"
+    },
+    {
+      "id": "52",
+      "image": "https://m.media-amazon.com/images/I/71O1QaI-sbL._AC_UY1100_.jpg",
+      "title": "Amazon",
+      "text": "AELOMART Men's T Shirt",
+      "old_price": "220",
+      "new_price": "155",
+      "category": "Men"
+    },
+    {
+      "id": "53",
+      "image": "https://cdna.lystit.com/400/500/tr/photos/ruelala/62c333ff/versace-White-Mitchel-Fit-T-shirt.jpeg",
+      "title": "Lyst",
+      "text": "T-shirts for Men | Lyst",
+      "old_price": "120",
+      "new_price": "90",
+      "category": "Men"
+    },
+    {
+      "id": "54",
+      "image": "https://img2.exportersindia.com/product_images/bc-full/2019/12/5942274/mens-casual-shirt-1576584747-5211045.jpeg",
+      "title": "Cotton",
+      "text": "Long Sleeve Cotton Mens Casual Shirt",
+      "old_price": "320",
+      "new_price": "350",
+      "category": "Men"
+    },
+    {
+      "id": "55",
+      "image": "https://imagescdn.planetfashion.in/img/app/product/8/803229-9507698.jpg?auto=format&w=494.40000000000003",
+      "title": "Planet Fashion",
+      "text": "Men Brown Slim Fit Casual Shirts",
+      "old_price": "400",
+      "new_price": "375",
+      "category": "Men"
+    },
+    {
+      "id": "56",
+      "image": "https://img0.junaroad.com/uiproducts/18389629/zoom_0-1653983351.jpg",
+      "title": "Limeroad",
+      "text": "White Printed Casual Shirt from shirts",
+      "old_price": "120",
+      "new_price": "95",
+      "category": "Men"
+    },
+    {
+      "id": "57",
+      "image": "https://www.uniformsarees.in/cdn/shop/products/Blue_Chex_Formal_Uniform_Shirts_for_Corporate_Office_SB-113154.jpg?v=1579879363",
+      "title": "Uniform Sarees",
+      "text": "Blue Chex Mens Formal Uniform Shirts",
+      "old_price": "535",
+      "new_price": "585",
+      "category": "Men"
+    },
+    {
+      "id": "58",
+      "image": "https://i.ebayimg.com/images/g/kBIAAOSwxqligbUQ/s-l1200.webp",
+      "title": "Cotton",
+      "text": "Cotton Men Plain Formal Shirts",
+      "old_price": "350",
+      "new_price": "275",
+      "category": "Men"
+    },
+    {
+      "id": "59",
+      "image": "https://sslimages.shoppersstop.com/sys-master/images/h6a/h5d/26465641299998/S21182FSAGAP9PB_PETROL_alt1.jpg_2000Wx3000H",
+      "title": "Shoppers Shop",
+      "text": "Printed Cotton Regular Fit Mens Formal Shirt ",
+      "old_price": "420",
+      "new_price": "450",
+      "category": "Men"
+    },
+    {
+      "id": "60",
+      "image": "https://images.hugoboss.com/is/image/hugobosscsprod/HBME_110_WI23_BOSS_EditorialStories_Elevated_on_the_go_009_1440x2304?%24large%24&align=0,-1&fit=crop,1&ts=1699526380611&qlt=80&wid=768&hei=870",
+      "title": "Hugo Boss",
+      "text": "HUGO BOSS | Men's Jackets and Coats",
+      "old_price": "620",
+      "new_price": "695",
+      "category": "Men"
+    },
+    {
+      "id": "61",
+      "image": "https://i.ebayimg.com/images/g/efkAAOSww1Zj~68X/s-l1200.webp",
+      "title": "eBAY",
+      "text": "Winter Jacket Mens Fleece Warm Jackets",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Men"
+    },
+    {
+      "id": "62",
+      "image": "https://buffalojackson.com/cdn/shop/files/ellis-wool-jacket-navy-plaid-and-corduroy-pinhoti-peak-5_900x900_crop_center.jpg?v=1692811855",
+      "title": "Buffalo",
+      "text": "Men's Wool Jackets for Adventure",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Men"
+    },
+    {
+      "id": "63",
+      "image": "https://n.nordstrommedia.com/id/sr3/30dca903-e708-4ebe-9193-8fdab81d50aa.jpeg?h=365&w=240&dpr=2",
+      "title": "Nordstrom",
+      "text": "Blazers & Sport Coats for Men",
+      "old_price": "700",
+      "new_price": "600",
+      "category": "Men"
+    },
+    {
+      "id": "64",
+      "image": "https://medias.utsavfashion.com/media/catalog/product/cache/1/small_image/295x/040ec09b1e35df139433887a97daa66f/d/i/digital-printed-modal-satin-blazer-in-navy-blue-v1-mte1810.jpg",
+      "title": "Utsav Fahion",
+      "text": "Coat & Blazer Collection for Men",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Men"
+    },
+    {
+      "id": "65",
+      "image": "https://i5.walmartimages.com/asr/94b61446-ec6a-46ab-ac2a-dbf9dfc21d40.a3680bc30d63306b13f56ade2364c1ba.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
+      "title": "Wallmart",
+      "text": "Men Business Solid Blazer Coats",
+      "old_price": "720",
+      "new_price": "660",
+      "category": "Men"
+    },
+    {
+      "id": "66",
+      "image": "https://assets0.mirraw.com/images/8860086/JBL01128_long_webp.webp?1688209988",
+      "title": "Mirraw",
+      "text": "Indian Kurta Sets for Women",
+      "old_price": "4300",
+      "new_price": "400",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "67",
+      "image": "https://azrakh.com/cdn/shop/files/WhatsAppImage2023-04-28at15.40.28.jpg?v=1682773252&width=1445",
+      "title": "Azrakh",
+      "text": "Alia Cut Kurta Set, Jaipuri bandhni",
+      "old_price": "300",
+      "new_price": "320",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "68",
+      "image": "https://m.media-amazon.com/images/I/71hwR0RY+JL._SL1500_.jpg",
+      "title": "Amazon",
+      "text": "Men's Kurtas and Pyjama Set",
+      "old_price": "510",
+      "new_price": "480",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "69",
+      "image": "https://i.etsystatic.com/22388648/r/il/aaad7b/3097089965/il_fullxfull.3097089965_sql0.jpg",
+      "title": "Etsy",
+      "text": "Kurta Pajama for Men Sherwani for Men",
+      "old_price": "300",
+      "new_price": "200",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "70",
+      "image": "https://assets.panashindia.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/7/977mw14-ks1860.jpg",
+      "title": "Panash India",
+      "text": "Cream Embroidered Open Sherwani",
+      "old_price": "500",
+      "new_price": "470",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "71",
+      "image": "https://i.etsystatic.com/22388648/r/il/e3a0dc/3049354302/il_570xN.3049354302_2f1e.jpg",
+      "title": "Etsy",
+      "text": "Kurta Pajama for Men Sherwani for Men",
+      "old_price": "400",
+      "new_price": "420",
+      "category": "Indian & Festive Wear"
+    },
+    {
+      "id": "72",
+      "image": "https://styleunion.in/cdn/shop/products/6316GREY_1.jpg?v=1693635707&width=2048",
+      "title": "Style Union",
+      "text": "For Women Kurtas & Suits Set in India",
+      "old_price": "490",
+      "new_price": "450",
+      "category": "Women"
+    },
+    {
+      "id": "73",
+      "image": "https://i.pinimg.com/736x/f6/6c/d5/f66cd564ccd4c6c22f6a09aef7eabfeb.jpg",
+      "title": "Pinterest",
+      "text": "Kurtis/kurtas: Slub Cotton ",
+      "old_price": "660",
+      "new_price": "630",
+      "category": "Women"
+    },
+    {
+      "id": "74",
+      "image": "https://getketchadmin.getketch.com/product/8905980218891/300/KHKU000444_1.JPG",
+      "title": "Ketch",
+      "text": "Buy Kurtas for Women Online",
+      "old_price": "330",
+      "new_price": "350",
+      "category": "Women"
+    },
+    {
+      "id": "75",
+      "image": "https://mahezon.in/cdn/shop/files/IMG_20230701_140951_800x1026_crop_center@2x.jpg?v=1688208034",
+      "title": "Mahezon",
+      "text": "Beautiful Women Dola Silk Saree",
+      "old_price": "470",
+      "new_price": "450",
+      "category": "Women"
+    },
+    {
+      "id": "76",
+      "image": "https://www.jiomart.com/images/product/500x630/rvq4ibs1lm/siril-women-blue-printed-khadi-silk-single-saree-product-images-rvq4ibs1lm-0-202202250404.jpg",
+      "title": "JioMart",
+      "text": "Siril Women Blue Printed Khadi Silk Saree",
+      "old_price": "660",
+      "new_price": "620",
+      "category": "Women"
+    },
+    {
+      "id": "77",
+      "image": "https://assets0.mirraw.com/images/7536711/image_zoom.jpeg?1573100400",
+      "title": "Dvanza",
+      "text": "Dark green woven silk saree",
+      "old_price": "500",
+      "new_price": "475",
+      "category": "Women"
+    },
+    {
+      "id": "78",
+      "image": "https://clothsvilla.com/cdn/shop/products/Women_Ethnic_Wear_Pink_Printed_Georgette_Lehenga_Choli_Collection_2301.2_1024x1024.jpg?v=1694845128",
+      "title": "ClothsVilla",
+      "text": "Women Ethnic Wear Pink Printed",
+      "old_price": "850",
+      "new_price": "820",
+      "category": "Women"
+    },
+    {
+      "id": "79",
+      "image": "https://ethnicrace.com/wp-content/uploads/2021/12/Light-Blue-colour-Charming-Suit-Salwar-Suit-Ethnic-wear-for-women.jpeg",
+      "title": "SAINLY",
+      "text": "Light Blue colour Ethnic wear for women",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Women"
+    },
+    {
+      "id": "80",
+      "image": "https://images.meesho.com/images/products/260011507/rgzzv_256.webp",
+      "title": "Meesho",
+      "text": "Buy Women Ethnic Wear Online Starting",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Women"
+    },
+    {
+      "id": "81",
+      "image": "https://www.rajwadi.com/image/cache/data/designer-chiffon-lehenga-choli-for-women-41879-800x1100.jpg",
+      "title": "Rajwadi",
+      "text": "Designer Chiffon Lehenga Choli For Women",
+      "old_price": "580",
+      "new_price": "550",
+      "category": "Women"
+    },
+    {
+      "id": "82",
+      "image": "https://mahezon.in/cdn/shop/files/IMG-20230612-WA0140_1200x1200.jpg?v=1686652489",
+      "title": "Mahezon",
+      "text": "Lehenga Choli with Dupatta Suit",
+      "old_price": "810",
+      "new_price": "750",
+      "category": "Women"
+    },
+    {
+      "id": "83",
+      "image": "https://www.crazycloths.com/wp-content/uploads/2022/09/1-11.jpg",
+      "title": "CrazyCloths",
+      "text": "WEDDING LEHENGA CHOLI DUPATTA WOMEN",
+      "old_price": "430",
+      "new_price": "400",
+      "category": "Women"
+    },
+    {
+      "id": "84",
+      "image": "https://aritzia.scene7.com/is/image/Aritzia/medium/f23_01_a05_102564_16992_on_a.jpg",
+      "title": "Aritzia",
+      "text": "Jackets & Coats for Women",
+      "old_price": "1000",
+      "new_price": "880",
+      "category": "Women"
+    },
+    {
+      "id": "85",
+      "image": "https://m.media-amazon.com/images/I/81J3GSbrKYL._AC_SY879_.jpg",
+      "title": "GUESS",
+      "text": "Women's Coats & Jackets",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Women"
+    },
+    {
+      "id": "86",
+      "image": "https://n.nordstrommedia.com/id/sr3/8afc938b-fc19-4e09-a728-e9d44b159942.jpeg?h=365&w=240&dpr=2",
+      "title": "Nordstrom",
+      "text": "Women's Denim Jackets",
+      "old_price": "570",
+      "new_price": "600",
+      "category": "Women"
+    },
+    {
+      "id": "87",
+      "image": "https://medias.utsavfashion.com/media/catalog/product/cache/1/small_image/295x/040ec09b1e35df139433887a97daa66f/e/m/embroidered-net-gown-in-wine-v1-tuy209.jpg",
+      "title": "Utsaf Fashion",
+      "text": "Western Wear for Women",
+      "old_price": "630",
+      "new_price": "610",
+      "category": "Western Wear"
+    },
+    {
+      "id": "88",
+      "image": "https://images.bewakoof.com/utter/content/2489/content_western_dress_8.jpg",
+      "title": "Bewakoof",
+      "text": "Pineuro Western Dresses for Women",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Western Wear"
+    },
+    {
+      "id": "89",
+      "image": "https://rukminim1.flixcart.com/image/550/650/xif0q/dress/g/v/v/m-310tk6042-selvia-original-imagugkuhfc8nphp.jpeg?q=90&crop=false",
+      "title": "Flipkart",
+      "text": "Western Wear For Women ",
+      "old_price": "750",
+      "new_price": "710",
+      "category": "Western Wear"
+    },
+    {
+      "id": "90",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/2/ZV/UV/QN/92264406/whatsapp-image-2022-02-17-at-9-45-32-pm-1--500x500.jpeg",
+      "title": "IndiaMart",
+      "text": "Casual Wear Rayon Western Jumpsuit",
+      "old_price": "520",
+      "new_price": "500",
+      "category": "Western Wear"
+    },
+    {
+      "id": "91",
+      "image": "https://shopwestboutique.com/cdn/shop/products/IMG_60492.jpg?v=1667328903&width=1200",
+      "title": "West Boutique",
+      "text": "Desperado Jumpsuit – West Boutique",
+      "old_price": "400",
+      "new_price": "350",
+      "category": "Western Wear"
+    },
+    {
+      "id": "92",
+      "image": "https://img0.junaroad.com/uiproducts/19371550/zoom_0-1676607794.jpg",
+      "title": "Limeroad",
+      "text": " Blue Printed Jumpsuit from western wear",
+      "old_price": "830",
+      "new_price": "790",
+      "category": "Western Wear"
+    },
+    {
+      "id": "93",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/7/OO/OY/CX/122533202/as-women-flats-footwear.jpg",
+      "title": "Pinterest",
+      "text": "synthetic foam Plain Flats Footwear",
+      "old_price": "300",
+      "new_price": "270",
+      "category": "Footwear"
+    },
+    {
+      "id": "94",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4cUDWG8lxIBeCwSYm9uJfqcvkPxwETLrrTw&usqp=CAU",
+      "title": "Meesho",
+      "text": "WOMEN BALLET FLATs FOR GIRLS",
+      "old_price": "370",
+      "new_price": "340",
+      "category": "Footwear"
+    },
+    {
+      "id": "95",
+      "image": "https://m.media-amazon.com/images/I/71kAia5bqcL._AC_UY1000_.jpg",
+      "title": "Amazon",
+      "text": "tresmode Women Fashion Stylish Sandals",
+      "old_price": "350",
+      "new_price": "320",
+      "category": "Footwear"
+    },
+    {
+      "id": "96",
+      "image": "https://i.ebayimg.com/images/g/6q8AAOSw3GZkLqJV/s-l1200.jpg",
+      "title": "eBAY",
+      "text": "Men Leather All-Match Casual Shoes ",
+      "old_price": "400",
+      "new_price": "370",
+      "category": "Footwear"
+    },
+    {
+      "id": "97",
+      "image": "https://cdn.anscommerce.com/image/tr:e-sharpen-01,h-822,w-940,cm-pad_resize/data/khadims/20-oct-2021/52014952020_1.jpg",
+      "title": "Khadims",
+      "text": "Khadim Grey Slip-On Casual Shoes",
+      "old_price": "630",
+      "new_price": "600",
+      "category": "Footwear"
+    },
+    {
+      "id": "98",
+      "image": "https://marvel-b1-cdn.bc0a.com/f00000000114841/www.florsheim.com/shop/thumbnails/14352-221_t.jpg",
+      "title": "Florshim shoes",
+      "text": "Men's Casual Slip On Shoes",
+      "old_price": "470",
+      "new_price": "410",
+      "category": "Footwear"
+    },
+    {
+      "id": "99",
+      "image": "https://m.media-amazon.com/images/I/61dWTAx5ypL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Wallmart",
+      "text": "ZAMASS Women Summer High Heels Sandals",
+      "old_price": "380",
+      "new_price": "350",
+      "category": "Footwear"
+    },
+    {
+      "id": "100",
+      "image": "https://www.rafaelstore.com/3563-large_default/pomme-dor-womens-ankle-boots-hells-pomme-dor-5300b-bordeaux-suede.jpg",
+      "title": "Rafael store",
+      "text": "Women's Ankle Boots Hells",
+      "old_price": "330",
+      "new_price": "370",
+      "category": "Footwear"
+    },
+    {
+      "id": "101",
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/3/2/tr:w-270,/32ab28aNF_SANAK00000304_3.jpg?rnd=20200526195200",
+      "title": "Nykaa Fashion",
+      "text": "Sana K Luxurious Footwear Heels",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Footwear"
+    },
+    {
+      "id": "102",
+      "image": "https://static.moleonline.com/media/wysiwyg/safety_boots_block_image.jpg",
+      "title": "Mole Valley Farmers",
+      "text": "Farming Boots & Footwear",
+      "old_price": "280",
+      "new_price": "3200",
+      "category": "Footwear"
+    },
+    {
+      "id": "103",
+      "image": "https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/hallmark-stories/2023/fall/boot-shop/wk32_090523_lp_boot_chelsea.jpg",
+      "title": "Famous Footwear",
+      "text": "Women's Boots, Booties & Winter Boots",
+      "old_price": "400",
+      "new_price": "370",
+      "category": "Footwear"
+    },
+    {
+      "id": "104",
+      "image": "https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/hallmark-stories/2023/fall/boot-shop/wk32_090523_lp_boot_tall_boots_v2-_final.jpg",
+      "title": "Famous Footwear",
+      "text": "Women's Boots, Booties & Winter Boots",
+      "old_price": "700",
+      "new_price": "650",
+      "category": "Footwear"
+    },
+    {
+      "id": "105",
+      "image": "https://images.meesho.com/images/products/43286193/byogx_512.webp",
+      "title": "Meesho",
+      "text": "Relaxed Fashionable Women Sports Shoes",
+      "old_price": "770",
+      "new_price": "720",
+      "category": "Footwear"
+    },
+    {
+      "id": "106",
+      "image": "https://cdn.anscommerce.com/image/tr:e-sharpen-01,h-822,w-940,cm-pad_resize/data/khadims/03nov2023/28926551910_1.jpg",
+      "title": "Khadims",
+      "text": "Khadim Boys White Sneakers School Shoe",
+      "old_price": "450",
+      "new_price": "350",
+      "category": "Footwear"
+    },
+    {
+      "id": "107",
+      "image": "https://sslimages.shoppersstop.com/sys-master/images/hbe/h7c/13614459322398/203460892_9607_alt1.jpg_230Wx334H",
+      "title": "Shoppers Shop",
+      "text": "CAMPUS Mens Lace Up Sports Shoes",
+      "old_price": "450",
+      "new_price": "420",
+      "category": "Footwear"
+    },
+    {
+      "id": "108",
+      "image": "https://theelegance.pk/wp-content/uploads/2022/08/Customized-T-Shirt-for-Kids-Gift-Online-in-Pakistan.jpg",
+      "title": "The Elegance",
+      "text": "Let's Party Kids T-Shirts",
+      "old_price": "750",
+      "new_price": "720",
+      "category": "Kids"
+    },
+    {
+      "id": "109",
+      "image": "https://www.redwolf.in/image/cache/catalog/mens-t-shirts/kids/master-of-mischief-kids-t-shirt-india-525x700.jpg",
+      "title": "Redwolf",
+      "text": "Master Of Mischief",
+      "old_price": "450",
+      "new_price": "420",
+      "category": "Kids"
+    },
+    {
+      "id": "110",
+      "image": "https://www.littlerockstore.com/media/catalog/product/cache/a016358483516a632349e7cef5e72183/m/e-8740-9246-8740-9246/metallica-clothes-kids-t-shirt-scary-guy.jpg",
+      "title": "Little Rock Store",
+      "text": "Metallica Clothes for Kids",
+      "old_price": "580",
+      "new_price": "550",
+      "category": "Kids"
+    },
+    {
+      "id": "111",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2020/11/WS/AF/MX/14964704/9d6a9589-270d-4322-8eb7-3c1f4dbb20b0-500x500.jpg",
+      "title": "Amazon",
+      "text": "Print kids shirts-Customise kids",
+      "old_price": "650",
+      "new_price": "620",
+      "category": "Kids"
+    },
+    {
+      "id": "112",
+      "image": "https://i.pinimg.com/736x/30/69/59/3069595e9f432c225717f15bcb65c7cd.jpg",
+      "title": "Pinterest",
+      "text": "Kids shirts",
+      "old_price": "450",
+      "new_price": "420",
+      "category": "Kids"
+    },
+    {
+      "id": "113",
+      "image": "https://images.hugoboss.com/is/image/boss/hbnaJ04470_971_200?$re_fullPageZoom$&qlt=85&fit=crop,1&align=1,1&lastModified=1690219687000&wid=1200&hei=1818",
+      "title": "Hugo Boss",
+      "text": "BOSS - Kids' jeans in stretch denim jeans",
+      "old_price": "330",
+      "new_price": "300",
+      "category": "Kids"
+    },
+    {
+      "id": "114",
+      "image": "https://oldnavy.gap.com/webcontent/0015/358/449/cn15358449.jpg",
+      "title": "Old Navy",
+      "text": "Wow Skinny Non-Stretch Jeans ",
+      "old_price": "330",
+      "new_price": "270",
+      "category": "Kids"
+    },
+    {
+      "id": "115",
+      "image": "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/R/120294_1562821579.jpg",
+      "title": "Konga",
+      "text": "Trendy Lovely Children Kids Jeans Trousers",
+      "old_price": "630",
+      "new_price": "580",
+      "category": "Kids"
+    },
+    {
+      "id": "116",
+      "image": "https://in.benetton.com/dw/image/v2/BBSF_PRD/on/demandware.static/-/Sites-ucb-in-master/default/dw44229fd8/images/Full_Card_v/Benetton_23PI_23P4WBSLD104I_S20_FS_Full_Card_v.jpg?sw=600&sh=800",
+      "title": "United Colors of Benetton",
+      "text": "Kid Boys' Trousers New Collection",
+      "old_price": "600",
+      "new_price": "540",
+      "category": "Kids"
+    },
+    {
+      "id": "117",
+      "image": "https://www.piccalilly.co.uk/media/catalog/product/cache/96d785f14297b9783aada2020ba6dc63/o/c/oc-1301_loop_the_loop_reversible_trousers.jpg",
+      "title": "Piccalilly",
+      "text": "Organic Cotton Red Unisex Reversible",
+      "old_price": "770",
+      "new_price": "740",
+      "category": "Kids"
+    },
+    {
+      "id": "118",
+      "image": "https://www.westside.com/cdn/shop/products/300936690SAND_1_30f66d33-45ee-49e9-a91b-a90b5a283ce4.jpg?v=1686651090",
+      "title": "Westside",
+      "text": "HOP Kids Solid Taupe-Colored Cargo",
+      "old_price": "630",
+      "new_price": "580",
+      "category": "Kids"
+    },
+    {
+      "id": "119",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI8QAQHDkvVRqMi0NAHxvhaUBTBCGmMWd96A&usqp=CAU",
+      "title": "Liandly",
+      "text": "Buy Red Kids Party Dresses",
+      "old_price": "630",
+      "new_price": "580",
+      "category": "Kids"
+    },
+    {
+      "id": "120",
+      "image": "https://www.mumkins.in/cdn/shop/files/party-wear-set-for-boys-bs121068-black-model-image.jpg?v=1685960347&width=1080",
+      "title": "Mumkins",
+      "text": "Party Wear Dresses For Boys And Kids",
+      "old_price": "670",
+      "new_price": "570",
+      "category": "Kids"
+    },
+    {
+      "id": "121",
+      "image": "https://medias.utsavfashion.com/media/catalog/product/cache/1/small_image/295x/040ec09b1e35df139433887a97daa66f/e/m/embellished-net-layered-gown-in-maroon-v1-unh41.jpg",
+      "title": "Utsaf Fashion",
+      "text": "Kids Party Dresses: Buy Ethnic Party",
+      "old_price": "630",
+      "new_price": "580",
+      "category": "Kids"
+    },
+    {
+      "id": "122",
+      "image": "https://images.bestsellerclothing.in/data/JJ/aug-23-2022/288811702_g0.jpg?width=1080&height=1355&mode=fill&fill=blur&format=auto",
+      "title": "Jack&Jones Junior",
+      "text": "White Check Full Sleeves Shirt",
+      "old_price": "500",
+      "new_price": "470",
+      "category": "Kids"
+    },
+    {
+      "id": "123",
+      "image": "https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://images2.zoodmall.com/https%3A/upload.zoodmall.com/web/product/picture/98/18854498/164009240532281000014.jpeg",
+      "title": "Style Union",
+      "text": "Kota Thermal Underwear for Kids",
+      "old_price": "430",
+      "new_price": "400",
+      "category": "Kids"
+    },
+    {
+      "id": "124",
+      "image": "https://image.made-in-china.com/202f0j00KeQUoiBtCsqk/Kids-Winter-Thermal-Underwear-Set.webp",
+      "title": "Cangnan Laijiu",
+      "text": "Kids Winter Thermal Underwear Set",
+      "old_price": "630",
+      "new_price": "580",
+      "category": "Kids"
+    },
+    {
+      "id": "125",
+      "image": "https://i.ebayimg.com/images/g/c2EAAOSw1~ZfjaOa/s-l1200.jpg",
+      "title": "eBAY",
+      "text": "Unisex Children Pajamas Solid Color",
+      "old_price": "710",
+      "new_price": "680",
+      "category": "Kids"
+    },
+    {
+      "id": "126",
+      "image": "https://5.imimg.com/data5/ANDROID/Default/2021/2/FJ/FS/RC/10770426/product-jpeg-500x500.jpeg",
+      "title": "IndiaMart",
+      "text": "Boy''S Track Pant",
+      "old_price": "460",
+      "new_price": "410",
+      "category": "Kids"
+    },
+    {
+      "id": "127",
+      "image": "https://fabricprinter.com.au/cdn/shop/products/3023_KIDS_TRACK_PANTS_FRONT_1200x1200.jpg?v=1559713759",
+      "title": "The Fabric Printer",
+      "text": "Kids Track Pants - Pants/Shorts",
+      "old_price": "430",
+      "new_price": "340",
+      "category": "Kids"
+    },
+    {
+      "id": "128",
+      "image": "https://assets.adidas.com/images/w_600,f_auto,q_auto/8a96d3fab82c4769b2f8af4e0023ef66_9366/Adicolor_SST_Track_Pants_Red_IC3088_21_model.jpg",
+      "title": "Adidas",
+      "text": "adidas Adicolor SST Track Pants",
+      "old_price": "980",
+      "new_price": "780",
+      "category": "Kids"
     }
   ],
   "categories": [
     {
       "id": 1,
       "category": "Men",
-      "categoryimg": "https://s3-alpha-sig.figma.com/img/7b49/5588/d2d9e5946f18cdd68fb56df9d415b9fa?Expires=1693785600&Signature=hMmENpjg3F3QNkQ3UIb75OlVeVorf9lEjsX~SJ5VStIa-V~8mLq5PWxO4mBGp-Ml3Bu1DzQfgku-GL80PmDXOmKVQtgHhxnYJwS5ReFgzb-TxchwcnXbOnNL6dMQP6WNdnq6tQdjngIRLhHXmZL7P9B4TCAb619qcYIcUTJQbwgZTF1o9~CyYgwbYw05ykBGEJBe33JpgDOYztqwyoxUSNoZayYaBtjF3~c9cvYH-ZPyjsX~xWFXTcpA9~JT~koiFvLXDRgR~uGTfW9JiaTqM-EUSrYYNaEs6hUIzLPl6SwG2hgVFkHECH5~Qu4h8PSusaavN8vBKvvET8KeV5YBEA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "categoryimg": "/menbanner.png",
       "subcategories": [
         "Casual Shirts",
         "T-Shirts",
@@ -494,7 +1196,7 @@
     {
       "id": 3,
       "category": "Women",
-      "categoryimg": "https://s3-alpha-sig.figma.com/img/c575/87ba/8e2bdffd168b1471d44fcdd922be204a?Expires=1693785600&Signature=NSir7QlpJzsaIhc2rs0SD62zE8lc3iS3XbSBCQeF2fyi-oKfu-16hTbaQyjUhUFisZa1BBNuohhyFLFfx1hMNoYrpOZYhJatlRTHCtr33qmEIAuBwlQf1k2QT0U6Hgjmavw37RUxWBxLhsdnlIdghX4fEUuk7WhTy~GJJuFtsbdeLP4B2m2lnMgUV~snU642UN-luIMAN7k9Naa2epYq~MBsjvTFBG3K23Y3Iioi7obY563KO6GEsiH0q7QySIqX5qVFnW1JFIweRHX2UjpX4Wy2M6O954LEsMNC6FmsUIxRm9ikO5W7-8ThqhYEiNOHkO12OPDlFxoPAnJa0VO31g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "categoryimg": "/category3.png",
       "subcategories": [
         "Ethnic Wear",
         "Kurtas & Suits",
@@ -506,7 +1208,7 @@
     {
       "id": 4,
       "category": "Western Wear",
-      "categoryimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkshXvH0fsHpwjbe6yJ4P4oT7F4YluczViXTkyglJfaYzMZJwgDSVVqgO5_kIvsoU5Eo8&usqp=CAU",
+      "categoryimg": "/category2.png",
       "subcategories": ["Dresses", "Jumpsuits"]
     },
     {
@@ -530,7 +1232,7 @@
     {
       "id": 7,
       "category": "Kids",
-      "categoryimg": "https://s3-alpha-sig.figma.com/img/4376/227a/2d750daddf2d0cda07c210fe0bc7bbb1?Expires=1693785600&Signature=TSE3Hr3YYKY8y596YoicUeaO21f933gavzkGR6l~OYBDUTOtK78Xj-kK9Ad0iWw~zc65dDGGbAT8OUcCzCoEeP4meCnXGDZxnZpOotC6mhge7WljJN33k0Cvq~xAL7GlNwIeMRetAvY06A~CI9SymtqmPEj37K8KddFBNB1awZqTE~yXZStWQZCUctReJvtCceHhDC39ETEYGnWNF6dcAmkU~pY5X~kDb~5zwAYdgw7IlualrT3iQj0xW4Hf1r5NBPBDW7qwQwbiBgjQmODyLY2cINyTFz7kKbzH~PM2dFLrH6bUwYvNgBPtfQMjAskqWIUcygy2Nffi~UUCdyGAOA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "categoryimg": "https://ae01.alicdn.com/kf/HTB1wwZxac_vK1RkSmRyq6xwupXaW/Ensemble-de-v-tements-de-printemps-pour-filles-Combinaison-de-sport-tenue-de-sport-surv-tement.jpg_Q90.jpg_.webp",
       "subcategories": [
         "T-Shirts",
         "Shirts",

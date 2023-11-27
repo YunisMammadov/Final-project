@@ -23,7 +23,7 @@ function Home_banner({ lang, words }) {
                 <div className="home-banner-info-text">
                   <p>{words[lang].classicexclusive}</p>
                   <h1>{words[lang].womencollection}</h1>
-                  <h2>{words[lang].upto40}</h2>
+                  <h2>40% {words[lang].upto40}</h2>
                 </div>
                 <button>
                   <span>{words[lang].shop_now}</span>
@@ -59,8 +59,8 @@ function Home_banner({ lang, words }) {
               <div className="home-banner-info">
                 <div className="home-banner-info-text">
                   <p>{words[lang].classicexclusive}</p>
-                  <h1>{words[lang].womencollection}</h1>
-                  <h2>{words[lang].upto40}</h2>
+                  <h1>{words[lang].mencollection}</h1>
+                  <h2>30% {words[lang].upto40}</h2>
                 </div>
                 <button>
                   <span>{words[lang].shop_now}</span>
@@ -84,9 +84,11 @@ function Home_banner({ lang, words }) {
               <div className="home-rectangle">
                 <div className="home-rec"></div>
                 <div className="home-img">
-                  <img src="/fashionable.png" alt="" />
+                  <img
+                    src="https://www.moodbana.com/images/makaleler/Onu-1-Duym--li-Klassik-Indigo-Kostyum-resim-6165-resim-23.jpg"
+                    alt=""
+                  />
                 </div>
-                <div className="home-rectangle1"></div>
               </div>
               <p className="bestseller">BESTSELLER</p>
             </div>
@@ -96,8 +98,8 @@ function Home_banner({ lang, words }) {
               <div className="home-banner-info">
                 <div className="home-banner-info-text">
                   <p>{words[lang].classicexclusive}</p>
-                  <h1>{words[lang].womencollection}</h1>
-                  <h2>{words[lang].upto40}</h2>
+                  <h1>{words[lang].kidscollection}</h1>
+                  <h2>35% {words[lang].upto40}</h2>
                 </div>
                 <button>
                   <span>{words[lang].shop_now}</span>
@@ -121,9 +123,12 @@ function Home_banner({ lang, words }) {
               <div className="home-rectangle">
                 <div className="home-rec"></div>
                 <div className="home-img">
-                  <img src="/fashionable.png" alt="" />
+                  <img
+                    src="https://luned.shop/images5/1017/cocktailkleider-kinderkleider/cocktailkleider-kinderkleider-90.jpg"
+                    alt=""
+                  />
                 </div>
-                <div className="home-rectangle1"></div>
+                {/* <div className="home-rectangle1"></div> */}
               </div>
               <p className="bestseller">BESTSELLER</p>
             </div>

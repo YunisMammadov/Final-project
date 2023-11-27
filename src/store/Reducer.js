@@ -29,7 +29,7 @@ const init = {
       category: "Kateqoriyalar",
       womencollection: "Qadın Kolleksiyası",
       classicexclusive: "Klassik Eksklüziv",
-      upto40: "40%-ə qədər ENDİRİM",
+      upto40: "-ə qədər ENDİRİM",
       shop_now: "İndi alış-veriş edin",
       shop_category: "Kateqoriyalar üzrə alış-veriş edin",
       ourbestseller: "Ən çox satılanlarımız",
@@ -192,7 +192,7 @@ const init = {
       twofactor: "İki faktorlu autentifikasiya",
       twofactor1:
         "Poçt vasitəsilə 2FA-nı aktiv etməklə hesabınızı təhlükəsiz saxlayın",
-      pushnoti: "Push Notifications",
+      pushnoti: "Push Bildirişləri",
       pushnoti1: "Push bildiriş alın",
       detskompnoti: "Masaüstü Bildirişlər",
       detskompnoti1: "İş masasında təkan bildirişi alın",
@@ -232,7 +232,7 @@ const init = {
       Philadelphiaoff: "Philadelphia ofisi",
       Charlotteoff: "Charlotte ofisi",
       Consonantia:
-        "Çox uzaqlarda, söz dağlarının arxasında, Vokalia və Consonantia ölkələrindən uzaqlarda, kor mətnlər yaşayır.",
+        "Stilinizin ünvanı! Ən son modelləri və trendləri kəşf etmək üçün bizə müraciət edin.Sevdiyiniz brendlərdən ən yaxşı parçalar yalnız bizim mağazamızda.Dəb həvəskarlarını filialınıza cəlb etmək üçün ən yaxşı variantlar mağazamızda sizi gözləyir",
       november: "Noyabr",
       october: "Oktyabr",
       September: "Sentyabr",
@@ -290,8 +290,21 @@ const init = {
       TrackPants: "İdman şalvarı",
       ValuePack: "Değer paketi",
       nodata: "Məlumat yoxdur.",
+      mencollection: "Kişi kolleksiyası",
+      kidscollection: "Uşaq kolleksiyası",
+      productdescription:
+        "Keyfiyyət və estetikanı birləşdirən kolleksiyamız diqqətlə seçilmiş materiallar və orijinal dizaynlarla seçilir. Hər bir məhsul gündəlik istifadədən tutmuş xüsusi anlara qədər geniş istifadə imkanı təklif edən funksional detallarla təchiz edilmişdir.Moda və rahatlığı birləşdirən məhsullarımız üslubunuzu ifadə etməyə imkan verən müasir kəsimləri ilə seçilir. ",
+      productdescription1:
+        "Kolleksiyamız istifadəçilərinə şəxsi üslublarını əks etdirmək üçün geniş seçimlər təklif edir.Hər bir parça davamlılıq və üslubun birləşməsini təklif edərək istifadəçilərinə güvən verir. Sərfəli qiymətlərlə təklif olunan bu xüsusi kolleksiya müştərilərimizə öz üslublarını ən yaxşı şəkildə tamamlamaq imkanı təqdim edir.",
     },
     en: {
+      productdescription:
+        "Combining quality and aesthetics, our collection is distinguished by carefully selected materials and original designs. Each product is equipped with functional details that offer a wide range of use, from everyday use to special moments.Combining fashion and comfort, our products are distinguished by their modern cuts that allow you to express your style. ",
+
+      productdescription1:
+        "Our collection offers its users a wide range of options to reflect their personal style. Each piece offers a combination of durability and style, giving confidence to its wearers. Offered at affordable prices, this exclusive collection offers our customers the opportunity to best complement their style.",
+      kidscollection: "Kids collection",
+      mencollection: "Men's collection",
       nodata: "There is no information.",
       ValuePack: "Value Pack",
       TrackPants: "Track Pants",
@@ -349,7 +362,7 @@ const init = {
       november: "November",
       october: "October",
       Consonantia:
-        "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+        "The address of your style! Visit us to discover the latest models and trends.The best pieces from your favorite brands only in our store.The best options to attract fashionistas to your branch are waiting for you in our store",
       Charlotteoff: "Office of the Charlotte",
       Philadelphiaoff: "Office of the Philadelphia",
       Houstonoff: "Office of the Houston",
@@ -388,7 +401,8 @@ const init = {
       detskompnoti1: "Receive push notification in desktop",
       detskompnoti: "Desktop Notifications",
       pushnoti1: "Receive push notification",
-      pushnoti: "Push Bildirişləri",
+      pushnoti: "Push Notifications",
+
       twofactor1: "Keep your account secure by enabling 2FA via mail",
       twofactor: "Two-factor Authentication",
       passwordupdate1: "Your password has been updated successfully",
@@ -573,10 +587,8 @@ export default function Reducer(state = init, action) {
       let totalAmount =
         state.totalAmount + action.payload.amount * action.payload.price;
 
-      if (state.cartItems.find((x) => x.title === action.payload.title)) {
-        let item = state.cartItems.find(
-          (x) => x.title === action.payload.title
-        );
+      if (state.cartItems.find((x) => x.id === action.payload.id)) {
+        let item = state.cartItems.find((x) => x.id === action.payload.id);
         (item.amount += action.payload.amount),
           (item.subtotal += action.payload.amount * action.payload.price);
       } else {
@@ -590,7 +602,7 @@ export default function Reducer(state = init, action) {
       return { ...state, totalAmount: totalAmount };
     case "BASKETITEMDEC":
       let tempArrDec = state.cartItems;
-      let itemDec = tempArrDec.find((x) => x.title === action.payload.title);
+      let itemDec = tempArrDec.find((x) => x.id === action.payload.id);
 
       if (itemDec.amount > 1) {
         itemDec.amount -= 1;
@@ -600,7 +612,7 @@ export default function Reducer(state = init, action) {
         localStorage.setItem("basket", JSON.stringify(tempArrDec));
         localStorage.setItem("totalamount", JSON.stringify(state.totalAmount));
       } else {
-        tempArrDec = tempArrDec.filter((x) => x.title !== action.payload.title);
+        tempArrDec = tempArrDec.filter((x) => x.id !== action.payload.id);
 
         state.totalAmount -= itemDec.subtotal;
 
@@ -611,7 +623,7 @@ export default function Reducer(state = init, action) {
       return { ...state, cartItems: tempArrDec };
     case "BASKETITEMINC":
       let tempArr = state.cartItems;
-      let item = tempArr.find((x) => x.title === action.payload.title);
+      let item = tempArr.find((x) => x.id === action.payload.id);
       item.amount += 1;
       item.subtotal = item.amount * item.price;
 

@@ -309,7 +309,7 @@ function Feedbacks({ words, lang }) {
                 <p>{words[lang].feedbacks}</p>
                 <div className="feedback-person">
                   <img
-                    src="https://s3-alpha-sig.figma.com/img/0265/1490/b7390f28d50ffb98bc7be05622c0e522?Expires=1693785600&Signature=Dc1d0jTB5NWouEBRRqt0uZYXcrGk~xKBbaanm9XQ7gnjAJ10Wz0gHy6iJ0apNa8-QlqwdN9AZEsdyIZt4xFPVSeA99meTEBGjajjyd4Ovl3cI75odju5342lcqXoM-NALka7G7udzts0~KTrI00QEUc8gnKXfajS5Bb4gfcPcqDm45MoCVZEZdGiUHyP~idMY3ik~Sta8tjpu5w6XIWG4L5PJBJWRSRA0P4XVAiGQ6qzl-oZgQfeHCr2w~LKDBP44davbRN-k51gBU5Jg4hcHr9bkVf2GNdcaebCaX9umtTWxMdjLvvXBQ0YxLZT5cdl3kjR4KaTtN0YeNnfE-GppA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/134396167/original/e3ba2e328a51eb47b97a05f3f903ec2cf57ad5ee/be-your-male-model-for-your-business.jpg"
                     alt=""
                   />
                   <div className="feedback-person-name">
@@ -386,7 +386,7 @@ function Feedbacks({ words, lang }) {
                 <p>{words[lang].feedbacks}</p>
                 <div className="feedback-person">
                   <img
-                    src="https://s3-alpha-sig.figma.com/img/fd8b/ceaf/61eb50b1d44a437e2c70909aa4e5d32b?Expires=1693785600&Signature=jKbKWH87HFBeqUuM-4AAAl0SPC~-sqYee0g5ock-DA6nVrTBF0Aq47MdgNUe90zrPEMmjzLE01MDPJhSdbuWJq33MU~zHsCwcZcc2gPGeB04SSAKYNh0Xy4so1tjygZ2O1THsQ3g-yei0MLdh9MzZH4tRBG~P~nz0c1F3YyV2ITQlxksMalis7iMYe24tC4ZW-aYPc8KKUZto-97CjS7ygnLS8qP-o5z5ynFlACKmEuz1CqiPRPUCKGCrxmsu~4dLY4UpkG3teZJ5yNWynRqc6BBVATsdsIhlG2PnC~SFb3RsBN8ecQbtK86LqZWV9MNM5bRisZYD-HAsmGPckAHIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    src="https://onecms-res.cloudinary.com/image/upload/s--DNzszIZc--/c_crop,h_2193,w_2924,x_183,y_-1/c_fill,g_auto,h_622,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2022/09/22/img_2863.jpg?itok=qxBpePXK"
                     alt=""
                   />
                   <div className="feedback-person-name">

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { connect } from "react-redux";
-
+import { NavLink } from "react-router-dom";
 import "./My_orders.css";
-function My_orders({ words, lang }) {
+function My_orders({ words, lang, cartItems , dispatch }) {
   const [searchText, setSearchText] = useState("");
   const handleInputChange = (e) => {
     setSearchText(e.target.value);
@@ -92,77 +92,55 @@ function My_orders({ words, lang }) {
       </div>
       <div className="profile-down-right">
         <div className="profile-down-right-order">
-          <div className="my-order">
-            <div className="order-left">
-              <div className="order-left-up">
-                <div className="order-image">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/5576/3d45/9184a253721acd1b282d80cd874bd19b?Expires=1695600000&Signature=KJK3ItcUgxxx5Qm8kWNZ8yyCGPdP5rQtkAEsR~0EthnfjJ4X6iUgQ2cmCJP7abHLZFK208bC~o1U7vANgcXz85clL5Pt6VDYIuXnPNGc~wufH0Okp~UTqLosBpMFkv-HS1c315bHnW0Y9woVqIOhWnxMsvbYz55yuJeVb2~AzXJwRqURC2mFF4Jn16f30NNXHr5-nJ1wdAtilhZZZ6rgHp-Kl8zZ3iobbVrenZGGM8dLBNXe9s~EmwRL~Gt3U06YRv1vrsitlOAW2hMgEZNFszk4a0UwoDodv2pbNmOyT2nuyd299CVM6Llp6fD67suBKI96zV4dfZ-a6XmT0XofTw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    alt=""
-                  />
+          {cartItems ? (
+            cartItems.map((item) => (
+              <>
+                <div key={item} className="my-order">
+                  <div className="order-left">
+                    <div className="order-left-up">
+                      <div className="order-image">
+                        <img src={item.image} alt="" />
+                      </div>
+                      <div className="order-info">
+                        <h3>{item.title}</h3>
+                        <p>Size: S</p>
+                        <p>{item.amount}</p>
+                      </div>
+                    </div>
+                    <div className="order-left-bottom">
+                      <button className="btn-inprocess">
+                        {words[lang].inprocess}
+                      </button>
+                      <p>{words[lang].productprocess}</p>
+                    </div>
+                  </div>
+                  <div className="order-right">
+                    <div className="order-right-left">
+                      <p>{item.amount * item.price} $</p>
+                    </div>
+                    <div className="order-right-right">
+                      <button className="view-order">
+                        <NavLink to="/payment_review">
+                          {words[lang].vieworder}
+                        </NavLink>
+                      </button>
+                      <button
+                        onClick={() =>
+                          dispatch({ type: "BASKETDELETE", payload: item.id })
+                        }
+                        className="cancel-order"
+                      >
+                        {words[lang].CancelOrder}
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className="order-info">
-                  <h3>Girls Pink Moana Printed Dress</h3>
-                  <p>Size: S</p>
-                  <p>Qyt: 1</p>
-                </div>
-              </div>
-              <div className="order-left-bottom">
-                <button className="btn-delivered">
-                  {words[lang].Delivered}
-                </button>
-                <p>{words[lang].productdel}</p>
-              </div>
-            </div>
-            <div className="order-right">
-              <div className="order-right-left">
-                <p>$80.00</p>
-              </div>
-              <div className="order-right-right">
-                <button className="view-order">{words[lang].vieworder}</button>
-                <button className="write-order">
-                  {words[lang].writereview}
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="my-order-rect"></div>
-          <div className="my-order">
-            <div className="order-left">
-              <div className="order-left-up">
-                <div className="order-image">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/3d30/4ae5/ab098881655b8003736dc40c7b639ebf?Expires=1695600000&Signature=ncqryaH6DWS4xL2xE-ngc6M0v1AmR9gZqY8uzQbt~Ch7N1lyJ-QGX6CkEdqhkrEMVWr24KdpY63UA~j9tJWf2Y3EkC4hUm2zMyvQi9-OLlaHmg1MC0QSIZMAli3~hwzkR1Cy83GA1DtvN7JyF0N6g7SKxqF10fAZgZZQAHXv72~r9Yy41fscVfLD4bK0HaTsdh~F-aZJsyzXWm1wcR77urFhOijaL~r1nosy5XbrsnMOpWvVIFr-NatFaPeDYDI8vRVnpAtelNmAAvQQ~1xkKVFb1agY2M1ifcGv7gjRiW5rQDs20fZBXl8OB04EPkGGRta-L~phXLsTuBBw11BdsQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    alt=""
-                  />
-                </div>
-                <div className="order-info">
-                  <h3>Women Textured Handheld Bag</h3>
-                  <p>Size: Regular</p>
-                  <p>Qyt: 1</p>
-                </div>
-              </div>
-              <div className="order-left-bottom">
-                <button className="btn-inprocess">
-                  {words[lang].inprocess}
-                </button>
-                <p>{words[lang].productprocess}</p>
-              </div>
-            </div>
-            <div className="order-right">
-              <div className="order-right-left">
-                <p>$80.00</p>
-              </div>
-              <div className="order-right-right">
-                <button className="view-order">{words[lang].vieworder}</button>
-                <button className="cancel-order">
-                  {words[lang].CancelOrder}
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="my-order-rect"></div>
-         
+                <div className="my-order-rect"></div>
+              </>
+            ))
+          ) : (
+            <span></span>
+          )}
         </div>
       </div>
     </section>

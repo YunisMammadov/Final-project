@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Descriptions from "./Descriptions";
 import Additional from "./Additional";
 import Reviews from "./Reviews";
-import AddToCard from "./Index";
+import AddToCard from "./AddToCard";
 function Product_details({ words, lang }) {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState({});
@@ -18,7 +18,7 @@ function Product_details({ words, lang }) {
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
-  
+
   return (
     <section className="products">
       <div className="container">
@@ -85,7 +85,7 @@ function Product_details({ words, lang }) {
                 <p>{productDetail.title}</p>
                 <span>{productDetail.text}</span>
               </div>
-              <div className="product-right-stars">
+              {/* <div className="product-right-stars">
                 <div className="product-right-star">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@ function Product_details({ words, lang }) {
                   </svg>
                 </div>
                 <div className="product-right-rewievs">5.0 (121 Reviews)</div>
-              </div>
+              </div> */}
               <div className="product-right-price">
                 <div className="product-right-newprice">
                   {productDetail.new_price}
@@ -159,12 +159,7 @@ function Product_details({ words, lang }) {
                 </div>
               </div>
               <div className="product-right-txt">
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters
-                </p>
+                <p>{words[lang].productdescription}</p>
               </div>
               <div className="product-right-color">
                 <p>Color</p>

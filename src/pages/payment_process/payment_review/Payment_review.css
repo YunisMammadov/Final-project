@@ -144,6 +144,7 @@
   background: var(--gray-gray-5, rgba(164, 161, 170, 0.05));
 }
 .pay_rev-det-rect img {
+  object-fit: contain;
   width: 57.805px;
   height: 52.162px;
   flex-shrink: 0;

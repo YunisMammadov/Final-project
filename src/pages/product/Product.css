@@ -33,6 +33,7 @@ body {
 }
 .product-up {
   display: flex;
+  gap: 10px;
 }
 .product-left {
   width: 244px;
@@ -208,7 +209,6 @@ body {
 }
 .products-listing {
   width: 900px;
-  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;

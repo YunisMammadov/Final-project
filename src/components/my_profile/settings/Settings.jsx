@@ -3,6 +3,12 @@ import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
 function Settings({ dispatch, words, lang }) {
+  const changeLang = (lang) => {
+    dispatch({
+      type: "SET_LANG",
+      payload: lang,
+    });
+  };
   const [switchStates, setSwitchStates] = useState({
     language: false,
     twoFactorAuth: false,
@@ -38,7 +44,7 @@ function Settings({ dispatch, words, lang }) {
             <p>{words[lang].Language1}</p>
           </div>
           <div className="settings-right">
-            <select name="" id="">
+            <select value={lang} onChange={(e) => changeLang(e.target.value)}>
               <option value="az">{words[lang].aze}</option>
               <option value="en">{words[lang].eng}</option>
             </select>
