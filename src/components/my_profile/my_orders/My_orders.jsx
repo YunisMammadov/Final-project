@@ -103,7 +103,7 @@ function My_orders({ words, lang, cartItems , dispatch }) {
                       </div>
                       <div className="order-info">
                         <h3>{item.title}</h3>
-                        <p>Size: S</p>
+                        <p>{words[lang].size}: {item.size}</p>
                         <p>{item.amount}</p>
                       </div>
                     </div>

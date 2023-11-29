@@ -8,7 +8,7 @@ function Personal_info({ words, lang }) {
         <div className="profile-person">
           <div className="profile-per-img">
             <img
-              src="https://s3-alpha-sig.figma.com/img/5084/a7e3/7e7cd1c893075a37d729499a65dc1004?Expires=1695600000&Signature=Poo5TmJdxzaEw-TqdfcU2deY6I9X8YD4VuzNNqo8RTzbnWiB-6FQSWbvdWLignOJTsuPIZcMeBIi2yUKGnuqo0JgII5p2q6SjHrieAqyf5uoBbkEJD0qXlM8ZszZbFGlM~xOQHgROkFReQS7QihssW4q1Kf8D-WzdqvkPYIUnskhDkwaO8RsmmQnY2-YXHqjftmXxh2ITndYETi8LSGJvFNlpsTIDvlmvgwn565Q3PuD3XBvtnU7I5Tzs9~ka6p6wGym8pgLKC7xS1ElNGRCh2rpLOeRYf4621IT65OSk01seBVzuR8mK1PxsL5LOjYZnG-DnqB2LTL~p9XJO7ooLw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src="/menbanner.png"
               alt=""
             />
           </div>

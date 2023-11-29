@@ -18,6 +18,8 @@ const getTotalAmount = () => {
 const init = {
   products: [],
   category: [],
+  wishlist: JSON.parse(localStorage.getItem("wishlist")) || [],
+  selectedSize: null,
   filteredCategories: [],
   cartItems: getBasket(),
   totalAmount: getTotalAmount(),
@@ -583,37 +585,64 @@ export default function Reducer(state = init, action) {
       let newArr = [];
       newArr = state.products.filter((x) => x.category_id === action.payload);
       return { ...state, filteredCategories: newArr };
+
+    case "ADD_TO_WISHLIST":
+      const newItemToAdd = action.payload;
+      const isItemInWishlist = state.wishlist.find(
+        (item) => item.id === newItemToAdd.id
+      );
+      if (!isItemInWishlist) {
+        const updatedWishlist = [...state.wishlist, newItemToAdd];
+        localStorage.setItem("wishlist", JSON.stringify(updatedWishlist)); // Update local storage
+        return { ...state, wishlist: updatedWishlist };
+      } else {
+        return state;
+      }
+    case "DELETE_TO_WISHLIST":
+      const itemIdToDelete = action.payload;
+      const updatedWishlistDelete = state.wishlist.filter(
+        (item) => item.id !== itemIdToDelete
+      );
+      localStorage.setItem("wishlist", JSON.stringify(updatedWishlistDelete));
+      return { ...state, wishlist: updatedWishlistDelete };
+
+    case "SET_SELECTED_SIZE":
+      return { ...state, selectedSize: action.payload };
     case "BASKET":
       let totalAmount =
         state.totalAmount + action.payload.amount * action.payload.price;
 
-      if (state.cartItems.find((x) => x.id === action.payload.id)) {
-        let item = state.cartItems.find((x) => x.id === action.payload.id);
-        (item.amount += action.payload.amount),
-          (item.subtotal += action.payload.amount * action.payload.price);
+      const existingItem = state.cartItems.find(
+        (x) => x.id === action.payload.id && x.size === state.selectedSize
+      );
+
+      if (existingItem) {
+        existingItem.amount += action.payload.amount;
+        existingItem.subtotal += action.payload.amount * action.payload.price;
       } else {
         state.cartItems.push({
           ...action.payload,
           subtotal: action.payload.amount * action.payload.price,
+          size: state.selectedSize,
         });
       }
       localStorage.setItem("basket", JSON.stringify(state.cartItems));
       localStorage.setItem("totalamount", JSON.stringify(totalAmount));
       return { ...state, totalAmount: totalAmount };
     case "BASKETITEMDEC":
-      let tempArrDec = state.cartItems;
-      let itemDec = tempArrDec.find((x) => x.id === action.payload.id);
+      let tempArrDec = state.cartItems.slice(); // Yeni bir referans oluşturun
 
-      if (itemDec.amount > 1) {
+      let itemDec = tempArrDec.find((x) => x.size === action.payload.size);
+
+      if (itemDec && itemDec.amount > 1) {
         itemDec.amount -= 1;
         itemDec.subtotal = itemDec.amount * itemDec.price;
         state.totalAmount -= +itemDec.price;
 
         localStorage.setItem("basket", JSON.stringify(tempArrDec));
         localStorage.setItem("totalamount", JSON.stringify(state.totalAmount));
-      } else {
-        tempArrDec = tempArrDec.filter((x) => x.id !== action.payload.id);
-
+      } else if (itemDec) {
+        tempArrDec = tempArrDec.filter((x) => x.size !== action.payload.size);
         state.totalAmount -= itemDec.subtotal;
 
         localStorage.setItem("basket", JSON.stringify(tempArrDec));
@@ -621,32 +650,46 @@ export default function Reducer(state = init, action) {
       }
 
       return { ...state, cartItems: tempArrDec };
+
     case "BASKETITEMINC":
-      let tempArr = state.cartItems;
-      let item = tempArr.find((x) => x.id === action.payload.id);
-      item.amount += 1;
-      item.subtotal = item.amount * item.price;
+      let tempArr = state.cartItems.slice(); // Yeni bir referans oluşturun
 
-      state.totalAmount = state.totalAmount + +item.price;
-      console.log(tempArr);
-      localStorage.setItem("basket", JSON.stringify(tempArr));
-      localStorage.setItem("totalamount", JSON.stringify(state.totalAmount));
+      let item = tempArr.find((x) => x.size === action.payload.size);
 
-      return { ...state, cartItems: state.cartItems };
+      if (item) {
+        item.amount += 1;
+        item.subtotal = item.amount * item.price;
+
+        state.totalAmount = state.totalAmount + +item.price;
+
+        localStorage.setItem("basket", JSON.stringify(tempArr));
+        localStorage.setItem("totalamount", JSON.stringify(state.totalAmount));
+      }
+
+      return { ...state, cartItems: tempArr };
     case "BASKETDELETE":
-      let filteredBasket = state.cartItems.filter(
-        (x) => x.id !== action.payload
+      const indexToDelete = state.cartItems.findIndex(
+        (x) => x.size === action.payload
       );
-      let filteredItem = state.cartItems.find((x) => x.id == action.payload);
 
-      let updatedTotalAmount =
-        state.totalAmount - filteredItem.amount * filteredItem.price;
+      if (indexToDelete === -1) {
+        return state;
+      }
+      const deletedItem = state.cartItems[indexToDelete];
 
-      localStorage.setItem("basket", JSON.stringify(filteredBasket));
+      const updatedBasket = [
+        ...state.cartItems.slice(0, indexToDelete),
+        ...state.cartItems.slice(indexToDelete + 1),
+      ];
+
+      const updatedTotalAmount =
+        state.totalAmount - deletedItem.amount * deletedItem.price;
+      localStorage.setItem("basket", JSON.stringify(updatedBasket));
       localStorage.setItem("totalamount", JSON.stringify(updatedTotalAmount));
+
       return {
         ...state,
-        cartItems: filteredBasket,
+        cartItems: updatedBasket,
         totalAmount: updatedTotalAmount,
       };
     case "SIDEBAROPEN":

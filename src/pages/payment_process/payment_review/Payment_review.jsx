@@ -161,7 +161,9 @@ function Payment_review({ totalAmount, words, lang, cartItems }) {
                             <div className="pay_rev-pro-details">
                               <p>{item.title}</p>
                               <span>{item.price}</span>
-                              <span>Size:none</span>
+                              <span>
+                                {words[lang].size}: {item.size}
+                              </span>
                             </div>
                           </div>
                         </div>

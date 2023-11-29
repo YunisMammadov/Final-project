@@ -60,7 +60,7 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
                         </div>
                         <div className="checkout-info">
                           <h1>{item.title}</h1>
-                          <p>Size:none</p>
+                          <p>Size: {item.size}</p>
                         </div>
                       </div>
                       <div className="checkout-row-right">
@@ -72,7 +72,7 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
                               dispatch({
                                 type: "BASKETITEMDEC",
                                 payload: {
-                                  id: item.id,
+                                  size: item.size,
                                   amount: item.amount - 1,
                                 },
                               })
@@ -102,7 +102,7 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
                               dispatch({
                                 type: "BASKETITEMINC",
                                 payload: {
-                                  id: item.id,
+                                  size: item.size,
                                   amount: item.amount + 1,
                                 },
                               })
@@ -128,7 +128,10 @@ function Checkout({ cartItems, totalAmount, dispatch }) {
                         <button
                           className="checkout-del-btn"
                           onClick={() =>
-                            dispatch({ type: "BASKETDELETE", payload: item.id })
+                            dispatch({
+                              type: "BASKETDELETE",
+                              payload: item.size,
+                            })
                           }
                         >
                           <svg

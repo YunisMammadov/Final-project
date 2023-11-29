@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./ShippingAddress.css";
+import "../payment_method/Payment_method.css";
+
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
 function ShippingAddress({ totalAmount, words, lang }) {
@@ -138,7 +140,7 @@ function ShippingAddress({ totalAmount, words, lang }) {
           </div>
           <div className="shipping-address">
             <div className="shipping-address-left">
-              <div className="shipping-address-up">
+              <div className="payment_method-up">
                 <div className="payment-address">
                   <div className="payment-address-rect">
                     <svg

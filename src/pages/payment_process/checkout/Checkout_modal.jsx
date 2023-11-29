@@ -10,25 +10,15 @@ function Checkout_modal({
   dispatch,
   words,
   lang,
-  selectedSize,
 }) {
-  const handleAddToCart = () => {
-    if (!selectedSize) {
-      return;
-    }
-
-    dispatch({
-      type: "BASKET",
-      payload: {
-        // ... other item properties
-        size: selectedSize,
-      },
-    });
-  };
   return (
     <div onClick={close} className={`checkout_modal ${open ? "active" : ""}`}>
       <div onClick={(e) => e.stopPropagation()} className="minicart">
-        <div className="minicart-up"></div>
+        <div className="minicart-up">
+          <p>
+            {words[lang].youhave} {cartItems.length} {words[lang].itemcart}
+          </p>
+        </div>
         <div className="minicart-down">
           <div className="minicart-products">
             {cartItems ? (
@@ -44,14 +34,15 @@ function Checkout_modal({
                         {item.amount} x ${item.price}
                       </h1>
                       <div className="minicart-product-det">
-                        <span>Size: {selectedSize}</span>
+                        <span>
+                          {words[lang].size}: {item.size}{" "}
+                        </span>
                         <button
                           id="check-modal-del-btn"
                           onClick={() => {
-                            handleAddToCart();
                             dispatch({
                               type: "BASKETDELETE",
-                              payload: item.id,
+                              payload: item.size,
                             });
                           }}
                         >

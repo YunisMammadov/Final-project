@@ -19,7 +19,7 @@ function Our_bestseller({ products, words, lang }) {
                 <div className="our_bestseller-img">
                   <img src={a.image} alt="" />
                   <div className="our_bestseller-common">
-                    <div className="our_bestseller-icons">
+                    {/* <div className="our_bestseller-icons">
                       <button>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ function Our_bestseller({ products, words, lang }) {
                           />
                         </svg>
                       </button>
-                    </div>
+                    </div> */}
                     <div className="btn-cart">
                       <Link
                         key={a.id}

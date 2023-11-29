@@ -20,7 +20,7 @@ function Related_product({ products, words, lang }) {
                     <div className="related-img">
                       <img src={a.image} alt="" />
                       <div className="related-common">
-                        <div className="related-icons">
+                        {/* <div className="related-icons">
                           <button>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ function Related_product({ products, words, lang }) {
                               />
                             </svg>
                           </button>
-                        </div>
+                        </div> */}
                         <div className="related-btn-cart">
                           <button className="related-cart">
                             {words[lang].addtocart}

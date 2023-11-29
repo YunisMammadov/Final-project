@@ -68,7 +68,7 @@ body {
   height: 51px;
   border-radius: 51px;
   background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-  object-fit: cover;
+  object-fit: contain;
 }
 .profile-left-up-info p {
   color: var(--Dark-500, #131118);

@@ -5,7 +5,7 @@ import Descriptions from "./Descriptions";
 import Additional from "./Additional";
 import Reviews from "./Reviews";
 import AddToCard from "./AddToCard";
-function Product_details({ words, lang }) {
+function Product_details({ dispatch, words, lang }) {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState({});
   useEffect(() => {
@@ -19,6 +19,11 @@ function Product_details({ words, lang }) {
     setActiveTab(tabName);
   };
 
+  const [selectedSize, setSelectedSize] = useState(null);
+  const handleSizeSelection = (size) => {
+    dispatch({ type: "SET_SELECTED_SIZE", payload: size });
+    setSelectedSize(size);
+  };
   return (
     <section className="products">
       <div className="container">
@@ -175,11 +180,46 @@ function Product_details({ words, lang }) {
               <div className="product-right-size">
                 <p>Size</p>
                 <div className="product-right-checkboxes">
-                  <div className="product-center-rects">S</div>
-                  <div className="product-center-rects">M</div>
-                  <div className="product-center-rects">L</div>
-                  <div className="product-center-rects">XL</div>
-                  <div className="product-center-rects">XXL</div>
+                  <div
+                    className={`product-center-rects ${
+                      selectedSize === "S" ? "active" : ""
+                    }`}
+                    onClick={() => handleSizeSelection("S")}
+                  >
+                    S
+                  </div>
+                  <div
+                    className={`product-center-rects ${
+                      selectedSize === "M" ? "active" : ""
+                    }`}
+                    onClick={() => handleSizeSelection("M")}
+                  >
+                    M
+                  </div>
+                  <div
+                    className={`product-center-rects ${
+                      selectedSize === "L" ? "active" : ""
+                    }`}
+                    onClick={() => handleSizeSelection("L")}
+                  >
+                    L
+                  </div>
+                  <div
+                    className={`product-center-rects ${
+                      selectedSize === "XL" ? "active" : ""
+                    }`}
+                    onClick={() => handleSizeSelection("XL")}
+                  >
+                    XL
+                  </div>
+                  <div
+                    className={`product-center-rects ${
+                      selectedSize === "XXL" ? "active" : ""
+                    }`}
+                    onClick={() => handleSizeSelection("XXL")}
+                  >
+                    XXL
+                  </div>
                 </div>
               </div>
               <div className="product-add-cart">

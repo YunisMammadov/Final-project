@@ -74,20 +74,6 @@ body {
   height: 100%;
   object-fit: contain;
 }
-.product-center-rects {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  border-radius: 5px;
-  background: var(--dark-500, #131118);
-  color: var(--white-500, #fff);
-  text-align: center;
-  font-family: Jost;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 
 .product-center-right {
   display: flex;
@@ -236,18 +222,28 @@ body {
   line-height: normal;
 }
 .product-center-rects {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--dark-500, #131118);
-  background-color: #fff;
-  border: 1px solid;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 5px;
   text-align: center;
   font-family: Jost;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-500, #131118);
+  background-color: #fff;
+  border: 1px solid;
+  cursor: pointer; /* Cursor ekledim, kullanıcının tıklanabilir olduğunu görmesi için */
+}
+
+.product-center-rects.active {
+  background-color: black;
+  color: white;
 }
 .product-add-cart {
   margin-top: 50px;
@@ -299,21 +295,18 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.product-add-heart {
-  display: flex;
-  width: 56px;
-  height: 56px;
-  padding: 12px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 10px;
+#product-add-heart {
+  display: flex !important;
+  width: 56px !important;
+  height: 56px !important;
+  padding: 12px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px !important;
+  border-radius: 10px !important;
   border: 1px solid var(--dark-500, #131118);
 }
-.product-add-heart svg {
-  width: 60px;
-  height: 60px;
-}
+
 .product-detail-down {
   flex-direction: column;
   display: flex;
