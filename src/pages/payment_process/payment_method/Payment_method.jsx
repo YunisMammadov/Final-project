@@ -21,7 +21,7 @@ function Payment_method({ totalAmount, words, lang }) {
       name: cardName,
       expire: expire,
       cvv: cvv,
-      type: "debet",
+      type: words[lang].debit,
     };
 
     let array = [];

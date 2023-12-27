@@ -2,10 +2,18 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import "./My_orders.css";
-function My_orders({ words, lang, cartItems , dispatch }) {
+function My_orders({ words, lang, cartItems, dispatch }) {
   const [searchText, setSearchText] = useState("");
+  const filterItemsByName = (items, name) => {
+    return items.filter((item) =>
+      item.title.toLowerCase().includes(name.toLowerCase())
+    );
+  };
+
   const handleInputChange = (e) => {
-    setSearchText(e.target.value);
+    const searchTerm = e.target.value;
+    setSearchText(searchTerm);
+    const filteredItems = filterItemsByName(cartItems, searchTerm);
   };
   return (
     <section id="myorder">
@@ -33,7 +41,7 @@ function My_orders({ words, lang, cartItems , dispatch }) {
             />
           </svg>
         </div>
-        <button>
+        <button onClick={handleInputChange}>
           {words[lang].filter}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +101,7 @@ function My_orders({ words, lang, cartItems , dispatch }) {
       <div className="profile-down-right">
         <div className="profile-down-right-order">
           {cartItems ? (
-            cartItems.map((item) => (
+            filterItemsByName(cartItems, searchText).map((item) => (
               <>
                 <div key={item} className="my-order">
                   <div className="order-left">
@@ -103,7 +111,9 @@ function My_orders({ words, lang, cartItems , dispatch }) {
                       </div>
                       <div className="order-info">
                         <h3>{item.title}</h3>
-                        <p>{words[lang].size}: {item.size}</p>
+                        <p>
+                          {words[lang].size}: {item.size}
+                        </p>
                         <p>{item.amount}</p>
                       </div>
                     </div>
@@ -126,7 +136,7 @@ function My_orders({ words, lang, cartItems , dispatch }) {
                       </button>
                       <button
                         onClick={() =>
-                          dispatch({ type: "BASKETDELETE", payload: item.id })
+                          dispatch({ type: "BASKETDELETE", payload: item.size })
                         }
                         className="cancel-order"
                       >

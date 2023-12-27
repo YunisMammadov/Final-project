@@ -17,6 +17,10 @@ function Header({ dispatch, lang, words, cartItems, wishlist }) {
     });
     setMenuOpen(false);
   };
+
+  const handleCategoryClick = (categoryId) => {
+    dispatch({ type: "SET_SELECTED_CATEGORIES", payload: [categoryId] });
+  };
   let favs = cartItems.length;
   let wishlists = wishlist.length;
   return (
@@ -35,63 +39,91 @@ function Header({ dispatch, lang, words, cartItems, wishlist }) {
             <li className="has-dropdown">
               <NavLink to="/product">
                 {words[lang].shop}
-                <svg
-                  width="24"
-                  height="18"
-                  viewBox=" 24 25"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="Huge-icon/arrows/outline/direction-down 01">
-                    <path
-                      id="Vector 175"
-                      d="M7 10.5L12 14.5L17 10.5"
-                      stroke="#131118"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+
                 <div className="dropdown">
                   <div className="megamenu-card">
                     <div className="megamenu-up">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>{words[lang].men}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(1)}
+                          >
+                            {words[lang].men}
+                          </NavLink>
                         </li>
                       </div>
 
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>{words[lang].Tshirts}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(14)}
+                          >
+                            {words[lang].Tshirts}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].casualshirt}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(15)}
+                          >
+                            {words[lang].casualshirt}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].formalshirt}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(16)}
+                          >
+                            {words[lang].formalshirt}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Jackets}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(17)}
+                          >
+                            {words[lang].Jackets}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Blazerscoats}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(18)}
+                          >
+                            {words[lang].Blazerscoats}
+                          </NavLink>
                         </li>
                       </div>
                     </div>
                     <div className="megamenu-down">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>{words[lang].indian}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(2)}
+                          >
+                            {words[lang].indian}
+                          </NavLink>
                         </li>
                       </div>
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>{words[lang].kurtas}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(19)}
+                          >
+                            {words[lang].kurtas}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>Sherwanis</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(20)}
+                          >
+                            Sherwanis
+                          </NavLink>
                         </li>
                       </div>
                     </div>
@@ -101,40 +133,85 @@ function Header({ dispatch, lang, words, cartItems, wishlist }) {
                     <div className="megamenu-up">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>{words[lang].women}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(3)}
+                          >
+                            {words[lang].women}
+                          </NavLink>
                         </li>
                       </div>
 
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>{words[lang].kurtas1}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(21)}
+                          >
+                            {words[lang].kurtas1}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Sarees}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(22)}
+                          >
+                            {words[lang].Sarees}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].EthnicWear}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(23)}
+                          >
+                            {words[lang].EthnicWear}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>Lehenga Cholis</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(24)}
+                          >
+                            Lehenga Cholis
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Jackets}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(25)}
+                          >
+                            {words[lang].Jackets}
+                          </NavLink>
                         </li>
                       </div>
                     </div>
                     <div className="megamenu-down">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>{words[lang].western}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(4)}
+                          >
+                            {words[lang].western}
+                          </NavLink>
                         </li>
                       </div>
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>{words[lang].Dresses}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(26)}
+                          >
+                            {words[lang].Dresses}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Jumpsuits}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(27)}
+                          >
+                            {words[lang].Jumpsuits}
+                          </NavLink>
                         </li>
                       </div>
                     </div>
@@ -144,40 +221,85 @@ function Header({ dispatch, lang, words, cartItems, wishlist }) {
                     <div className="megamenu-up">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>{words[lang].Footwear}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(5)}
+                          >
+                            {words[lang].Footwear}
+                          </NavLink>
                         </li>
                       </div>
 
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>{words[lang].Flats}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(28)}
+                          >
+                            {words[lang].Flats}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].CasualShoes}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(29)}
+                          >
+                            {words[lang].CasualShoes}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Heels}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(30)}
+                          >
+                            {words[lang].Heels}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Boots}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(31)}
+                          >
+                            {words[lang].Boots}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].SportsShoes}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(32)}
+                          >
+                            {words[lang].SportsShoes}
+                          </NavLink>
                         </li>
                       </div>
                     </div>
                     <div className="megamenu-down">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>{words[lang].ProductFeatures}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(6)}
+                          >
+                            {words[lang].ProductFeatures}
+                          </NavLink>
                         </li>
                       </div>
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>{words[lang].ProductViewers}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(33)}
+                          >
+                            {words[lang].ProductViewers}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].ProductVideo}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(34)}
+                          >
+                            {words[lang].ProductVideo}
+                          </NavLink>
                         </li>
                       </div>
                     </div>
@@ -187,34 +309,79 @@ function Header({ dispatch, lang, words, cartItems, wishlist }) {
                     <div className="megamenu-up">
                       <div className="megamenu-inner-up">
                         <li>
-                          <NavLink>{words[lang].kids}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(7)}
+                          >
+                            {words[lang].kids}
+                          </NavLink>
                         </li>
                       </div>
 
                       <div className="megamenu-inner">
                         <li>
-                          <NavLink>{words[lang].Tshirts}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(35)}
+                          >
+                            {words[lang].Tshirts}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].shirt}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(36)}
+                          >
+                            {words[lang].shirt}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Jeans}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(37)}
+                          >
+                            {words[lang].Jeans}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].Trousers}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(38)}
+                          >
+                            {words[lang].Trousers}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].PartyWear}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(39)}
+                          >
+                            {words[lang].PartyWear}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].InnerwearThermal}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(40)}
+                          >
+                            {words[lang].InnerwearThermal}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].TrackPants}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(41)}
+                          >
+                            {words[lang].TrackPants}
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink>{words[lang].ValuePack}</NavLink>
+                          <NavLink
+                            to="/product"
+                            onClick={() => handleCategoryClick(42)}
+                          >
+                            {words[lang].ValuePack}
+                          </NavLink>
                         </li>
                       </div>
                     </div>

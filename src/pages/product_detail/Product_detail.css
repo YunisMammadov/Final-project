@@ -423,6 +423,7 @@ body {
   background: url(<path-to-image>), lightgray 50% / cover no-repeat;
   width: 50px;
   height: 50px;
+  object-fit: contain;
 }
 .product-text-up-review-txt h1 {
   color: var(--dark-500, #131118);

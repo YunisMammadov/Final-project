@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import "./Manage_address.css";
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
@@ -38,6 +37,8 @@ function Address_modal({ words, lang, onClose }) {
     setCity("");
     setPin("");
     setCountry("");
+
+    onClose();
   };
 
   useEffect(() => {
@@ -51,7 +52,7 @@ function Address_modal({ words, lang, onClose }) {
   return (
     <>
       <section id="address-modal">
-        <div className="address-modal">
+        <div className="address-modal" onClick={(e) => e.stopPropagation()}>
           <div className="address-modal-up">
             <p>{words[lang].addaddress}</p>
           </div>
@@ -125,16 +126,15 @@ function Address_modal({ words, lang, onClose }) {
                 <option value="France">France</option>
               </select>
             </div>
-
             <div className="address-modal-buttons">
-              <button className="modal-cancel-btn" onClick={onClose}>
+              <button
+                className="modal-cancel-btn"
+                type="button"
+                onClick={onClose}
+              >
                 {words[lang].cancel}
               </button>
-              <button
-                className="address-modal-btn"
-                onClick={onClose}
-                type="submit"
-              >
+              <button className="address-modal-btn" type="submit">
                 {words[lang].addaddress}
               </button>
             </div>

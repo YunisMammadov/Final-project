@@ -24,6 +24,16 @@ function Product_details({ dispatch, words, lang }) {
     dispatch({ type: "SET_SELECTED_SIZE", payload: size });
     setSelectedSize(size);
   };
+  const isCategoryVisible =
+    productDetail.category_id &&
+    ![8, 9, 10, 11, 12].includes(productDetail.category_id);
+
+  const sizeOptions = [5, 28, 29, 30, 31, 32].includes(
+    productDetail.category_id
+  )
+    ? ["36", "38", "40", "42", "44"]
+    : ["S", "M", "L", "XL", "XXL"];
+
   return (
     <section className="products">
       <div className="container">
@@ -177,51 +187,25 @@ function Product_details({ dispatch, words, lang }) {
                   <div className="product-right-rect6"></div>
                 </div>
               </div>
-              <div className="product-right-size">
-                <p>Size</p>
-                <div className="product-right-checkboxes">
-                  <div
-                    className={`product-center-rects ${
-                      selectedSize === "S" ? "active" : ""
-                    }`}
-                    onClick={() => handleSizeSelection("S")}
-                  >
-                    S
-                  </div>
-                  <div
-                    className={`product-center-rects ${
-                      selectedSize === "M" ? "active" : ""
-                    }`}
-                    onClick={() => handleSizeSelection("M")}
-                  >
-                    M
-                  </div>
-                  <div
-                    className={`product-center-rects ${
-                      selectedSize === "L" ? "active" : ""
-                    }`}
-                    onClick={() => handleSizeSelection("L")}
-                  >
-                    L
-                  </div>
-                  <div
-                    className={`product-center-rects ${
-                      selectedSize === "XL" ? "active" : ""
-                    }`}
-                    onClick={() => handleSizeSelection("XL")}
-                  >
-                    XL
-                  </div>
-                  <div
-                    className={`product-center-rects ${
-                      selectedSize === "XXL" ? "active" : ""
-                    }`}
-                    onClick={() => handleSizeSelection("XXL")}
-                  >
-                    XXL
+              {isCategoryVisible && (
+                <div className="product-right-size">
+                  <p>Size</p>
+                  <div className="product-right-checkboxes">
+                    {sizeOptions.map((sizeOption) => (
+                      <div
+                        key={sizeOption}
+                        className={`product-center-rects ${
+                          selectedSize === sizeOption ? "active" : ""
+                        }`}
+                        onClick={() => handleSizeSelection(sizeOption)}
+                      >
+                        {sizeOption}
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
+              )}
+
               <div className="product-add-cart">
                 <AddToCard product={productDetail} />
               </div>

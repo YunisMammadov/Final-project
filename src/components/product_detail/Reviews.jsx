@@ -70,10 +70,7 @@ function Reviews({ words, lang }) {
             <div key={index} className="product-text-up-review">
               <div className="product-text-up-review-per">
                 <div className="product-up-rev-per-img">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/032f/0c1a/398acdb0683ffbc6b37f43a3baed25dc?Expires=1694995200&Signature=Z2tuiH1tDuoFpFWbJxl-JRwe9omrctkvOB-n2VdVSdqnVgDhb86R1Eg8uRHf99GtXyi9WIFEvfoD-4kCfFn7NXyX7ig67OMPbRWAHTowEThR8-Aq7rr2pJ8PCYirSXp1BpUykglF5LC7TGmd-sjXyJDHAkxu4VOM3unnz1bgWLi665dUS7gYiUzJtj4PsuAUn81Q8H-nOk1uw91Vqa-8IHc82ljn0ISaoOd78jmX8D7OV5jlf~zxQog7b36ajuKjBajMySjttMMupN4VYwfH5UXLbJNlrYsvKRvvTw9Xw8HDOdfiJf6bNtXAJP9lfOWmZ6~Fus7otM5kdro~h3kF1Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    alt=""
-                  />
+                  <img src="/menbanner.png" alt="" />
                 </div>
                 <div className="product-up-rev-txt">
                   <p>{review.name}</p>

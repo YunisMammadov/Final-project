@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useRef } from "react";
 
-function Shop_category({ category, lang, words }) {
+function Shop_category({ categories, lang, words, dispatch }) {
   const sliderRef = useRef(null);
 
   const goToPrev = () => {
@@ -23,7 +23,7 @@ function Shop_category({ category, lang, words }) {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 2,
     initialSlide: 0,
     responsive: [
       {
@@ -51,6 +51,12 @@ function Shop_category({ category, lang, words }) {
         },
       },
     ],
+  };
+  const handleCategoryClick = (categoryId) => {
+    dispatch({ type: "SET_SELECTED_CATEGORIES", payload: [categoryId] });
+  };
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
   };
   return (
     <>
@@ -99,9 +105,9 @@ function Shop_category({ category, lang, words }) {
               {...settings}
               className="shop-category-down"
             >
-              {category.map((category) => {
+              {categories.slice(0, 12).map((category) => {
                 return (
-                  <div key={category} className="shop-category-card">
+                  <div key={category.id} className="shop-category-card">
                     <div className="shop-category-img">
                       <img
                         src={category.categoryimg && category.categoryimg}
@@ -109,10 +115,18 @@ function Shop_category({ category, lang, words }) {
                       />
                     </div>
                     <div className="shop-category-text">
-                      <span>{category.category}</span>
+                      <span>{category.category_name}</span>
                     </div>
                     <button>
-                      <NavLink to="">{category.category}</NavLink>
+                      <NavLink
+                        to="/product"
+                        onClick={() => {
+                          handleCategoryClick(category.id);
+                          handleLinkClick();
+                        }}
+                      >
+                         <p>{category[`category_name_${lang}`]}</p>
+                      </NavLink>
                     </button>
                   </div>
                 );

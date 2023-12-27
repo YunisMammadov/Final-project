@@ -17,7 +17,7 @@ const getTotalAmount = () => {
 
 const init = {
   products: [],
-  category: [],
+  categories: [],
   wishlist: JSON.parse(localStorage.getItem("wishlist")) || [],
   selectedSize: null,
   filteredCategories: [],
@@ -259,7 +259,7 @@ const init = {
       DecadeSuccess: "Uğur Onilliyi",
       DecadeSuccess1:
         "On illik amansız zəhməti, sarsılmaz sədaqətini və dəyərli müştərilərimizin daimi sədaqətini qeyd edirik. Bu əlamətdar səyahət, bizi bu mühüm mərhələyə gətirən ortaq öhdəlik və dəstək ilə əlamətdar oldu.",
-      men: "Kişi",
+      men: "Kişilər",
       Tshirts: "Koftalar",
       casualshirt: "Gündəlik köynəklər",
       formalshirt: "Formal köynəklər",
@@ -289,7 +289,7 @@ const init = {
       Trousers: "Şalvar",
       PartyWear: "Ziyafət geyimi",
       InnerwearThermal: "Daxili Geyim və Termal",
-      TrackPants: "İdman şalvarı",
+      TrackPants: "İdman Dəsti",
       ValuePack: "Değer paketi",
       nodata: "Məlumat yoxdur.",
       mencollection: "Kişi kolleksiyası",
@@ -298,8 +298,22 @@ const init = {
         "Keyfiyyət və estetikanı birləşdirən kolleksiyamız diqqətlə seçilmiş materiallar və orijinal dizaynlarla seçilir. Hər bir məhsul gündəlik istifadədən tutmuş xüsusi anlara qədər geniş istifadə imkanı təklif edən funksional detallarla təchiz edilmişdir.Moda və rahatlığı birləşdirən məhsullarımız üslubunuzu ifadə etməyə imkan verən müasir kəsimləri ilə seçilir. ",
       productdescription1:
         "Kolleksiyamız istifadəçilərinə şəxsi üslublarını əks etdirmək üçün geniş seçimlər təklif edir.Hər bir parça davamlılıq və üslubun birləşməsini təklif edərək istifadəçilərinə güvən verir. Sərfəli qiymətlərlə təklif olunan bu xüsusi kolleksiya müştərilərimizə öz üslublarını ən yaxşı şəkildə tamamlamaq imkanı təqdim edir.",
+      bags: "Çantalar",
+      wallets: "Pul kisələri",
+      belts: "Kəmərlər",
+      watch: "Saatlar",
+      Accessories: "Aksesuarlar",
+      WinterWear: "Qış geyimi",
+      count: "Say",
     },
     en: {
+      count: "Count",
+      WinterWear: "Winter Wear",
+      Accessories: "Accessories",
+      watch: "Watches",
+      belts: "Belts",
+      wallets: "Wallets",
+      bags: "Bags",
       productdescription:
         "Combining quality and aesthetics, our collection is distinguished by carefully selected materials and original designs. Each product is equipped with functional details that offer a wide range of use, from everyday use to special moments.Combining fashion and comfort, our products are distinguished by their modern cuts that allow you to express your style. ",
 
@@ -573,6 +587,11 @@ const init = {
       shipaddress: "Shipping Address",
     },
   },
+  priceFilter: [0, 1000],
+  selectedCategories: [],
+  filteredProducts: [],
+  currentPage: 1,
+  itemsPerPage: 24,
 };
 
 export default function Reducer(state = init, action) {
@@ -580,11 +599,46 @@ export default function Reducer(state = init, action) {
     case "SET_PRODUCTS":
       return { ...state, products: action.payload };
     case "SET_CATEGORY":
-      return { ...state, category: action.payload };
-    case "CATEGORY_FILTER":
-      let newArr = [];
-      newArr = state.products.filter((x) => x.category_id === action.payload);
-      return { ...state, filteredCategories: newArr };
+      return { ...state, categories: action.payload };
+    case "SET_PRICE_FILTER":
+      return { ...state, priceFilter: action.payload };
+    case "SET_SELECTED_CATEGORIES":
+      return { ...state, selectedCategories: action.payload };
+    case "SET_FILTERED_PRODUCTS":
+      return { ...state, filteredProducts: action.payload };
+    case "SET_CURRENT_PAGE":
+      return { ...state, currentPage: action.payload };
+    // case "CATEGORY_FILTER":
+    //   let newArr = [];
+    //   newArr = state.products.filter((x) => x.category_id === action.payload);
+    //   return { ...state, filteredCategories: newArr };
+    // case "CATEGORY_FILTER":
+    //   console.log(action.payload);
+    //   console.log(action.payload.priceFilter[0]);
+    //   let newArr = [];
+    //   newArr = state.products.filter((x) =>
+    //     action.payload.tempArr.includes(x.category)
+    //   );
+    //   newArr = newArr.filter(
+    //     (x) =>
+    //       x.new_price >= action.payload.priceFilter[0] &&
+    //       x.new_price <= action.payload.priceFilter[1]
+    //   );
+    //   // console.log(newArr)
+    //   return { ...state, filteredCategories: newArr };
+
+    // case "PRICE_FILTER":
+    //   console.log(action.payload);
+    //   let newPriceFilterArr = [];
+    //   newPriceFilterArr = state.products.filter(
+    //     (x) =>
+    //       action.payload.filterCategory.includes(x.category) &&
+    //       +x.new_price >= action.payload.priceFilter[0] &&
+    //       +x.new_price <= action.payload.priceFilter[1]
+    //   );
+    //   console.log(newPriceFilterArr);
+    //   // console.log(newArr)
+    //   return { ...state, filteredCategories: newPriceFilterArr };
 
     case "ADD_TO_WISHLIST":
       const newItemToAdd = action.payload;
@@ -593,7 +647,7 @@ export default function Reducer(state = init, action) {
       );
       if (!isItemInWishlist) {
         const updatedWishlist = [...state.wishlist, newItemToAdd];
-        localStorage.setItem("wishlist", JSON.stringify(updatedWishlist)); // Update local storage
+        localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
         return { ...state, wishlist: updatedWishlist };
       } else {
         return state;
@@ -630,7 +684,7 @@ export default function Reducer(state = init, action) {
       localStorage.setItem("totalamount", JSON.stringify(totalAmount));
       return { ...state, totalAmount: totalAmount };
     case "BASKETITEMDEC":
-      let tempArrDec = state.cartItems.slice(); // Yeni bir referans oluşturun
+      let tempArrDec = state.cartItems.slice();
 
       let itemDec = tempArrDec.find((x) => x.size === action.payload.size);
 
@@ -650,9 +704,8 @@ export default function Reducer(state = init, action) {
       }
 
       return { ...state, cartItems: tempArrDec };
-
     case "BASKETITEMINC":
-      let tempArr = state.cartItems.slice(); // Yeni bir referans oluşturun
+      let tempArr = state.cartItems.slice();
 
       let item = tempArr.find((x) => x.size === action.payload.size);
 

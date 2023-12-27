@@ -11,7 +11,6 @@ function Payment_review({ totalAmount, words, lang, cartItems }) {
   const [payments, setPayments] = useState(
     JSON.parse(localStorage.getItem("payments")) || []
   );
-
   const today = new Date();
   const estimatedDate = new Date(today.getTime() + 10 * 24 * 60 * 60 * 1000);
   const formattedEstimatedDate = estimatedDate.toLocaleDateString();
@@ -160,7 +159,7 @@ function Payment_review({ totalAmount, words, lang, cartItems }) {
                             </div>
                             <div className="pay_rev-pro-details">
                               <p>{item.title}</p>
-                              <span>{item.price}</span>
+                              <span>${item.price}.00</span>
                               <span>
                                 {words[lang].size}: {item.size}
                               </span>
@@ -220,45 +219,40 @@ function Payment_review({ totalAmount, words, lang, cartItems }) {
                     <p>{words[lang].payment}</p>
                   </div>
                   {payments.map((card, index) => (
-                    <>
-                      <div className="payment_review-pay-met-info" key={index}>
-                        <div className="payment_review-pay-met-text">
-                          <p>
-                            {payments[payments.length - 1].type
-                              .charAt(0)
-                              .toUpperCase() +
-                              payments[payments.length - 1].type.slice(1)}
-                            (.... .... .... ..
-                            {payments[payments.length - 1].num.slice(-2)})
-                          </p>
-                        </div>
-                        <button>
-                          <NavLink to="/Payment_method">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="20"
-                              height="20"
-                              viewBox="0 0 20 20"
-                              fill="none"
-                            >
-                              <g clip-path="url(#clip0_642_2077)">
-                                <path
-                                  d="M18.3334 10.0003V15.0003C18.3334 16.8413 16.841 18.3337 15.0001 18.3337H5.00008C3.15913 18.3337 1.66675 16.8413 1.66675 15.0003V5.00033C1.66675 3.15938 3.15913 1.66699 5.00008 1.66699H10.0001M13.072 3.35262C13.072 3.35262 13.072 4.54453 14.264 5.73644C15.4559 6.92836 16.6478 6.92836 16.6478 6.92836M7.62898 13.325L10.132 12.9674C10.493 12.9158 10.8276 12.7485 11.0855 12.4906L17.8397 5.73644C18.498 5.07817 18.498 4.01089 17.8397 3.35261L16.6478 2.1607C15.9895 1.50242 14.9222 1.50242 14.264 2.1607L7.50978 8.91488C7.25189 9.17277 7.0846 9.50736 7.03302 9.86841L6.67544 12.3714C6.59598 12.9277 7.07275 13.4044 7.62898 13.325Z"
-                                  stroke="#131118"
-                                  stroke-width="1.5"
-                                  stroke-linecap="round"
-                                />
-                              </g>
-                              <defs>
-                                <clipPath id="clip0_642_2077">
-                                  <rect width="20" height="20" fill="white" />
-                                </clipPath>
-                              </defs>
-                            </svg>
-                          </NavLink>
-                        </button>
+                    <div className="payment_review-pay-met-info" key={index}>
+                      <div className="payment_review-pay-met-text">
+                        <p>
+                          {card.type.charAt(0).toUpperCase() +
+                            card.type.slice(1)}
+                          (.... .... .... ..{card.num.slice(-2)})
+                        </p>
                       </div>
-                    </>
+                      <button>
+                        <NavLink to="/Payment_method">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                          >
+                            <g clip-path="url(#clip0_642_2077)">
+                              <path
+                                d="M18.3334 10.0003V15.0003C18.3334 16.8413 16.841 18.3337 15.0001 18.3337H5.00008C3.15913 18.3337 1.66675 16.8413 1.66675 15.0003V5.00033C1.66675 3.15938 3.15913 1.66699 5.00008 1.66699H10.0001M13.072 3.35262C13.072 3.35262 13.072 4.54453 14.264 5.73644C15.4559 6.92836 16.6478 6.92836 16.6478 6.92836M7.62898 13.325L10.132 12.9674C10.493 12.9158 10.8276 12.7485 11.0855 12.4906L17.8397 5.73644C18.498 5.07817 18.498 4.01089 17.8397 3.35261L16.6478 2.1607C15.9895 1.50242 14.9222 1.50242 14.264 2.1607L7.50978 8.91488C7.25189 9.17277 7.0846 9.50736 7.03302 9.86841L6.67544 12.3714C6.59598 12.9277 7.07275 13.4044 7.62898 13.325Z"
+                                stroke="#131118"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_642_2077">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </NavLink>
+                      </button>
+                    </div>
                   ))}
                   <div className="payment_review-rect"></div>
                 </div>
